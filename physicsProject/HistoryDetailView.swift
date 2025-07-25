@@ -1,0 +1,23 @@
+//
+//  HistoryDetailView.swift
+//  physicsProject
+//
+//  Created by Yulin Feng on 2025/7/22.
+//
+import SwiftUI
+
+struct HistoryDetailView: View {
+    let record: QuizHistoryRecord
+    var body: some View {
+        ResultView(
+            questions: record.questions,
+            userAnswers: record.userAnswers,
+            correct: record.correct,
+            wrong: record.wrong,
+            total: record.total,
+            onRestart: {}, // 可以不操作
+            onBack: {}     // 可以不操作
+        )
+    }
+}
+
