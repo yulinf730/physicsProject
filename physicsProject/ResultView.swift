@@ -86,7 +86,12 @@ struct ScoreHeaderView: View {
                 .font(.largeTitle)
                 .padding(.top, 16)
 
-            Text("✅ Correct: \(correct)   ❌ Wrong: \(wrong)   ⏸ Undone: \(undone)   🔢 Total: \(total)")
+            Text("✅ Correct: \(correct)   ❌ Wrong: \(wrong)")
+                .font(.title3)
+                .foregroundColor(.secondary)
+                .padding(.bottom, 8)
+            
+            Text("⏸ Undone: \(undone)   🔢 Total: \(total)")
                 .font(.title3)
                 .foregroundColor(.secondary)
                 .padding(.bottom, 8)
