@@ -61,7 +61,7 @@ struct QuestionView: View {
                                     isAnswered = true
                                     if mode == .practice {
                                         triggerHaptic(success: option == question.answer)
-                                        if option != question.answer {
+                                        if option != question.answer || isAnswered {
                                             WrongQuestionManager.shared.addWrongQuestion(id: question.id, selectedAnswer: option)
                                         }
                                     }

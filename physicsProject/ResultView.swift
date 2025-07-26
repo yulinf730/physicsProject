@@ -12,7 +12,9 @@ struct QuestionReviewCard: View {
     var onTap: (() -> Void)? = nil
 
     var body: some View {
-        let isCorrect = answer == question.answer
+        let isAnswered = (answer ?? "").isEmpty == false
+        let isCorrect = isAnswered && answer == question.answer
+
         VStack(alignment: .leading, spacing: 10) {
             if let uiImage = UIImage(named: question.imageName) {
                 Image(uiImage: uiImage)
@@ -21,9 +23,11 @@ struct QuestionReviewCard: View {
                     .frame(height: 120)
                     .cornerRadius(8)
             }
+
             Text("Q\(index + 1)")
                 .font(.caption)
                 .foregroundColor(.gray)
+
             HStack(spacing: 16) {
                 ForEach(question.options, id: \.self) { opt in
                     Text(opt)
@@ -41,19 +45,30 @@ struct QuestionReviewCard: View {
                         .clipShape(Circle())
                 }
             }
+
             Text("Answer: \(question.answer)")
                 .font(.callout)
                 .foregroundColor(.blue)
+
             Text(question.explanation)
                 .font(.footnote)
                 .foregroundColor(.secondary)
         }
         .padding()
-        .background(isCorrect ? Color(.systemGray6) : Color.red.opacity(0.08))
+        .background(
+            isAnswered ?
+                (isCorrect ? Color(.systemGray6) : Color.red.opacity(0.08))
+                : Color(.systemGray6)
+        )
         .cornerRadius(16)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(isCorrect ? Color.green.opacity(0.3) : Color.red, lineWidth: isCorrect ? 1 : 2)
+                .stroke(
+                    isAnswered ?
+                        (isCorrect ? Color.green.opacity(0.3) : Color.red)
+                        : Color.gray.opacity(0.3),
+                    lineWidth: isAnswered ? (isCorrect ? 1 : 2) : 1
+                )
         )
         .onTapGesture { onTap?() }
     }
@@ -62,6 +77,7 @@ struct QuestionReviewCard: View {
 struct ScoreHeaderView: View {
     let correct: Int
     let wrong: Int
+    let undone: Int
     let total: Int
 
     var body: some View {
@@ -69,10 +85,12 @@ struct ScoreHeaderView: View {
             Text("🎉 Completed！")
                 .font(.largeTitle)
                 .padding(.top, 16)
-            Text("✅ Correct：\(correct)   ❌ Wring：\(wrong)   Total：\(total)")
+
+            Text("✅ Correct: \(correct)   ❌ Wrong: \(wrong)   ⏸ Undone: \(undone)   🔢 Total: \(total)")
                 .font(.title3)
                 .foregroundColor(.secondary)
                 .padding(.bottom, 8)
+
             Divider().padding(.bottom, 6)
         }
     }
@@ -83,18 +101,16 @@ struct ResultView: View {
     let userAnswers: [String?]
     let correct: Int
     let wrong: Int
+    let undone: Int
     let total: Int
     var onRestart: () -> Void
     var onBack: () -> Void
 
-    // 用 SheetIndex 替换 Int
     @State private var selectedSheetIndex: SheetIndex? = nil
-    
-    
 
     var body: some View {
         VStack(spacing: 12) {
-            ScoreHeaderView(correct: correct, wrong: wrong, total: total)
+            ScoreHeaderView(correct: correct, wrong: wrong, undone: undone, total: total)
 
             ScrollView {
                 VStack(spacing: 28) {
@@ -112,15 +128,13 @@ struct ResultView: View {
                 .padding(.bottom, 32)
             }
             .padding(.top, 8)
-
-
             .padding(.vertical, 10)
         }
         .padding()
         .sheet(item: $selectedSheetIndex) { sheetIndex in
             QuestionView(
                 question: questions[sheetIndex.id],
-                mode: .practice, // 你也可以切换为其它模式
+                mode: .practice,
                 onAnswered: { _ in }
             )
         }

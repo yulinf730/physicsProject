@@ -5,18 +5,19 @@ struct QuizPageView: View {
     @Environment(\.dismiss) private var dismiss
     let questions: [Question]
     let mode: QuizMode
+    let title: String  // 试卷名称
+
     @State private var currentIndex = 0
     @State private var answers: [String?]
     @State private var showResult = false
     @State private var correctCount = 0
     @State private var wrongCount = 0
+    @State private var undoneCount = 0
     @State private var canGoNext = false
+    @State private var didCompleted = false  // 是否已完成提交
     var onQuizCompleted: (() -> Void)? = nil
-    // 增加一个标记是否已完成
-    @State private var didCompleted = false
-    let title: String  //增加试卷名称
 
-    init(questions: [Question], mode: QuizMode,title: String, onQuizCompleted: (() -> Void)? = nil) {
+    init(questions: [Question], mode: QuizMode, title: String, onQuizCompleted: (() -> Void)? = nil) {
         self.questions = questions
         self.mode = mode
         self.title = title
@@ -31,11 +32,13 @@ struct QuizPageView: View {
                 userAnswers: answers,
                 correct: correctCount,
                 wrong: wrongCount,
+                undone: undoneCount,
                 total: questions.count,
                 onRestart: {
                     answers = Array(repeating: nil, count: questions.count)
                     correctCount = 0
                     wrongCount = 0
+                    undoneCount = 0
                     currentIndex = 0
                     showResult = false
                     didCompleted = false
@@ -45,7 +48,6 @@ struct QuizPageView: View {
                 }
             )
             .onDisappear {
-                // 只在返回时调用闭包，且只调用一次
                 if didCompleted == false {
                     didCompleted = true
                     onQuizCompleted?()
@@ -55,6 +57,7 @@ struct QuizPageView: View {
             ZStack {
                 VStack {
                     Text("Question \(currentIndex + 1)/\(questions.count)")
+
                     TabView(selection: $currentIndex) {
                         ForEach(questions.indices, id: \.self) { i in
                             QuestionView(
@@ -73,11 +76,21 @@ struct QuizPageView: View {
                     .onChange(of: currentIndex) { _ in
                         canGoNext = false
                     }
+
                     HStack {
-                        Button("上一题") { if currentIndex > 0 { currentIndex -= 1 } }
-                            .disabled(currentIndex == 0)
-                        Button("下一题") { if currentIndex < questions.count - 1 { currentIndex += 1 } }
-                            .disabled(currentIndex == questions.count - 1)
+                        Button("上一题") {
+                            if currentIndex > 0 {
+                                currentIndex -= 1
+                            }
+                        }
+                        .disabled(currentIndex == 0)
+
+                        Button("下一题") {
+                            if currentIndex < questions.count - 1 {
+                                currentIndex += 1
+                            }
+                        }
+                        .disabled(currentIndex == questions.count - 1)
                     }
                     .padding()
 
@@ -101,30 +114,38 @@ struct QuizPageView: View {
     func submitQuiz() {
         var correct = 0
         var wrong = 0
+        var undone = 0
+
         for (i, ans) in answers.enumerated() {
-            if ans == questions[i].answer {
-                correct += 1
+            if let ans = ans, !ans.isEmpty {
+                if ans == questions[i].answer {
+                    correct += 1
+                } else {
+                    wrong += 1
+                    WrongQuestionManager.shared.addWrongQuestion(id: questions[i].id, selectedAnswer: ans)
+                }
             } else {
-                wrong += 1
-                WrongQuestionManager.shared.addWrongQuestion(id: questions[i].id, selectedAnswer: ans ?? "")
+                undone += 1
             }
         }
+
         correctCount = correct
         wrongCount = wrong
+        undoneCount = undone
 
         QuizHistoryManager.shared.add(
             QuizHistoryRecord(
                 id: UUID(),
                 date: Date(),
-                title: title,   // 这里用传进来的 title
+                title: title,
                 total: questions.count,
                 correct: correct,
+                undone: undone,
                 wrong: wrong,
                 userAnswers: answers,
                 questions: questions,
                 mode: mode
             )
         )
-        // ⚠️ 不再此处直接调用 onQuizCompleted
     }
 }

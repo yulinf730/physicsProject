@@ -34,7 +34,7 @@ struct MainMenuView: View {
 
                 // 欢迎语
                 VStack(alignment: .center, spacing: 10) {
-                    Text("Physics Practice")
+                    Text("Physics Practice!")
                         .font(.system(size: 32, weight: .bold))
                         .foregroundColor(.blue)
                     Text("Choose how you want to practice")

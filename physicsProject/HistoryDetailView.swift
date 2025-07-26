@@ -14,6 +14,7 @@ struct HistoryDetailView: View {
             userAnswers: record.userAnswers,
             correct: record.correct,
             wrong: record.wrong,
+            undone: record.undone,
             total: record.total,
             onRestart: {}, // 可以不操作
             onBack: {}     // 可以不操作

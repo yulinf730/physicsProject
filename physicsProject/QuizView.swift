@@ -1,7 +1,5 @@
 import SwiftUI
 
-
-
 struct QuizView: View {
     let questions: [Question]
     let title: String
@@ -9,6 +7,7 @@ struct QuizView: View {
     @State private var currentIndex = 0
     @State private var correctCount = 0
     @State private var wrongCount = 0
+    @State private var unansweredCount = 0   // ✅ 新增未作答计数
     let mode: QuizMode
 
     init(filteredBy filter: QuizFilter, mode: QuizMode) {
@@ -44,12 +43,17 @@ struct QuizView: View {
             if currentIndex < questions.count {
                 QuestionView(
                     question: questions[currentIndex],
-                    mode: mode, onAnswered: { selected in
-                        let correct = selected == questions[currentIndex].answer
-                        if correct {
-                            correctCount += 1
+                    mode: mode,
+                    onAnswered: { selected in
+                        if selected.isEmpty {
+                            unansweredCount += 1
                         } else {
-                            wrongCount += 1
+                            let correct = selected == questions[currentIndex].answer
+                            if correct {
+                                correctCount += 1
+                            } else {
+                                wrongCount += 1
+                            }
                         }
                         currentIndex += 1
                     }
@@ -64,12 +68,14 @@ struct QuizView: View {
 
                     Text("✅ Correct: \(correctCount)")
                     Text("❌ Wrong: \(wrongCount)")
+                    Text("⏸ Undone。: \(unansweredCount)")  // ✅ 新增展示
                     Text("🔢 Total: \(questions.count)")
 
                     Button("🔁 Restart") {
                         currentIndex = 0
                         correctCount = 0
                         wrongCount = 0
+                        unansweredCount = 0
                     }
                     .padding()
                     .background(Color.blue)
