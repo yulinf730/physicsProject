@@ -15,6 +15,8 @@ struct QuizPageView: View {
     @State private var undoneCount = 0
     @State private var canGoNext = false
     @State private var didCompleted = false  // 是否已完成提交
+    @State private var showAnswerSheet = false
+
     var onQuizCompleted: (() -> Void)? = nil
 
     init(questions: [Question], mode: QuizMode, title: String, onQuizCompleted: (() -> Void)? = nil) {
@@ -55,8 +57,13 @@ struct QuizPageView: View {
             }
         } else {
             ZStack {
-                VStack {
+                VStack(spacing: 12) {
+                    Text(title)
+                        .font(.title2.bold())
+                        .padding(.top, 8)
+
                     Text("Question \(currentIndex + 1)/\(questions.count)")
+                        .font(.headline)
 
                     TabView(selection: $currentIndex) {
                         ForEach(questions.indices, id: \.self) { i in
@@ -77,35 +84,79 @@ struct QuizPageView: View {
                         canGoNext = false
                     }
 
-                    HStack {
-                        Button("上一题") {
+                    Spacer()
+
+                    // Bottom buttons
+                    HStack(spacing: 12) {
+                        Button(action: {
                             if currentIndex > 0 {
                                 currentIndex -= 1
                             }
+                        }) {
+                            Text("上一题")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.gray.opacity(0.2))
+                                .foregroundColor(.primary)
+                                .cornerRadius(10)
                         }
                         .disabled(currentIndex == 0)
 
-                        Button("下一题") {
+                        Button(action: {
+                            showAnswerSheet = true
+                        }) {
+                            Label("答题卡", systemImage: "square.grid.3x3.fill")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.orange.opacity(0.9))
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+
+                        Button(action: {
                             if currentIndex < questions.count - 1 {
                                 currentIndex += 1
                             }
+                        }) {
+                            Text("下一题")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.gray.opacity(0.2))
+                                .foregroundColor(.primary)
+                                .cornerRadius(10)
                         }
                         .disabled(currentIndex == questions.count - 1)
                     }
-                    .padding()
+                    .padding(.horizontal)
 
                     if currentIndex == questions.count - 1 {
-                        Button("提交") {
+                        Button(action: {
                             submitQuiz()
                             showResult = true
+                        }) {
+                            Text("提交")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
                         }
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(12)
-                        .padding()
+                        .padding([.horizontal, .bottom])
                     }
+                }
+            }
+            .sheet(isPresented: $showAnswerSheet) {
+                NavigationView {
+                    AnswerSheetView(
+                        total: questions.count,
+                        answers: answers,
+                        onSelect: { index in
+                            currentIndex = index
+                            showAnswerSheet = false
+                        },
+                        currentIndex: currentIndex,
+                        correctAnswers: questions.map { $0.answer }
+                    )
                 }
             }
         }
