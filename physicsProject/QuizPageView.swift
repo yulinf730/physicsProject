@@ -16,6 +16,7 @@ struct QuizPageView: View {
     @State private var canGoNext = false
     @State private var didCompleted = false  // 是否已完成提交
     @State private var showAnswerSheet = false
+    @State private var showCalculator = false
 
     var onQuizCompleted: (() -> Void)? = nil
 
@@ -56,7 +57,7 @@ struct QuizPageView: View {
                 }
             }
         } else {
-            ZStack {
+            ZStack(alignment: .topTrailing) {
                 VStack(spacing: 12) {
                     Text(title)
                         .font(.title2.bold())
@@ -144,6 +145,27 @@ struct QuizPageView: View {
                         .padding([.horizontal, .bottom])
                     }
                 }
+
+                Button(action: {
+                    showCalculator = true
+                }) {
+                    Image("calculatorIcon") // 👈 使用你的图片名
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(radius: 1)
+                }
+                .padding()
+
+
+                if showCalculator {
+                    CalculatorOverlayView(isPresented: $showCalculator)
+                        .transition(.move(edge: .bottom))
+                        .zIndex(1)
+                }
             }
             .sheet(isPresented: $showAnswerSheet) {
                 NavigationView {
@@ -160,10 +182,9 @@ struct QuizPageView: View {
                     .navigationTitle("答题卡")
                     .navigationBarTitleDisplayMode(.inline)
                 }
-                .presentationDetents([.medium, .large]) // ✅ 自动弹出合适高度
-                .presentationDragIndicator(.visible)    // ✅ 显示拖拽提示
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
             }
-
         }
     }
 
@@ -205,3 +226,4 @@ struct QuizPageView: View {
         )
     }
 }
+

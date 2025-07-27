@@ -1,7 +1,6 @@
 import Foundation
 
-class QuestionLoader {
-    
+enum QuestionLoader {
     static func loadQuestions() -> [Question] {
         guard let url = Bundle.main.url(forResource: "QuestionData", withExtension: "json"),
               let data = try? Data(contentsOf: url),
@@ -10,9 +9,8 @@ class QuestionLoader {
         }
         return questions
     }
-    
-    
 }
+
 
 
 
