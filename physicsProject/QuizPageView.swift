@@ -157,8 +157,13 @@ struct QuizPageView: View {
                         currentIndex: currentIndex,
                         correctAnswers: questions.map { $0.answer }
                     )
+                    .navigationTitle("答题卡")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
+                .presentationDetents([.medium, .large]) // ✅ 自动弹出合适高度
+                .presentationDragIndicator(.visible)    // ✅ 显示拖拽提示
             }
+
         }
     }
 

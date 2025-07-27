@@ -67,27 +67,7 @@ struct MainMenuView: View {
 
                 Spacer()
 
-                // 年份进度展示
-                if !yearProgress.isEmpty {
-                    VStack(alignment: .trailing, spacing: 6) {
-                        ForEach(Array(yearProgress.keys.sorted()), id: \.self) { year in
-                            HStack {
-                                Text("\(year):")
-                                    .foregroundColor(.primary)
-                                ProgressView(value: Double(yearProgress[year] ?? 0), total: 10)
-                                    .progressViewStyle(LinearProgressViewStyle(tint: .blue))
-                                    .frame(width: 120)
-                                Text("\(yearProgress[year] ?? 0)x")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                    .padding(.bottom, 20)
-                    .padding(.trailing, 24)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .transition(.opacity)
-                }
+
             }
         }
         .navigationTitle("")
