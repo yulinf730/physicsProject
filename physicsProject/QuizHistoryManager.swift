@@ -1,9 +1,3 @@
-//
-//  QuizHistoryManager.swift
-//  physicsProject
-//
-//  Created by Yulin Feng on 2025/7/22.
-//
 import Foundation
 class QuizHistoryManager: ObservableObject {
     static let shared = QuizHistoryManager()
@@ -38,4 +32,3 @@ class QuizHistoryManager: ObservableObject {
         }
     }
 }
-
