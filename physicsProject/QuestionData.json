@@ -1074,7 +1074,7 @@
   {
       "id": "2023May21Q1",
       "topic": "Forces",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q1",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1083,7 +1083,7 @@
     {
       "id": "2023May21Q2",
       "topic": "Motion",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q2",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1092,7 +1092,7 @@
     {
       "id": "2023May21Q3",
       "topic": "Motion",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q3",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1101,7 +1101,7 @@
     {
       "id": "2023May21Q4",
       "topic": "Forces",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q4",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1110,7 +1110,7 @@
     {
       "id": "2023May21Q5",
       "topic": "Mass and weight",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q5",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1119,7 +1119,7 @@
     {
       "id": "2023May21Q6",
       "topic": "Forces",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q6",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1128,7 +1128,7 @@
     {
       "id": "2023May21Q7",
       "topic": "Momentum",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q7",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1137,7 +1137,7 @@
     {
       "id": "2023May21Q8",
       "topic": "Pressure",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q8",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1146,7 +1146,7 @@
     {
       "id": "2023May21Q9",
       "topic": "Kinetic particle model of matter",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q9",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1155,7 +1155,7 @@
     {
       "id": "2023May21Q10",
       "topic": "Energy, work and power",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q10",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1164,7 +1164,7 @@
     {
       "id": "2023May21Q11",
       "topic": "Energy, work and power",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q11",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1173,7 +1173,7 @@
     {
       "id": "2023May21Q12",
       "topic": "Energy, work and power",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q12",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1182,7 +1182,7 @@
     {
       "id": "2023May21Q13",
       "topic": "Pressure",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q13",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1191,7 +1191,7 @@
     {
       "id": "2023May21Q14",
       "topic": "Kinetic particle model of matter",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q14",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1200,7 +1200,7 @@
     {
       "id": "2023May21Q15",
       "topic": "Thermal properties and temperature",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q15",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1209,7 +1209,7 @@
     {
       "id": "2023May21Q16",
       "topic": "Transfer of thermal energy",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q16",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1218,7 +1218,7 @@
     {
       "id": "2023May21Q17",
       "topic": "General properties of waves",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q17",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1227,7 +1227,7 @@
     {
       "id": "2023May21Q18",
       "topic": "Light",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q18",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1236,7 +1236,7 @@
     {
       "id": "2023May21Q19",
       "topic": "Light",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q19",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1245,7 +1245,7 @@
     {
       "id": "2023May21Q20",
       "topic": "Light",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q20",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1254,7 +1254,7 @@
     {
       "id": "2023May21Q21",
       "topic": "Electromagnetic spectrum",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q21",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1263,7 +1263,7 @@
     {
       "id": "2023May21Q22",
       "topic": "Sound",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q22",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1272,7 +1272,7 @@
     {
       "id": "2023May21Q23",
       "topic": "Simple phenomena of magnetism",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q23",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1281,7 +1281,7 @@
     {
       "id": "2023May21Q24",
       "topic": "Electrical quantities",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q24",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1290,7 +1290,7 @@
     {
       "id": "2023May21Q25",
       "topic": "Electrical quantities",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q25",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1299,7 +1299,7 @@
     {
       "id": "2023May21Q26",
       "topic": "Electrical quantities",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q26",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1308,7 +1308,7 @@
     {
       "id": "2023May21Q27",
       "topic": "Electric circuits",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q27",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1317,7 +1317,7 @@
     {
       "id": "2023May21Q28",
       "topic": "Electric circuits",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q28",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1326,7 +1326,7 @@
     {
       "id": "2023May21Q29",
       "topic": "Electric circuits",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q29",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1335,7 +1335,7 @@
     {
       "id": "2023May21Q30",
       "topic": "Electromagnetic effects",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q30",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1344,7 +1344,7 @@
     {
       "id": "2023May21Q31",
       "topic": "Electromagnetic effects",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q31",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1353,7 +1353,7 @@
     {
       "id": "2023May21Q32",
       "topic": "Electromagnetic effects",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q32",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1362,7 +1362,7 @@
     {
       "id": "2023May21Q33",
       "topic": "The nuclear model of the atom",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q33",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1371,7 +1371,7 @@
     {
       "id": "2023May21Q34",
       "topic": "The nuclear model of the atom",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q34",
       "options": ["A","B","C","D"],
       "answer": "B",
@@ -1380,7 +1380,7 @@
     {
       "id": "2023May21Q35",
       "topic": "Radioactivity",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q35",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1389,7 +1389,7 @@
     {
       "id": "2023May21Q36",
       "topic": "Radioactivity",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q36",
       "options": ["A","B","C","D"],
       "answer": "C",
@@ -1398,7 +1398,7 @@
     {
       "id": "2023May21Q37",
       "topic": "The Earth and the Solar System",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q37",
       "options": ["A","B","C","D"],
       "answer": "A",
@@ -1407,7 +1407,7 @@
     {
       "id": "2023May21Q38",
       "topic": "The Earth and the Solar System",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q38",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1416,7 +1416,7 @@
     {
       "id": "2023May21Q39",
       "topic": "Stars and the Universe",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q39",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1425,7 +1425,7 @@
     {
       "id": "2023May21Q40",
       "topic": "Stars and the Universe",
-      "year": "2023 May Paper 21",
+      "year": "2023 May/June Paper 21",
       "imageName": "2023May21Q40",
       "options": ["A","B","C","D"],
       "answer": "D",
@@ -1434,7 +1434,7 @@
     {
         "id": "2023May22Q1",
         "topic": "Forces",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q1",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1443,7 +1443,7 @@
       {
         "id": "2023May22Q2",
         "topic": "Motion",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q2",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1452,7 +1452,7 @@
       {
         "id": "2023May22Q3",
         "topic": "Motion",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q3",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1461,7 +1461,7 @@
       {
         "id": "2023May22Q4",
         "topic": "Mass and weight",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q4",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1470,7 +1470,7 @@
       {
         "id": "2023May22Q5",
         "topic": "Mass and weight",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q5",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1479,7 +1479,7 @@
       {
         "id": "2023May22Q6",
         "topic": "Density",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q6",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1488,7 +1488,7 @@
       {
         "id": "2023May22Q7",
         "topic": "Forces",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q7",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1497,7 +1497,7 @@
       {
         "id": "2023May22Q8",
         "topic": "Forces",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q8",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1506,7 +1506,7 @@
       {
         "id": "2023May22Q9",
         "topic": "Momentum",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q9",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1515,7 +1515,7 @@
       {
         "id": "2023May22Q10",
         "topic": "Energy, work and power",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q10",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1524,7 +1524,7 @@
       {
         "id": "2023May22Q11",
         "topic": "Energy, work and power",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q11",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1533,7 +1533,7 @@
       {
         "id": "2023May22Q12",
         "topic": "Energy, work and power",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q12",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1542,7 +1542,7 @@
       {
         "id": "2023May22Q13",
         "topic": "Pressure",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q13",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1551,7 +1551,7 @@
       {
         "id": "2023May22Q14",
         "topic": "Kinetic particle model of matter",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q14",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1560,7 +1560,7 @@
       {
         "id": "2023May22Q15",
         "topic": "Thermal properties and temperature",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q15",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1569,7 +1569,7 @@
       {
         "id": "2023May22Q16",
         "topic": "Transfer of thermal energy",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q16",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1578,7 +1578,7 @@
       {
         "id": "2023May22Q17",
         "topic": "General properties of waves",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q17",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1587,7 +1587,7 @@
       {
         "id": "2023May22Q18",
         "topic": "Electromagnetic spectrum",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q18",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1596,7 +1596,7 @@
       {
         "id": "2023May22Q19",
         "topic": "Light",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q19",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1605,7 +1605,7 @@
       {
         "id": "2023May22Q20",
         "topic": "Light",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q20",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1614,7 +1614,7 @@
       {
         "id": "2023May22Q21",
         "topic": "Electromagnetic spectrum",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q21",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1623,7 +1623,7 @@
       {
         "id": "2023May22Q22",
         "topic": "Sound",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q22",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1632,7 +1632,7 @@
       {
         "id": "2023May22Q23",
         "topic": "Simple phenomena of magnetism",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q23",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1641,7 +1641,7 @@
       {
         "id": "2023May22Q24",
         "topic": "Electrical quantities",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q24",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1650,7 +1650,7 @@
       {
         "id": "2023May22Q25",
         "topic": "Electrical quantities",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q25",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1659,7 +1659,7 @@
       {
         "id": "2023May22Q26",
         "topic": "Electrical quantities",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q26",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1668,7 +1668,7 @@
       {
         "id": "2023May22Q27",
         "topic": "Electrical quantities",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q27",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1677,7 +1677,7 @@
       {
         "id": "2023May22Q28",
         "topic": "Electric circuits",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q28",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1686,7 +1686,7 @@
       {
         "id": "2023May22Q29",
         "topic": "Electric circuits",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q29",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1695,7 +1695,7 @@
       {
         "id": "2023May22Q30",
         "topic": "Electromagnetic effects",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q30",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1704,7 +1704,7 @@
       {
         "id": "2023May22Q31",
         "topic": "Electromagnetic effects",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q31",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1713,7 +1713,7 @@
       {
         "id": "2023May22Q32",
         "topic": "Electromagnetic effects",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q32",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1722,7 +1722,7 @@
       {
         "id": "2023May22Q33",
         "topic": "Nuclear Physics",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q33",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1731,7 +1731,7 @@
       {
         "id": "2023May22Q34",
         "topic": "The nuclear model of the atom",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q34",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1740,7 +1740,7 @@
       {
         "id": "2023May22Q35",
         "topic": "Radioactivity",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q35",
         "options": ["A","B","C","D"],
         "answer": "A",
@@ -1749,7 +1749,7 @@
       {
         "id": "2023May22Q36",
         "topic": "Radioactivity",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q36",
         "options": ["A","B","C","D"],
         "answer": "B",
@@ -1758,7 +1758,7 @@
       {
         "id": "2023May22Q37",
         "topic": "The Earth and the Solar System",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q37",
         "options": ["A","B","C","D"],
         "answer": "C",
@@ -1767,7 +1767,7 @@
       {
         "id": "2023May22Q38",
         "topic": "The Earth and the Solar System",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q38",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1776,7 +1776,7 @@
       {
         "id": "2023May22Q39",
         "topic": "Stars and the Universe",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q39",
         "options": ["A","B","C","D"],
         "answer": "D",
@@ -1785,11 +1785,371 @@
       {
         "id": "2023May22Q40",
         "topic": "Stars and the Universe",
-        "year": "2023 May Paper 22",
+        "year": "2023 May/June Paper 22",
         "imageName": "2023May22Q40",
         "options": ["A","B","C","D"],
         "answer": "A",
         "explanation": "Hubble constant is the ratio v/d (recession speed divided by distance)."
-      }
+      },
+      {
+          "id": "2023May11Q1",
+          "topic": "Physical quantities and measurement techniques",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q1",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "Kilonewton (kN) is a unit of weight (force); kilogram, kilojoule and kilometre are not."
+        },
+        {
+          "id": "2023May11Q2",
+          "topic": "Motion",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q2",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Distance travelled equals the area under a speed–time graph."
+        },
+        {
+          "id": "2023May11Q3",
+          "topic": "Motion",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q3",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Average speed = total distance / total time, taken from the distance–time graph between X and Y."
+        },
+        {
+          "id": "2023May11Q4",
+          "topic": "Mass and weight",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q4",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Mass is the same on Earth and Moon; weight is less on the Moon because g is smaller."
+        },
+        {
+          "id": "2023May11Q5",
+          "topic": "Mass and weight",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q5",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "A spring balance measures weight; same reading means the two samples have the same weight."
+        },
+        {
+          "id": "2023May11Q6",
+          "topic": "Density",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q6",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "To find density of an irregular stone, measure mass with a balance and volume by water displacement."
+        },
+        {
+          "id": "2023May11Q7",
+          "topic": "Forces",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q7",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "Zero resultant force gives zero acceleration, so motion at constant speed in a straight line."
+        },
+        {
+          "id": "2023May11Q8",
+          "topic": "Forces",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q8",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "For equilibrium, total clockwise moment equals total anticlockwise moment about the pivot."
+        },
+        {
+          "id": "2023May11Q9",
+          "topic": "Forces",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q9",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "With one suspension point, the centre of gravity lies somewhere on the vertical line below it; more tests are needed."
+        },
+        {
+          "id": "2023May11Q10",
+          "topic": "Energy, work and power",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q10",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "Pumping water to a higher dam increases its gravitational potential energy store."
+        },
+        {
+          "id": "2023May11Q11",
+          "topic": "Energy, work and power",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q11",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Change in GPE = weight × height = 50 N × 7.0 m = 350 J (decrease)."
+        },
+        {
+          "id": "2023May11Q12",
+          "topic": "Energy, work and power",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q12",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "For the same work done, the shortest time gives the greatest power."
+        },
+        {
+          "id": "2023May11Q13",
+          "topic": "Pressure",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q13",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Pressure = force / area = 600 N / 0.050 m² = 1.2 × 10^4 N/m²."
+        },
+        {
+          "id": "2023May11Q14",
+          "topic": "Kinetic particle model of matter",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q14",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Particles are far apart in gases and close together in liquids and solids."
+        },
+        {
+          "id": "2023May11Q15",
+          "topic": "Thermal properties and temperature",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q15",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Evaporation cools the remaining liquid and involves the more energetic surface particles escaping; it occurs at all temperatures."
+        },
+        {
+          "id": "2023May11Q16",
+          "topic": "Transfer of thermal energy",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q16",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "A shiny white surface is a poor absorber (and good reflector) of infrared radiation."
+        },
+        {
+          "id": "2023May11Q17",
+          "topic": "General properties of waves",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q17",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "Largest amplitude and greatest number of cycles per time corresponds to highest frequency and energy."
+        },
+        {
+          "id": "2023May11Q18",
+          "topic": "Light",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q18",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "The labelled lines are: 2 = normal, 1 = incident ray, 3 = reflected ray."
+        },
+        {
+          "id": "2023May11Q19",
+          "topic": "Light",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q19",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "With object between F and 2F, a real, inverted, enlarged image is formed beyond 2F."
+        },
+        {
+          "id": "2023May11Q20",
+          "topic": "Light",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q20",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Prism dispersion: violet deviates most, red least; the correct diagram shows separation into a spectrum."
+        },
+        {
+          "id": "2023May11Q21",
+          "topic": "Electromagnetic spectrum",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q21",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "A TV remote uses infrared radiation."
+        },
+        {
+          "id": "2023May11Q22",
+          "topic": "Sound",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q22",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "Time delay = distance / speed = 100 m / 340 m s⁻¹ ≈ 0.29 s."
+        },
+        {
+          "id": "2023May11Q23",
+          "topic": "Simple phenomena of magnetism",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q23",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Induced magnetism: the end nearest a pole becomes the opposite pole and is attracted to the magnet."
+        },
+        {
+          "id": "2023May11Q24",
+          "topic": "Electrical quantities",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q24",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Electrons move from one material to the other on rubbing; the rod becomes negative and the cloth positive."
+        },
+        {
+          "id": "2023May11Q25",
+          "topic": "Electrical quantities",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q25",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "1 A = 1 C s⁻¹; current is rate of flow of charge."
+        },
+        {
+          "id": "2023May11Q26",
+          "topic": "Electric circuits",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q26",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "In parallel circuits, components operate independently; current divides among branches."
+        },
+        {
+          "id": "2023May11Q27",
+          "topic": "Electrical safety",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q27",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "Earth wire provides a low-resistance path for fault current, preventing electric shock."
+        },
+        {
+          "id": "2023May11Q28",
+          "topic": "Electromagnetic effects",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q28",
+          "options": ["A","B","C","D"],
+          "answer": "D",
+          "explanation": "A current-carrying wire produces a magnetic field in concentric circles around the wire."
+        },
+        {
+          "id": "2023May11Q29",
+          "topic": "Electromagnetic effects",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q29",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Rotating a coil in a magnetic field induces an alternating e.m.f. (AC generator)."
+        },
+        {
+          "id": "2023May11Q30",
+          "topic": "Electromagnetic effects",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q30",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Transformers rely on electromagnetic induction and require an alternating primary current."
+        },
+        {
+          "id": "2023May11Q31",
+          "topic": "The nuclear model of the atom",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q31",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "Atoms have a small, dense, positively charged nucleus containing protons and neutrons."
+        },
+        {
+          "id": "2023May11Q32",
+          "topic": "The nuclear model of the atom",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q32",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Isotopes: same proton number but different neutron (and nucleon) numbers."
+        },
+        {
+          "id": "2023May11Q33",
+          "topic": "Radioactivity",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q33",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Alpha is most ionising and least penetrating; beta and gamma are more penetrating."
+        },
+        {
+          "id": "2023May11Q34",
+          "topic": "Radioactivity",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q34",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "Background radiation comes from natural sources such as rocks and cosmic rays."
+        },
+        {
+          "id": "2023May11Q35",
+          "topic": "Radioactivity",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q35",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "Half-life is the time for the activity (or number of undecayed nuclei) to fall to half."
+        },
+        {
+          "id": "2023May11Q36",
+          "topic": "The Earth and the Solar System",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q36",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "The Sun’s gravity provides the centripetal force that keeps planets in orbit."
+        },
+        {
+          "id": "2023May11Q37",
+          "topic": "The Earth and the Solar System",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q37",
+          "options": ["A","B","C","D"],
+          "answer": "C",
+          "explanation": "The Earth rotates once per day and orbits the Sun once per year."
+        },
+        {
+          "id": "2023May11Q38",
+          "topic": "Stars and the Universe",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q38",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "A light-year is the distance light travels in one year; it is a unit of distance, not time."
+        },
+        {
+          "id": "2023May11Q39",
+          "topic": "Stars and the Universe",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q39",
+          "options": ["A","B","C","D"],
+          "answer": "B",
+          "explanation": "The Sun’s energy comes from nuclear fusion of hydrogen nuclei into helium."
+        },
+        {
+          "id": "2023May11Q40",
+          "topic": "Stars and the Universe",
+          "year": "2023 May/June Paper 11",
+          "imageName": "2023May11Q40",
+          "options": ["A","B","C","D"],
+          "answer": "A",
+          "explanation": "A typical low-mass star’s lifecycle includes: stable star → red giant → white dwarf; Hubble’s law is unrelated here."
+        }
   
 ]
