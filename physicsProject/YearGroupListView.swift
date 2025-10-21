@@ -1,3 +1,11 @@
+//
+//  YearGroupListView.swift
+//  physicsProject
+//
+//  Created by Yulin Feng on 2025/10/21.
+//
+
+
 import SwiftUI
 
 /// 1st level: show distinct years (e.g. 2024, 2023). Tap to see papers of that year.

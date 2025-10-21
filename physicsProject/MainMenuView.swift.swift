@@ -138,7 +138,7 @@ struct MainMenuView: View {
         .background(
             NavigationLink(
                 destination: selectedMode == nil ? nil : AnyView(
-                    YearListView(
+                    YearGroupListView(
                         questions: questions,
                         mode: selectedMode ?? .practice,
                         yearProgress: $yearProgressManager.progress
