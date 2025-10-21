@@ -1070,6 +1070,726 @@
     "options": ["A", "B", "C", "D"],
     "answer": "A",
     "explanation": "Distance by supernova brightness; speed of recession by redshift (wavelength change)."
-  }
+  },
+  {
+      "id": "2023May21Q1",
+      "topic": "Forces",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q1",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "The correct resultant must be drawn head-to-tail with X and Y, giving Z as shown in option D."
+    },
+    {
+      "id": "2023May21Q2",
+      "topic": "Motion",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q2",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "At terminal velocity, weight equals drag. Acceleration is zero though air resistance is present."
+    },
+    {
+      "id": "2023May21Q3",
+      "topic": "Motion",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q3",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Distance travelled equals the area under the speed–time graph."
+    },
+    {
+      "id": "2023May21Q4",
+      "topic": "Forces",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q4",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "Extension depends on force (weight). On the Moon, g is 1/6, so a larger mass is needed for the same extension."
+    },
+    {
+      "id": "2023May21Q5",
+      "topic": "Mass and weight",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q5",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "A spring balance reads weight; the correct reading corresponds to option D."
+    },
+    {
+      "id": "2023May21Q6",
+      "topic": "Forces",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q6",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "Resultant force and acceleration follow Newton’s second law; only A is consistent with the described forces."
+    },
+    {
+      "id": "2023May21Q7",
+      "topic": "Momentum",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q7",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Total momentum is conserved; solving gives the value corresponding to option B."
+    },
+    {
+      "id": "2023May21Q8",
+      "topic": "Pressure",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q8",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Use p = ρgh (or pressure/area relations) to obtain the value in C."
+    },
+    {
+      "id": "2023May21Q9",
+      "topic": "Kinetic particle model of matter",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q9",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "The correct particle description/diagram matches option A."
+    },
+    {
+      "id": "2023May21Q10",
+      "topic": "Energy, work and power",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q10",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "Kinetic energy Ek = ½mv²; rearranging gives the stated value."
+    },
+    {
+      "id": "2023May21Q11",
+      "topic": "Energy, work and power",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q11",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Power relates to rate of doing work (W/t). The option consistent with greatest useful power is C."
+    },
+    {
+      "id": "2023May21Q12",
+      "topic": "Energy, work and power",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q12",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "The shortest time for the same work gives the greatest power."
+    },
+    {
+      "id": "2023May21Q13",
+      "topic": "Pressure",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q13",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "Hydrostatic pressure: p = ρgh = 1000×9.8×15 ≈ 1.5×10^5 Pa."
+    },
+    {
+      "id": "2023May21Q14",
+      "topic": "Kinetic particle model of matter",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q14",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Brownian motion: microscopic pollen grains are moved by random collisions with water molecules."
+    },
+    {
+      "id": "2023May21Q15",
+      "topic": "Thermal properties and temperature",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q15",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Evaporation cools the liquid; faster molecules escape from the surface (not only at 100 °C)."
+    },
+    {
+      "id": "2023May21Q16",
+      "topic": "Transfer of thermal energy",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q16",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "In vacuum, no conduction/convection; energy leaves by radiation."
+    },
+    {
+      "id": "2023May21Q17",
+      "topic": "General properties of waves",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q17",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "The graph with the largest amplitude and the greatest number of cycles per time has the highest frequency."
+    },
+    {
+      "id": "2023May21Q18",
+      "topic": "Light",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q18",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "Refractive index n = sin i / sin r with i = 50° and r = 25°: n = sin50°/sin25°."
+    },
+    {
+      "id": "2023May21Q19",
+      "topic": "Light",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q19",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Ray construction with F and 2F shows the image properties given in option B."
+    },
+    {
+      "id": "2023May21Q20",
+      "topic": "Light",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q20",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Prism dispersion splits white light into a spectrum with violet deviated most and red least (diagram B)."
+    },
+    {
+      "id": "2023May21Q21",
+      "topic": "Electromagnetic spectrum",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q21",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "f = c/λ for visible wavelengths 4.0×10^-7 m to 7.0×10^-7 m gives 7.5×10^14 Hz to 4.3×10^14 Hz."
+    },
+    {
+      "id": "2023May21Q22",
+      "topic": "Sound",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q22",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "Time delay = distance / speed of sound = 100 m / 340 m s^-1 ≈ 0.29 s."
+    },
+    {
+      "id": "2023May21Q23",
+      "topic": "Simple phenomena of magnetism",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q23",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Soft iron is induced to opposite polarity at the near end and is attracted toward the magnet."
+    },
+    {
+      "id": "2023May21Q24",
+      "topic": "Electrical quantities",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q24",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Rubbing transfers electrons; the rod becomes negative as electrons move onto it and the cloth becomes positive."
+    },
+    {
+      "id": "2023May21Q25",
+      "topic": "Electrical quantities",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q25",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "For a uniform wire: R ∝ l/A (not ∝ area or ∝ 1/diameter)."
+    },
+    {
+      "id": "2023May21Q26",
+      "topic": "Electrical quantities",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q26",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "Ohmic behaviour and definitions of current/voltage/resistance select D as the correct statement."
+    },
+    {
+      "id": "2023May21Q27",
+      "topic": "Electric circuits",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q27",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "The I–V graph for a filament lamp shows increasing resistance as temperature rises."
+    },
+    {
+      "id": "2023May21Q28",
+      "topic": "Electric circuits",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q28",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Circuit analysis with series/parallel or potential divider yields the value in option C."
+    },
+    {
+      "id": "2023May21Q29",
+      "topic": "Electric circuits",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q29",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Using R_total and V = IR gives the value corresponding to option B."
+    },
+    {
+      "id": "2023May21Q30",
+      "topic": "Electromagnetic effects",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q30",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Force on a current-carrying conductor depends on current, magnetic field, and length (F = BIL)."
+    },
+    {
+      "id": "2023May21Q31",
+      "topic": "Electromagnetic effects",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q31",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "Direction of force by Fleming’s left-hand rule matches option C."
+    },
+    {
+      "id": "2023May21Q32",
+      "topic": "Electromagnetic effects",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q32",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "Transformers work by changing magnetic flux; an AC primary induces an AC voltage across the secondary."
+    },
+    {
+      "id": "2023May21Q33",
+      "topic": "The nuclear model of the atom",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q33",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "A positive ion forms by electron loss; a negative ion forms by electron gain."
+    },
+    {
+      "id": "2023May21Q34",
+      "topic": "The nuclear model of the atom",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q34",
+      "options": ["A","B","C","D"],
+      "answer": "B",
+      "explanation": "Isotopes have the same proton number and different nucleon numbers."
+    },
+    {
+      "id": "2023May21Q35",
+      "topic": "Radioactivity",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q35",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "Corrected count rate = (total/ time) − background = 70 cpm − 20 cpm = 50 cpm."
+    },
+    {
+      "id": "2023May21Q36",
+      "topic": "Radioactivity",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q36",
+      "options": ["A","B","C","D"],
+      "answer": "C",
+      "explanation": "After three half-lives (60 minutes), activity is 1/8 of net source rate plus background."
+    },
+    {
+      "id": "2023May21Q37",
+      "topic": "The Earth and the Solar System",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q37",
+      "options": ["A","B","C","D"],
+      "answer": "A",
+      "explanation": "Mercury is the closest planet to the Sun and it is rocky (terrestrial)."
+    },
+    {
+      "id": "2023May21Q38",
+      "topic": "The Earth and the Solar System",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q38",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "Orbital speed v = 2πr/T with r = 7000 km and 15 orbits per day ≈ 27 000 km/h."
+    },
+    {
+      "id": "2023May21Q39",
+      "topic": "Stars and the Universe",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q39",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "Stable stars are powered by nuclear fusion of hydrogen into helium."
+    },
+    {
+      "id": "2023May21Q40",
+      "topic": "Stars and the Universe",
+      "year": "2023 May Paper 21",
+      "imageName": "2023May21Q40",
+      "options": ["A","B","C","D"],
+      "answer": "D",
+      "explanation": "A typical low-mass lifecycle sequence: stable star → red giant → white dwarf."
+    },
+    {
+        "id": "2023May22Q1",
+        "topic": "Forces",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q1",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Resultant of 3 N and 4 N at right angles is 5 N along OY (Pythagoras)."
+      },
+      {
+        "id": "2023May22Q2",
+        "topic": "Motion",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q2",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Released ball starts with acceleration g; at terminal speed acceleration becomes zero."
+      },
+      {
+        "id": "2023May22Q3",
+        "topic": "Motion",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q3",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Distance moved equals area under speed–time graph from 0–5 s."
+      },
+      {
+        "id": "2023May22Q4",
+        "topic": "Mass and weight",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q4",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Mass is not a force; weight is the gravitational force on a mass."
+      },
+      {
+        "id": "2023May22Q5",
+        "topic": "Mass and weight",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q5",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Same weight with lower g implies larger mass on Mars; masses differ."
+      },
+      {
+        "id": "2023May22Q6",
+        "topic": "Density",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q6",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Density requires mass and volume (ρ = m / V)."
+      },
+      {
+        "id": "2023May22Q7",
+        "topic": "Forces",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q7",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "With rope broken, truck accelerates right if driving force exceeds resistive forces."
+      },
+      {
+        "id": "2023May22Q8",
+        "topic": "Forces",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q8",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Adding a small mass near Y requires moving X towards the pivot to rebalance moments."
+      },
+      {
+        "id": "2023May22Q9",
+        "topic": "Momentum",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q9",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Impulse = FΔt = mΔv ⇒ Δv = (2.0 N × 6.0 s) / 3.0 kg = 4.0 m/s."
+      },
+      {
+        "id": "2023May22Q10",
+        "topic": "Energy, work and power",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q10",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "Chemical energy is transferred by electrical work to other energy stores in the phone."
+      },
+      {
+        "id": "2023May22Q11",
+        "topic": "Energy, work and power",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q11",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Input power = output / efficiency = 2.5 MW / 0.30 ≈ 8.3 MW."
+      },
+      {
+        "id": "2023May22Q12",
+        "topic": "Energy, work and power",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q12",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Power = work done / time; both quantities are needed."
+      },
+      {
+        "id": "2023May22Q13",
+        "topic": "Pressure",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q13",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "p_total = p_atm + ρgh = 101000 + 1030×9.8×h = 513000 ⇒ h ≈ 40.8 m."
+      },
+      {
+        "id": "2023May22Q14",
+        "topic": "Kinetic particle model of matter",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q14",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "Absolute zero is the lowest possible temperature (0 K)."
+      },
+      {
+        "id": "2023May22Q15",
+        "topic": "Thermal properties and temperature",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q15",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Gases expand more than solids because intermolecular forces are much weaker in gases."
+      },
+      {
+        "id": "2023May22Q16",
+        "topic": "Transfer of thermal energy",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q16",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "A white cup with a lid reduces radiation and convection losses; keeps coffee warm longest."
+      },
+      {
+        "id": "2023May22Q17",
+        "topic": "General properties of waves",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q17",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Amplitude is 3 cm (midline to peak); wavelength is 8 cm (peak to peak)."
+      },
+      {
+        "id": "2023May22Q18",
+        "topic": "Electromagnetic spectrum",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q18",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "Digital signals have two levels; speed v = c/n = 3.0×10^8 / 1.50 = 2.0×10^8 m/s."
+      },
+      {
+        "id": "2023May22Q19",
+        "topic": "Light",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q19",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "Monochromatic light has a single frequency (single wavelength)."
+      },
+      {
+        "id": "2023May22Q20",
+        "topic": "Light",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q20",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Through a prism, blue deviates more than yellow; diagram D shows correct dispersion."
+      },
+      {
+        "id": "2023May22Q21",
+        "topic": "Electromagnetic spectrum",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q21",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "λ = c/f = 3.0×10^8 / 89×10^6 ≈ 3.4 m."
+      },
+      {
+        "id": "2023May22Q22",
+        "topic": "Sound",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q22",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Echo time is round trip: distance = v × (t/2) = 330×(2.2/2) = 360 m."
+      },
+      {
+        "id": "2023May22Q23",
+        "topic": "Simple phenomena of magnetism",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q23",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "Magnetic field lines go from N to S; lines never cross and are denser where field is stronger."
+      },
+      {
+        "id": "2023May22Q24",
+        "topic": "Electrical quantities",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q24",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Rubbing makes the rod lose electrons → becomes positively charged."
+      },
+      {
+        "id": "2023May22Q25",
+        "topic": "Electrical quantities",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q25",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "In a.c., the direction of charge flow reverses continuously."
+      },
+      {
+        "id": "2023May22Q26",
+        "topic": "Electrical quantities",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q26",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "For same material: R ∝ l/A. Halving length and doubling area gives R/4."
+      },
+      {
+        "id": "2023May22Q27",
+        "topic": "Electrical quantities",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q27",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "P = VI = 1.0 kW at 240 V ⇒ I = 1000/240 ≈ 4.17 A; Q = It over 1 h ⇒ 4.17×3600 ≈ 1.5×10^4 C."
+      },
+      {
+        "id": "2023May22Q28",
+        "topic": "Electric circuits",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q28",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Both parallel lamps need supply path and return: all three switches closed."
+      },
+      {
+        "id": "2023May22Q29",
+        "topic": "Electric circuits",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q29",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "An LDR circuit lights a lamp when light intensity increases."
+      },
+      {
+        "id": "2023May22Q30",
+        "topic": "Electromagnetic effects",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q30",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "100% efficient transformer: VpIp = VsIs; 240×0.50 = 60×Is ⇒ Is = 2.0 A."
+      },
+      {
+        "id": "2023May22Q31",
+        "topic": "Electromagnetic effects",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q31",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Field direction circles wire (right-hand rule); field is stronger closer to the wire (greater at Q)."
+      },
+      {
+        "id": "2023May22Q32",
+        "topic": "Electromagnetic effects",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q32",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "A potential divider uses resistors, not magnetic effects."
+      },
+      {
+        "id": "2023May22Q33",
+        "topic": "Nuclear Physics",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q33",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Mass decreases in both fusion and fission; the missing mass becomes energy (E = mc²)."
+      },
+      {
+        "id": "2023May22Q34",
+        "topic": "The nuclear model of the atom",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q34",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Isotopes have same proton number; X (3p) and Y (3p) are isotopes."
+      },
+      {
+        "id": "2023May22Q35",
+        "topic": "Radioactivity",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q35",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "In β− emission, a neutron converts into a proton and an electron."
+      },
+      {
+        "id": "2023May22Q36",
+        "topic": "Radioactivity",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q36",
+        "options": ["A","B","C","D"],
+        "answer": "B",
+        "explanation": "Net source rate is 200−20 = 180 cpm; after one half-life (8 days) it halves to 90 cpm."
+      },
+      {
+        "id": "2023May22Q37",
+        "topic": "The Earth and the Solar System",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q37",
+        "options": ["A","B","C","D"],
+        "answer": "C",
+        "explanation": "Pluto is classified as a dwarf planet."
+      },
+      {
+        "id": "2023May22Q38",
+        "topic": "The Earth and the Solar System",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q38",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Comets have elliptical orbits; the Sun is not at the centre (at a focus)."
+      },
+      {
+        "id": "2023May22Q39",
+        "topic": "Stars and the Universe",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q39",
+        "options": ["A","B","C","D"],
+        "answer": "D",
+        "explanation": "Stars are powered by nuclear fusion of hydrogen into helium."
+      },
+      {
+        "id": "2023May22Q40",
+        "topic": "Stars and the Universe",
+        "year": "2023 May Paper 22",
+        "imageName": "2023May22Q40",
+        "options": ["A","B","C","D"],
+        "answer": "A",
+        "explanation": "Hubble constant is the ratio v/d (recession speed divided by distance)."
+      }
   
 ]
