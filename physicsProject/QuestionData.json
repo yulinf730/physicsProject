@@ -361,6 +361,366 @@
     },
   
   {
+    "id": "2024May23Q1",
+    "topic": "Measurement",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q1",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Volume of an irregular object is measured using water displacement in a measuring cylinder."
+  },
+  {
+    "id": "2024May23Q2",
+    "topic": "General Physics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q2",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "Electric field strength is a vector quantity because it has both magnitude and direction."
+  },
+  {
+    "id": "2024May23Q3",
+    "topic": "Kinematics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q3",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Average speed is calculated by dividing total distance by total time."
+  },
+  {
+    "id": "2024May23Q4",
+    "topic": "Dynamics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q4",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Acceleration and deceleration are given by the steepest gradients on a speed–time graph."
+  },
+  {
+    "id": "2024May23Q5",
+    "topic": "Gravitation",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q5",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Gravitational field strength g is defined as the acceleration of free fall."
+  },
+  {
+    "id": "2024May23Q6",
+    "topic": "Forces",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q6",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "Mass cannot be changed by applying forces to an object."
+  },
+  {
+    "id": "2024May23Q7",
+    "topic": "Momentum",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q7",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "Momentum is conserved in an inelastic collision when the objects stick together."
+  },
+  {
+    "id": "2024May23Q8",
+    "topic": "Pressure",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q8",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Maximum depth is calculated using pressure = ρgh plus atmospheric pressure."
+  },
+  {
+    "id": "2024May23Q9",
+    "topic": "States of Matter",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q9",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "When a solid melts, particles move around each other but remain close together."
+  },
+  {
+    "id": "2024May23Q10",
+    "topic": "Particle Model",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q10",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Brownian motion shows particles moving randomly due to collisions."
+  },
+  {
+    "id": "2024May23Q11",
+    "topic": "Kinetic Theory",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q11",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Compression at constant temperature causes more frequent collisions with the same speed."
+  },
+  {
+    "id": "2024May23Q12",
+    "topic": "Gas Laws",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q12",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "For a fixed mass of gas at constant temperature, pressure is inversely proportional to volume."
+  },
+  {
+    "id": "2024May23Q13",
+    "topic": "Thermal Physics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q13",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "The liquid in a thermometer rises because it expands when heated."
+  },
+  {
+    "id": "2024May23Q14",
+    "topic": "Thermal Physics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q14",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "During melting, energy is absorbed but temperature remains constant."
+  },
+  {
+    "id": "2024May23Q15",
+    "topic": "Evaporation",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q15",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Increasing surface area and airflow removes high-energy molecules faster."
+  },
+  {
+    "id": "2024May23Q16",
+    "topic": "Thermal Properties",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q16",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Thermal conduction is best in solids that contain free electrons."
+  },
+  {
+    "id": "2024May23Q17",
+    "topic": "Waves",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q17",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Wavelength equals wave speed divided by frequency."
+  },
+  {
+    "id": "2024May23Q18",
+    "topic": "Waves",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q18",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Diffraction is greatest when wavelength is similar to gap size."
+  },
+  {
+    "id": "2024May23Q19",
+    "topic": "Reflection",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q19",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "A plane mirror produces a laterally inverted image."
+  },
+  {
+    "id": "2024May23Q20",
+    "topic": "Refraction",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q20",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "Light travels more slowly in glass than in air."
+  },
+  {
+    "id": "2024May23Q21",
+    "topic": "Lenses",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q21",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "A magnifying glass produces a virtual, upright image."
+  },
+  {
+    "id": "2024May23Q22",
+    "topic": "Electromagnetic Spectrum",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q22",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Wavelength increases from violet to red."
+  },
+  {
+    "id": "2024May23Q23",
+    "topic": "Electromagnetic Waves",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q23",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Frequency increases across the electromagnetic spectrum."
+  },
+  {
+    "id": "2024May23Q24",
+    "topic": "Sound",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q24",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "Sound travels fastest in solids, slower in liquids, slowest in gases."
+  },
+  {
+    "id": "2024May23Q25",
+    "topic": "Magnetism",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q25",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Compass needles align with the magnetic field direction."
+  },
+  {
+    "id": "2024May23Q26",
+    "topic": "Magnetic Fields",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q26",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Field strength is shown by the spacing of magnetic field lines."
+  },
+  {
+    "id": "2024May23Q27",
+    "topic": "Static Electricity",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q27",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "The rod becomes positively charged by losing electrons."
+  },
+  {
+    "id": "2024May23Q28",
+    "topic": "Electric Circuits",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q28",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Conventional current flows opposite to electron flow."
+  },
+  {
+    "id": "2024May23Q29",
+    "topic": "Electricity",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q29",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Energy transferred equals charge multiplied by voltage."
+  },
+  {
+    "id": "2024May23Q30",
+    "topic": "Resistance",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q30",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Resistance is proportional to length and inversely proportional to area."
+  },
+  {
+    "id": "2024May23Q31",
+    "topic": "Electronics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q31",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Relays respond to changes in temperature and light intensity."
+  },
+  {
+    "id": "2024May23Q32",
+    "topic": "Electromagnetic Induction",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q32",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "For an ideal transformer, power input equals power output."
+  },
+  {
+    "id": "2024May23Q33",
+    "topic": "Atomic Physics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q33",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "A neutral atom has equal numbers of protons and electrons."
+  },
+  {
+    "id": "2024May23Q34",
+    "topic": "Nuclear Physics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q34",
+    "options": ["A", "B", "C", "D"],
+    "answer": "D",
+    "explanation": "Nuclear fission is the splitting of a nucleus into smaller nuclei."
+  },
+  {
+    "id": "2024May23Q35",
+    "topic": "Radioactivity",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q35",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Gamma radiation is the most penetrating but least ionising."
+  },
+  {
+    "id": "2024May23Q36",
+    "topic": "Radioactive Uses",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q36",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Different radioactive sources are used for smoke alarms, thickness monitoring and tracers."
+  },
+  {
+    "id": "2024May23Q37",
+    "topic": "Radiation Safety",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q37",
+    "options": ["A", "B", "C", "D"],
+    "answer": "A",
+    "explanation": "Lead absorbs radiation emitted from radioactive sources."
+  },
+  {
+    "id": "2024May23Q38",
+    "topic": "Astrophysics",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q38",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Orbital speed is calculated using circumference divided by time."
+  },
+  {
+    "id": "2024May23Q39",
+    "topic": "Stars",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q39",
+    "options": ["A", "B", "C", "D"],
+    "answer": "B",
+    "explanation": "Stars form from protostars, become stable stars, then red giants before supernova."
+  },
+  {
+    "id": "2024May23Q40",
+    "topic": "Cosmology",
+    "year": "2024 May/June P23",
+    "imageName": "2024May23Q40",
+    "options": ["A", "B", "C", "D"],
+    "answer": "C",
+    "explanation": "Light-year is the distance light travels in one year."
+  },
+  {
     "id": "2023Feb22Q1",
     "topic": "Physical quantities and measurement techniques",
     "year": "2023 Feb/Mar Paper 22",
