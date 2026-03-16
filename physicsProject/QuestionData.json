@@ -1028,7 +1028,7 @@
   },
   {
     "id": "2023Feb22Q35",
-    "topic": "Radioactivity ",
+    "topic": "Radioactivity",
     "year": "2023 Feb/Mar Paper 22",
     "imageName": "2023Feb22Q35",
     "options": ["A", "B", "C", "D"],
@@ -1037,7 +1037,7 @@
   },
   {
     "id": "2023Feb22Q36",
-    "topic": "Radioactivity ",
+    "topic": "Radioactivity",
     "year": "2023 Feb/Mar Paper 22",
     "imageName": "2023Feb22Q36",
     "options": ["A", "B", "C", "D"],
@@ -1800,7 +1800,7 @@
         "answer": "C",
         "explanation": "Resultant of 3 N and 4 N at right angles is 5 N along OY (Pythagoras)."
       },
-      {
+{
         "id": "2023May22Q2",
         "topic": "Motion",
         "year": "2023 May/June Paper 22",
@@ -2510,6 +2510,249 @@
           "options": ["A","B","C","D"],
           "answer": "A",
           "explanation": "A typical low-mass star’s lifecycle includes: stable star → red giant → white dwarf; Hubble’s law is unrelated here."
-        }
+        },
+
+        {"id":"2023May13Q1","topic":"Making measurements","year":"2023 May/June Paper 13","imageName":"2023May13Q1","options":["A","B","C","D"],"answer":"C","explanation":"A ruler is suitable for measuring a small length such as a copper rod."},
+        {"id":"2023May13Q2","topic":"Describing motion","year":"2023 May/June Paper 13","imageName":"2023May13Q2","options":["A","B","C","D"],"answer":"B","explanation":"Distance travelled equals the area under the speed–time graph."},
+        {"id":"2023May13Q3","topic":"Describing motion","year":"2023 May/June Paper 13","imageName":"2023May13Q3","options":["A","B","C","D"],"answer":"B","explanation":"Free fall with negligible air resistance gives constant acceleration."},
+        {"id":"2023May13Q4","topic":"Forces and motion","year":"2023 May/June Paper 13","imageName":"2023May13Q4","options":["A","B","C","D"],"answer":"C","explanation":"Spring extension and beam balance compare masses."},
+        {"id":"2023May13Q5","topic":"Making measurements","year":"2023 May/June Paper 13","imageName":"2023May13Q5","options":["A","B","C","D"],"answer":"B","explanation":"Density = mass ÷ volume."},
+
+        {"id":"2023May13Q6","topic":"Forces and motion","year":"2023 May/June Paper 13","imageName":"2023May13Q6","options":["A","B","C","D"],"answer":"A","explanation":"Constant speed means forces are balanced."},
+        {"id":"2023May13Q7","topic":"Turning effects","year":"2023 May/June Paper 13","imageName":"2023May13Q7","options":["A","B","C","D"],"answer":"A","explanation":"Moment uses perpendicular distance from pivot."},
+        {"id":"2023May13Q8","topic":"Turning effects","year":"2023 May/June Paper 13","imageName":"2023May13Q8","options":["A","B","C","D"],"answer":"A","explanation":"Moving X left reduces turning moment."},
+        {"id":"2023May13Q9","topic":"Turning effects","year":"2023 May/June Paper 13","imageName":"2023May13Q9","options":["A","B","C","D"],"answer":"A","explanation":"Lower centre of mass improves stability."},
+        {"id":"2023May13Q10","topic":"Energy stores and transfers","year":"2023 May/June Paper 13","imageName":"2023May13Q10","options":["A","B","C","D"],"answer":"C","explanation":"Energy transfer occurs through mechanical work."},
+
+        {"id":"2023May13Q11","topic":"Work and power","year":"2023 May/June Paper 13","imageName":"2023May13Q11","options":["A","B","C","D"],"answer":"C","explanation":"Work done = force × distance."},
+        {"id":"2023May13Q12","topic":"Work and power","year":"2023 May/June Paper 13","imageName":"2023May13Q12","options":["A","B","C","D"],"answer":"C","explanation":"Power is energy transferred per second."},
+        {"id":"2023May13Q13","topic":"Forces and matter","year":"2023 May/June Paper 13","imageName":"2023May13Q13","options":["A","B","C","D"],"answer":"C","explanation":"Pressure = force ÷ area."},
+        {"id":"2023May13Q14","topic":"Thermal properties of matter","year":"2023 May/June Paper 13","imageName":"2023May13Q14","options":["A","B","C","D"],"answer":"A","explanation":"Absolute zero is −273°C."},
+        {"id":"2023May13Q15","topic":"The kinetic particle model of matter","year":"2023 May/June Paper 13","imageName":"2023May13Q15","options":["A","B","C","D"],"answer":"A","explanation":"Liquid particles are close together and slide past each other."},
+
+        {"id":"2023May13Q16","topic":"Thermal energy transfers","year":"2023 May/June Paper 13","imageName":"2023May13Q16","options":["A","B","C","D"],"answer":"D","explanation":"Silvered walls reduce heat transfer by radiation."},
+        {"id":"2023May13Q17","topic":"Properties of waves","year":"2023 May/June Paper 13","imageName":"2023May13Q17","options":["A","B","C","D"],"answer":"C","explanation":"Water waves are transverse."},
+        {"id":"2023May13Q18","topic":"Light","year":"2023 May/June Paper 13","imageName":"2023May13Q18","options":["A","B","C","D"],"answer":"A","explanation":"Plane mirror images are virtual and same distance behind mirror."},
+        {"id":"2023May13Q19","topic":"Light","year":"2023 May/June Paper 13","imageName":"2023May13Q19","options":["A","B","C","D"],"answer":"D","explanation":"Object between F and 2F gives enlarged inverted image."},
+        {"id":"2023May13Q20","topic":"Light","year":"2023 May/June Paper 13","imageName":"2023May13Q20","options":["A","B","C","D"],"answer":"C","explanation":"Red light deviates least and blue most in a prism."},
+
+        {"id":"2023May13Q21","topic":"The electromagnetic spectrum","year":"2023 May/June Paper 13","imageName":"2023May13Q21","options":["A","B","C","D"],"answer":"C","explanation":"Microwaves are used for mobile phone communication."},
+        {"id":"2023May13Q22","topic":"Sound","year":"2023 May/June Paper 13","imageName":"2023May13Q22","options":["A","B","C","D"],"answer":"B","explanation":"Echo travels twice the distance."},
+        {"id":"2023May13Q23","topic":"Magnetism","year":"2023 May/June Paper 13","imageName":"2023May13Q23","options":["A","B","C","D"],"answer":"B","explanation":"Soft iron makes temporary electromagnets."},
+        {"id":"2023May13Q24","topic":"Static electricity","year":"2023 May/June Paper 13","imageName":"2023May13Q24","options":["A","B","C","D"],"answer":"C","explanation":"Electrons move to the rod making it negatively charged."},
+        {"id":"2023May13Q25","topic":"Electrical quantities","year":"2023 May/June Paper 13","imageName":"2023May13Q25","options":["A","B","C","D"],"answer":"C","explanation":"Current I = V/R = 4A."},
+
+        {"id":"2023May13Q26","topic":"Electrical quantities","year":"2023 May/June Paper 13","imageName":"2023May13Q26","options":["A","B","C","D"],"answer":"A","explanation":"Energy cost calculated using kWh."},
+        {"id":"2023May13Q27","topic":"Electrical circuits","year":"2023 May/June Paper 13","imageName":"2023May13Q27","options":["A","B","C","D"],"answer":"D","explanation":"Thermistor symbol not shown."},
+        {"id":"2023May13Q28","topic":"Electrical circuits","year":"2023 May/June Paper 13","imageName":"2023May13Q28","options":["A","B","C","D"],"answer":"A","explanation":"Switch arrangement lights only specific lamps."},
+        {"id":"2023May13Q29","topic":"Electrical circuits","year":"2023 May/June Paper 13","imageName":"2023May13Q29","options":["A","B","C","D"],"answer":"C","explanation":"Fuse and switch are placed in the live wire."},
+        {"id":"2023May13Q30","topic":"Electromagnetic forces","year":"2023 May/June Paper 13","imageName":"2023May13Q30","options":["A","B","C","D"],"answer":"B","explanation":"Electric motors use magnetic force on current."},
+
+        {"id":"2023May13Q31","topic":"Electromagnetic forces","year":"2023 May/June Paper 13","imageName":"2023May13Q31","options":["A","B","C","D"],"answer":"C","explanation":"Relays use the magnetic effect of current."},
+        {"id":"2023May13Q32","topic":"Electromagnetic induction","year":"2023 May/June Paper 13","imageName":"2023May13Q32","options":["A","B","C","D"],"answer":"D","explanation":"Primary coil larger than secondary gives step-down."},
+        {"id":"2023May13Q33","topic":"Electromagnetic induction","year":"2023 May/June Paper 13","imageName":"2023May13Q33","options":["A","B","C","D"],"answer":"B","explanation":"High voltage reduces energy loss in power lines."},
+        {"id":"2023May13Q34","topic":"The nuclear atom","year":"2023 May/June Paper 13","imageName":"2023May13Q34","options":["A","B","C","D"],"answer":"C","explanation":"Nucleus contains protons and neutrons."},
+        {"id":"2023May13Q35","topic":"The nuclear atom","year":"2023 May/June Paper 13","imageName":"2023May13Q35","options":["A","B","C","D"],"answer":"C","explanation":"Nucleon number equals protons plus neutrons."},
+
+        {"id":"2023May13Q36","topic":"Radioactivity","year":"2023 May/June Paper 13","imageName":"2023May13Q36","options":["A","B","C","D"],"answer":"A","explanation":"Cosmic rays are a major source of background radiation."},
+        {"id":"2023May13Q37","topic":"Radioactivity","year":"2023 May/June Paper 13","imageName":"2023May13Q37","options":["A","B","C","D"],"answer":"B","explanation":"Half-life read from decay graph."},
+        {"id":"2023May13Q38","topic":"Earth and the Solar System","year":"2023 May/June Paper 13","imageName":"2023May13Q38","options":["A","B","C","D"],"answer":"D","explanation":"Earth orbits Sun in ~365 days and Moon orbits Earth in ~30 days."},
+        {"id":"2023May13Q39","topic":"Stars and the Universe","year":"2023 May/June Paper 13","imageName":"2023May13Q39","options":["A","B","C","D"],"answer":"A","explanation":"A galaxy is a collection of billions of stars."},
+        {"id":"2023May13Q40","topic":"Stars and the Universe","year":"2023 May/June Paper 13","imageName":"2023May13Q40","options":["A","B","C","D"],"answer":"C","explanation":"Redshift is an increase in observed wavelength due to motion away."},
+
+        {"id":"2023May23Q1","topic":"Making measurements","year":"2023 May/June Paper 23","imageName":"2023May23Q1","options":["A","B","C","D"],"answer":"B","explanation":"Measurement of small lengths uses appropriate scale."},
+        {"id":"2023May23Q2","topic":"Describing motion","year":"2023 May/June Paper 23","imageName":"2023May23Q2","options":["A","B","C","D"],"answer":"C","explanation":"Distance from speed–time graph."},
+        {"id":"2023May23Q3","topic":"Describing motion","year":"2023 May/June Paper 23","imageName":"2023May23Q3","options":["A","B","C","D"],"answer":"C","explanation":"Acceleration relationships."},
+        {"id":"2023May23Q4","topic":"Forces and motion","year":"2023 May/June Paper 23","imageName":"2023May23Q4","options":["A","B","C","D"],"answer":"C","explanation":"Balanced forces conditions."},
+        {"id":"2023May23Q5","topic":"Making measurements","year":"2023 May/June Paper 23","imageName":"2023May23Q5","options":["A","B","C","D"],"answer":"B","explanation":"Density calculations."},
+
+        {"id":"2023May23Q6","topic":"Forces and motion","year":"2023 May/June Paper 23","imageName":"2023May23Q6","options":["A","B","C","D"],"answer":"A","explanation":"Force balance concepts."},
+        {"id":"2023May23Q7","topic":"Turning effects","year":"2023 May/June Paper 23","imageName":"2023May23Q7","options":["A","B","C","D"],"answer":"D","explanation":"Moment principle."},
+        {"id":"2023May23Q8","topic":"Turning effects","year":"2023 May/June Paper 23","imageName":"2023May23Q8","options":["A","B","C","D"],"answer":"B","explanation":"Moment balance."},
+        {"id":"2023May23Q9","topic":"Turning effects","year":"2023 May/June Paper 23","imageName":"2023May23Q9","options":["A","B","C","D"],"answer":"D","explanation":"Centre of mass stability."},
+        {"id":"2023May23Q10","topic":"Energy stores and transfers","year":"2023 May/June Paper 23","imageName":"2023May23Q10","options":["A","B","C","D"],"answer":"D","explanation":"Energy transfer analysis."},
+
+        {"id":"2023May23Q11","topic":"Work and power","year":"2023 May/June Paper 23","imageName":"2023May23Q11","options":["A","B","C","D"],"answer":"D","explanation":"Work-energy relations."},
+        {"id":"2023May23Q12","topic":"Work and power","year":"2023 May/June Paper 23","imageName":"2023May23Q12","options":["A","B","C","D"],"answer":"C","explanation":"Power relationships."},
+        {"id":"2023May23Q13","topic":"Forces and matter","year":"2023 May/June Paper 23","imageName":"2023May23Q13","options":["A","B","C","D"],"answer":"B","explanation":"Pressure in solids."},
+        {"id":"2023May23Q14","topic":"Thermal properties of matter","year":"2023 May/June Paper 23","imageName":"2023May23Q14","options":["A","B","C","D"],"answer":"A","explanation":"Temperature scale."},
+        {"id":"2023May23Q15","topic":"The kinetic particle model of matter","year":"2023 May/June Paper 23","imageName":"2023May23Q15","options":["A","B","C","D"],"answer":"A","explanation":"Particle model."},
+
+        {"id":"2023May23Q16","topic":"Thermal energy transfers","year":"2023 May/June Paper 23","imageName":"2023May23Q16","options":["A","B","C","D"],"answer":"A","explanation":"Heat transfer mechanisms."},
+        {"id":"2023May23Q17","topic":"Properties of waves","year":"2023 May/June Paper 23","imageName":"2023May23Q17","options":["A","B","C","D"],"answer":"C","explanation":"Wave characteristics."},
+        {"id":"2023May23Q18","topic":"Light","year":"2023 May/June Paper 23","imageName":"2023May23Q18","options":["A","B","C","D"],"answer":"D","explanation":"Image formation."},
+        {"id":"2023May23Q19","topic":"Light","year":"2023 May/June Paper 23","imageName":"2023May23Q19","options":["A","B","C","D"],"answer":"C","explanation":"Lens behaviour."},
+        {"id":"2023May23Q20","topic":"Light","year":"2023 May/June Paper 23","imageName":"2023May23Q20","options":["A","B","C","D"],"answer":"C","explanation":"Dispersion."},
+
+        {"id":"2023May23Q21","topic":"The electromagnetic spectrum","year":"2023 May/June Paper 23","imageName":"2023May23Q21","options":["A","B","C","D"],"answer":"C","explanation":"Microwave communications."},
+        {"id":"2023May23Q22","topic":"Sound","year":"2023 May/June Paper 23","imageName":"2023May23Q22","options":["A","B","C","D"],"answer":"B","explanation":"Echo method."},
+        {"id":"2023May23Q23","topic":"Magnetism","year":"2023 May/June Paper 23","imageName":"2023May23Q23","options":["A","B","C","D"],"answer":"B","explanation":"Electromagnet core material."},
+        {"id":"2023May23Q24","topic":"Static electricity","year":"2023 May/June Paper 23","imageName":"2023May23Q24","options":["A","B","C","D"],"answer":"C","explanation":"Electron transfer."},
+        {"id":"2023May23Q25","topic":"Electrical quantities","year":"2023 May/June Paper 23","imageName":"2023May23Q25","options":["A","B","C","D"],"answer":"A","explanation":"Ohm’s law."},
+
+        {"id":"2023May23Q26","topic":"Electrical quantities","year":"2023 May/June Paper 23","imageName":"2023May23Q26","options":["A","B","C","D"],"answer":"A","explanation":"Electrical energy cost."},
+        {"id":"2023May23Q27","topic":"Electrical circuits","year":"2023 May/June Paper 23","imageName":"2023May23Q27","options":["A","B","C","D"],"answer":"B","explanation":"Circuit symbol identification."},
+        {"id":"2023May23Q28","topic":"Electrical circuits","year":"2023 May/June Paper 23","imageName":"2023May23Q28","options":["A","B","C","D"],"answer":"A","explanation":"Switch logic."},
+        {"id":"2023May23Q29","topic":"Electrical circuits","year":"2023 May/June Paper 23","imageName":"2023May23Q29","options":["A","B","C","D"],"answer":"C","explanation":"Fuse placement."},
+        {"id":"2023May23Q30","topic":"Electromagnetic forces","year":"2023 May/June Paper 23","imageName":"2023May23Q30","options":["A","B","C","D"],"answer":"A","explanation":"Motor effect."},
+
+        {"id":"2023May23Q31","topic":"Electromagnetic forces","year":"2023 May/June Paper 23","imageName":"2023May23Q31","options":["A","B","C","D"],"answer":"D","explanation":"Magnetic effect."},
+        {"id":"2023May23Q32","topic":"Electromagnetic induction","year":"2023 May/June Paper 23","imageName":"2023May23Q32","options":["A","B","C","D"],"answer":"A","explanation":"Transformer ratio."},
+        {"id":"2023May23Q33","topic":"Electromagnetic induction","year":"2023 May/June Paper 23","imageName":"2023May23Q33","options":["A","B","C","D"],"answer":"C","explanation":"Power transmission."},
+        {"id":"2023May23Q34","topic":"The nuclear atom","year":"2023 May/June Paper 23","imageName":"2023May23Q34","options":["A","B","C","D"],"answer":"C","explanation":"Atomic structure."},
+        {"id":"2023May23Q35","topic":"The nuclear atom","year":"2023 May/June Paper 23","imageName":"2023May23Q35","options":["A","B","C","D"],"answer":"C","explanation":"Nucleon number."},
+
+        {"id":"2023May23Q36","topic":"Radioactivity","year":"2023 May/June Paper 23","imageName":"2023May23Q36","options":["A","B","C","D"],"answer":"A","explanation":"Background radiation sources."},
+        {"id":"2023May23Q37","topic":"Radioactivity","year":"2023 May/June Paper 23","imageName":"2023May23Q37","options":["A","B","C","D"],"answer":"D","explanation":"Half-life reading."},
+        {"id":"2023May23Q38","topic":"Earth and the Solar System","year":"2023 May/June Paper 23","imageName":"2023May23Q38","options":["A","B","C","D"],"answer":"B","explanation":"Orbital periods."},
+        {"id":"2023May23Q39","topic":"Stars and the Universe","year":"2023 May/June Paper 23","imageName":"2023May23Q39","options":["A","B","C","D"],"answer":"C","explanation":"Galaxy definition."},
+        {"id":"2023May23Q40","topic":"Stars and the Universe","year":"2023 May/June Paper 23","imageName":"2023May23Q40","options":["A","B","C","D"],"answer":"B","explanation":"Redshift indicates stars moving away."},
+        
+        {"id":"2023OctNov21Q1","topic":"Forces and motion","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q1","options":["A","B","C","D"],"answer":"D","explanation":"Weight is a force and therefore a vector quantity."},
+        {"id":"2023OctNov21Q2","topic":"Describing motion","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q2","options":["A","B","C","D"],"answer":"D","explanation":"The decelerating section is where speed decreases with time."},
+        {"id":"2023OctNov21Q3","topic":"Describing motion","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q3","options":["A","B","C","D"],"answer":"C","explanation":"An object reaching terminal velocity speeds up first, then moves at constant speed."},
+        {"id":"2023OctNov21Q4","topic":"Forces and matter","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q4","options":["A","B","C","D"],"answer":"A","explanation":"The liquid with the lowest density floats at the top, and the highest density sinks to the bottom."},
+        {"id":"2023OctNov21Q5","topic":"Forces and motion","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q5","options":["A","B","C","D"],"answer":"B","explanation":"An aircraft moving in a circle at constant speed has a resultant force towards the centre."},
+
+        {"id":"2023OctNov21Q6","topic":"Forces and motion","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q6","options":["A","B","C","D"],"answer":"B","explanation":"Equilibrium requires zero resultant force and zero resultant moment."},
+        {"id":"2023OctNov21Q7","topic":"Forces and motion","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q7","options":["A","B","C","D"],"answer":"B","explanation":"Impulse equals change in momentum, so the moving sphere continues in the same direction at lower speed."},
+        {"id":"2023OctNov21Q8","topic":"Energy stores and transfers","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q8","options":["A","B","C","D"],"answer":"A","explanation":"As the cyclist goes downhill then brakes, energy transfers from gravitational potential to kinetic to internal energy."},
+        {"id":"2023OctNov21Q9","topic":"Energy stores and transfers","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q9","options":["A","B","C","D"],"answer":"D","explanation":"The loss in gravitational potential energy is mg(h1 − h2)."},
+        {"id":"2023OctNov21Q10","topic":"Work and power","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q10","options":["A","B","C","D"],"answer":"A","explanation":"Power equals work done divided by time."},
+
+        {"id":"2023OctNov21Q11","topic":"Forces and matter","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q11","options":["A","B","C","D"],"answer":"C","explanation":"Pressure in a liquid increases directly with depth."},
+        {"id":"2023OctNov21Q12","topic":"The kinetic particle model of matter","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q12","options":["A","B","C","D"],"answer":"A","explanation":"A gas is easily compressed because its particles are far apart."},
+        {"id":"2023OctNov21Q13","topic":"Thermal properties of matter","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q13","options":["A","B","C","D"],"answer":"A","explanation":"Heating the gas increases the force of each collision, while expansion reduces collision frequency with the piston."},
+        {"id":"2023OctNov21Q14","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q14","options":["A","B","C","D"],"answer":"A","explanation":"Water evaporating from the wet cloth takes energy away and cools the milk."},
+        {"id":"2023OctNov21Q15","topic":"Thermal properties of matter","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q15","options":["A","B","C","D"],"answer":"A","explanation":"With the same heating power and volume, the oil needs less time because the effective heat capacity is smaller."},
+
+        {"id":"2023OctNov21Q16","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q16","options":["A","B","C","D"],"answer":"B","explanation":"Air near the radiator at X is warmer, and cooler denser air is found at Y."},
+        {"id":"2023OctNov21Q17","topic":"Sound","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q17","options":["A","B","C","D"],"answer":"D","explanation":"Sound diffracts significantly because its wavelength is comparable to the gap width."},
+        {"id":"2023OctNov21Q18","topic":"Properties of waves","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q18","options":["A","B","C","D"],"answer":"B","explanation":"Amplitude and wavelength are both distances, so both are measured in metres."},
+        {"id":"2023OctNov21Q19","topic":"Light","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q19","options":["A","B","C","D"],"answer":"A","explanation":"For a virtual image formed by a converging lens, the refracted ray must diverge appropriately."},
+        {"id":"2023OctNov21Q20","topic":"Light","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q20","options":["A","B","C","D"],"answer":"C","explanation":"The angle of incidence and reflection are measured from the normal."},
+
+        {"id":"2023OctNov21Q21","topic":"Light","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q21","options":["A","B","C","D"],"answer":"B","explanation":"A real image formed by a converging lens is always on the opposite side of the lens from the object."},
+        {"id":"2023OctNov21Q22","topic":"The electromagnetic spectrum","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q22","options":["A","B","C","D"],"answer":"C","explanation":"Wavelength = speed / frequency for radio waves."},
+        {"id":"2023OctNov21Q23","topic":"Sound","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q23","options":["A","B","C","D"],"answer":"D","explanation":"Sound travels fastest in solids, slower in liquids, and slowest in gases."},
+        {"id":"2023OctNov21Q24","topic":"Magnetism","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q24","options":["A","B","C","D"],"answer":"D","explanation":"Steel is suitable for a permanent magnet, while iron is suitable for an electromagnet core."},
+        {"id":"2023OctNov21Q25","topic":"Static electricity","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q25","options":["A","B","C","D"],"answer":"C","explanation":"Electric field direction is defined as the direction of force on a positive charge."},
+
+        {"id":"2023OctNov21Q26","topic":"Electrical quantities","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q26","options":["A","B","C","D"],"answer":"C","explanation":"A voltmeter measures potential difference."},
+        {"id":"2023OctNov21Q27","topic":"Electrical quantities","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q27","options":["A","B","C","D"],"answer":"B","explanation":"Doubling both length and cross-sectional area leaves the resistance unchanged."},
+        {"id":"2023OctNov21Q28","topic":"Static electricity","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q28","options":["A","B","C","D"],"answer":"B","explanation":"A positively charged rod has lost electrons, so electrons moved from the rod to the cloth."},
+        {"id":"2023OctNov21Q29","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q29","options":["A","B","C","D"],"answer":"C","explanation":"A diode allows current in only one direction, so the resistor gets a half-wave output."},
+        {"id":"2023OctNov21Q30","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q30","options":["A","B","C","D"],"answer":"B","explanation":"The heater should switch on when temperature falls, so the potential divider must use the correct temperature-dependent resistor arrangement."},
+
+        {"id":"2023OctNov21Q31","topic":"Electromagnetic forces","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q31","options":["A","B","C","D"],"answer":"D","explanation":"A stronger reversed field is produced by increasing the current and reversing its direction."},
+        {"id":"2023OctNov21Q32","topic":"Electromagnetic forces","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q32","options":["A","B","C","D"],"answer":"C","explanation":"Reversing either the current or magnetic field reverses the force direction; reversing both would not."},
+        {"id":"2023OctNov21Q33","topic":"Electromagnetic induction","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q33","options":["A","B","C","D"],"answer":"B","explanation":"A transformer reducing 240 V to 12 V is step-down and therefore needs more turns on the primary coil."},
+        {"id":"2023OctNov21Q34","topic":"The nuclear atom","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q34","options":["A","B","C","D"],"answer":"A","explanation":"Most alpha-particles passing straight through supports the conclusion that most of the atom is empty space."},
+        {"id":"2023OctNov21Q35","topic":"Radioactivity","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q35","options":["A","B","C","D"],"answer":"B","explanation":"Alpha-particles and beta-particles are charged and can be deflected by an electric field, but gamma-rays cannot."},
+
+        {"id":"2023OctNov21Q36","topic":"Radioactivity","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q36","options":["A","B","C","D"],"answer":"C","explanation":"The half-life is the interval needed for the undecayed parent isotope to halve."},
+        {"id":"2023OctNov21Q37","topic":"Radioactivity","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q37","options":["A","B","C","D"],"answer":"A","explanation":"A neutron is absorbed to start fission in a fissile nucleus."},
+        {"id":"2023OctNov21Q38","topic":"Earth and the Solar System","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q38","options":["A","B","C","D"],"answer":"D","explanation":"It is summer in the northern hemisphere in June because the north pole is tilted towards the Sun."},
+        {"id":"2023OctNov21Q39","topic":"Stars and the Universe","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q39","options":["A","B","C","D"],"answer":"C","explanation":"The Sun is a medium-sized star made mostly of hydrogen and helium."},
+        {"id":"2023OctNov21Q40","topic":"Stars and the Universe","year":"2023 Oct/Nov Paper 21","imageName":"2023Nov21Q40","options":["A","B","C","D"],"answer":"B","explanation":"A red supergiant will eventually explode as a supernova."},
+        
+        {"id":"2023OctNov22Q1","topic":"Describing motion","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q1","options":["A","B","C","D"],"answer":"C","explanation":"Time is a scalar quantity."},
+        {"id":"2023OctNov22Q2","topic":"Describing motion","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q2","options":["A","B","C","D"],"answer":"C","explanation":"Average speed requires total distance travelled and total time taken."},
+        {"id":"2023OctNov22Q3","topic":"Describing motion","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q3","options":["A","B","C","D"],"answer":"C","explanation":"Equal spacing first shows constant speed, then increasing spacing shows acceleration."},
+        {"id":"2023OctNov22Q4","topic":"Forces and matter","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q4","options":["A","B","C","D"],"answer":"B","explanation":"When it is just level with the water surface, the average density equals the density of water, so 16 g of water has entered."},
+        {"id":"2023OctNov22Q5","topic":"Forces and motion","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q5","options":["A","B","C","D"],"answer":"B","explanation":"A satellite moving in a circular orbit has a resultant force towards the Earth."},
+
+        {"id":"2023OctNov22Q6","topic":"Forces and motion","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q6","options":["A","B","C","D"],"answer":"D","explanation":"Equilibrium requires both zero resultant force and zero resultant moment."},
+        {"id":"2023OctNov22Q7","topic":"Forces and motion","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q7","options":["A","B","C","D"],"answer":"C","explanation":"Momentum p = mv and force F = p/t for this change from rest."},
+        {"id":"2023OctNov22Q8","topic":"Energy stores and transfers","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q8","options":["A","B","C","D"],"answer":"C","explanation":"From X to Y the car speeds up while descending, so kinetic energy increases and gravitational potential energy decreases."},
+        {"id":"2023OctNov22Q9","topic":"Energy stores and transfers","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q9","options":["A","B","C","D"],"answer":"A","explanation":"The box loses gravitational potential energy and some becomes internal energy due to friction."},
+        {"id":"2023OctNov22Q10","topic":"Work and power","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q10","options":["A","B","C","D"],"answer":"A","explanation":"Power equals energy transferred divided by time."},
+
+        {"id":"2023OctNov22Q11","topic":"Forces and matter","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q11","options":["A","B","C","D"],"answer":"D","explanation":"Density equals p/(hg) from the liquid pressure equation p = ρgh."},
+        {"id":"2023OctNov22Q12","topic":"The kinetic particle model of matter","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q12","options":["A","B","C","D"],"answer":"B","explanation":"Brownian motion is observed in gases and liquids."},
+        {"id":"2023OctNov22Q13","topic":"The kinetic particle model of matter","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q13","options":["A","B","C","D"],"answer":"D","explanation":"At constant temperature for a fixed mass of gas, pressure is inversely proportional to volume."},
+        {"id":"2023OctNov22Q14","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q14","options":["A","B","C","D"],"answer":"A","explanation":"Evaporation cools the remaining liquid, and the lower temperature reduces the evaporation rate."},
+        {"id":"2023OctNov22Q15","topic":"Thermal properties of matter","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q15","options":["A","B","C","D"],"answer":"A","explanation":"Specific heat capacity is energy divided by mass times temperature rise."},
+
+        {"id":"2023OctNov22Q16","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q16","options":["A","B","C","D"],"answer":"A","explanation":"Convection occurs as heated air becomes less dense and rises."},
+        {"id":"2023OctNov22Q17","topic":"Properties of waves","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q17","options":["A","B","C","D"],"answer":"D","explanation":"Wave speed v = fλ, so the wavelength of wave 2 can be found from its speed and frequency."},
+        {"id":"2023OctNov22Q18","topic":"Properties of waves","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q18","options":["A","B","C","D"],"answer":"A","explanation":"The spreading of waves after passing through a gap is diffraction."},
+        {"id":"2023OctNov22Q19","topic":"Light","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q19","options":["A","B","C","D"],"answer":"C","explanation":"Refractive index n = sin i / sin r."},
+        {"id":"2023OctNov22Q20","topic":"Light","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q20","options":["A","B","C","D"],"answer":"D","explanation":"The correct reflected image is the same distance behind the mirror as the object is in front."},
+
+        {"id":"2023OctNov22Q21","topic":"Light","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q21","options":["A","B","C","D"],"answer":"B","explanation":"A longer focal length means the rays converge more gently, giving a larger distance to the focus."},
+        {"id":"2023OctNov22Q22","topic":"The electromagnetic spectrum","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q22","options":["A","B","C","D"],"answer":"A","explanation":"Wavelength = speed / frequency for microwaves."},
+        {"id":"2023OctNov22Q23","topic":"Sound","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q23","options":["A","B","C","D"],"answer":"D","explanation":"Sound travels much faster in solids than in gases."},
+        {"id":"2023OctNov22Q24","topic":"Magnetism","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q24","options":["A","B","C","D"],"answer":"C","explanation":"Iron is magnetically soft and steel is magnetically hard."},
+        {"id":"2023OctNov22Q25","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q25","options":["A","B","C","D"],"answer":"C","explanation":"Conventional current flows from positive to negative, opposite to electron flow."},
+
+        {"id":"2023OctNov22Q26","topic":"Electrical quantities","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q26","options":["A","B","C","D"],"answer":"C","explanation":"Electromotive force is measured in volts."},
+        {"id":"2023OctNov22Q27","topic":"Electrical quantities","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q27","options":["A","B","C","D"],"answer":"C","explanation":"As voltage increases, the filament lamp gets hotter and its resistance increases."},
+        {"id":"2023OctNov22Q28","topic":"Static electricity","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q28","options":["A","B","C","D"],"answer":"B","explanation":"Repulsion by a positively charged rod shows rod R must also be positively charged."},
+        {"id":"2023OctNov22Q29","topic":"Electromagnetic forces","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q29","options":["A","B","C","D"],"answer":"D","explanation":"A d.c. motor supplied by a.c. has its current reverse each half-cycle, so the current graph alternates."},
+        {"id":"2023OctNov22Q30","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q30","options":["A","B","C","D"],"answer":"D","explanation":"For the p.d. across Y to increase with temperature, the divider must use the correct thermistor-resistor arrangement."},
+
+        {"id":"2023OctNov22Q31","topic":"Electromagnetic induction","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q31","options":["A","B","C","D"],"answer":"D","explanation":"Larger induced effects come from larger changes, and the soft iron must attract the approaching north pole."},
+        {"id":"2023OctNov22Q32","topic":"Electromagnetic forces","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q32","options":["A","B","C","D"],"answer":"A","explanation":"Reversing current direction reverses the force direction, so the force alternates left and right."},
+        {"id":"2023OctNov22Q33","topic":"Electromagnetic induction","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q33","options":["A","B","C","D"],"answer":"B","explanation":"Transformer voltage ratio equals turns ratio."},
+        {"id":"2023OctNov22Q34","topic":"The nuclear atom","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q34","options":["A","B","C","D"],"answer":"A","explanation":"A chlorine atom gains an electron to form a chloride ion."},
+        {"id":"2023OctNov22Q35","topic":"Radioactivity","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q35","options":["A","B","C","D"],"answer":"B","explanation":"Radioactive decay involves an unstable nucleus emitting radiation and often changing element."},
+
+        {"id":"2023OctNov22Q36","topic":"Radioactivity","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q36","options":["A","B","C","D"],"answer":"C","explanation":"Using the half-life pattern in the count-rate data gives a background count rate of 20 counts/s."},
+        {"id":"2023OctNov22Q37","topic":"Radioactivity","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q37","options":["A","B","C","D"],"answer":"C","explanation":"Nuclear fission is the splitting of an atomic nucleus."},
+        {"id":"2023OctNov22Q38","topic":"Earth and the Solar System","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q38","options":["A","B","C","D"],"answer":"C","explanation":"The Earth’s average orbital speed is approximately 3.0 × 10^4 m/s."},
+        {"id":"2023OctNov22Q39","topic":"Earth and the Solar System","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q39","options":["A","B","C","D"],"answer":"B","explanation":"Most of the Sun’s energy reaching Earth is in infrared radiation and visible light."},
+        {"id":"2023OctNov22Q40","topic":"Stars and the Universe","year":"2023 Oct/Nov Paper 22","imageName":"2023Nov22Q40","options":["A","B","C","D"],"answer":"D","explanation":"The Sun produces energy by the fusion of hydrogen."},
+        
+        {"id":"2023OctNov23Q1","topic":"Describing motion","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q1","options":["A","B","C","D"],"answer":"C","explanation":"Mass, density and energy are scalars, while momentum is a vector."},
+        {"id":"2023OctNov23Q2","topic":"Describing motion","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q2","options":["A","B","C","D"],"answer":"B","explanation":"A constant non-zero value of y can represent a stationary train’s distance from the last station or a moving train’s constant speed."},
+        {"id":"2023OctNov23Q3","topic":"Describing motion","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q3","options":["A","B","C","D"],"answer":"A","explanation":"A straight line with decreasing gradient on a speed-time graph shows decreasing acceleration."},
+        {"id":"2023OctNov23Q4","topic":"Energy resources","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q4","options":["A","B","C","D"],"answer":"B","explanation":"Volume each second is mass divided by density, and kinetic energy each second is ½mv²."},
+        {"id":"2023OctNov23Q5","topic":"Forces and motion","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q5","options":["A","B","C","D"],"answer":"C","explanation":"Circular motion at constant speed requires a force towards the centre."},
+
+        {"id":"2023OctNov23Q6","topic":"Turning effects","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q6","options":["A","B","C","D"],"answer":"A","explanation":"For equilibrium, the rod must have zero resultant force and zero moment about the pivot."},
+        {"id":"2023OctNov23Q7","topic":"Forces and motion","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q7","options":["A","B","C","D"],"answer":"A","explanation":"Impulse equals change in momentum: 1200 × (10 − 5) = 6000 Ns."},
+        {"id":"2023OctNov23Q8","topic":"Energy stores and transfers","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q8","options":["A","B","C","D"],"answer":"D","explanation":"At the lowest point, gravitational potential energy is least and elastic potential energy in the spring is greatest."},
+        {"id":"2023OctNov23Q9","topic":"Work and power","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q9","options":["A","B","C","D"],"answer":"A","explanation":"Work done by the boy is force multiplied by distance moved along the slope."},
+        {"id":"2023OctNov23Q10","topic":"Work and power","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q10","options":["A","B","C","D"],"answer":"A","explanation":"A power rating of 900 W means 900 joules are transferred each second."},
+
+        {"id":"2023OctNov23Q11","topic":"Forces and matter","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q11","options":["A","B","C","D"],"answer":"C","explanation":"From p = ρgh, the depth is h = p/(ρg)."},
+        {"id":"2023OctNov23Q12","topic":"The kinetic particle model of matter","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q12","options":["A","B","C","D"],"answer":"D","explanation":"Heating at constant volume increases particle speed, but the average distance between particles stays the same."},
+        {"id":"2023OctNov23Q13","topic":"The kinetic particle model of matter","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q13","options":["A","B","C","D"],"answer":"D","explanation":"Higher pressure than expected can result from lower volume with cooling and air leaking out in the specific way shown."},
+        {"id":"2023OctNov23Q14","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q14","options":["A","B","C","D"],"answer":"D","explanation":"Water evaporates by gaining energy from the student, which cools the face."},
+        {"id":"2023OctNov23Q15","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q15","options":["A","B","C","D"],"answer":"C","explanation":"Evaporation becomes slower only if the effective surface conditions reduce it after more water is added."},
+
+        {"id":"2023OctNov23Q16","topic":"Thermal energy transfers","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q16","options":["A","B","C","D"],"answer":"B","explanation":"Cooler air moves towards the heater through the gap, setting up convection."},
+        {"id":"2023OctNov23Q17","topic":"Light","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q17","options":["A","B","C","D"],"answer":"B","explanation":"The sharpest image comes from a large aperture and short wavelength, reducing diffraction blur."},
+        {"id":"2023OctNov23Q18","topic":"Properties of waves","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q18","options":["A","B","C","D"],"answer":"B","explanation":"Amplitude is the maximum displacement from equilibrium and wavelength is one full cycle length."},
+        {"id":"2023OctNov23Q19","topic":"Light","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q19","options":["A","B","C","D"],"answer":"D","explanation":"Monochromatic light is not dispersed, so no spectrum is formed."},
+        {"id":"2023OctNov23Q20","topic":"Light","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q20","options":["A","B","C","D"],"answer":"B","explanation":"The angle to the mirror is 35°, so the angle to the normal is 55° and that is the angle of reflection."},
+
+        {"id":"2023OctNov23Q21","topic":"Light","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q21","options":["A","B","C","D"],"answer":"C","explanation":"A camera lens forms a real inverted image on the photo-sensitive surface."},
+        {"id":"2023OctNov23Q22","topic":"Light","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q22","options":["A","B","C","D"],"answer":"B","explanation":"Using Snell’s law with n = 1.4 and i = 45° gives an angle of refraction about 30°."},
+        {"id":"2023OctNov23Q23","topic":"Sound","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q23","options":["A","B","C","D"],"answer":"A","explanation":"Typical sound speeds are highest in copper, lower in water and lowest in air."},
+        {"id":"2023OctNov23Q24","topic":"Magnetism","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q24","options":["A","B","C","D"],"answer":"C","explanation":"Iron is a magnetic material and can be attracted by a magnet."},
+        {"id":"2023OctNov23Q25","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q25","options":["A","B","C","D"],"answer":"A","explanation":"Electrons flow anticlockwise here, and an ammeter measures charge passing a point per unit time."},
+
+        {"id":"2023OctNov23Q26","topic":"Electrical quantities","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q26","options":["A","B","C","D"],"answer":"D","explanation":"Metals such as silver and gold contain large concentrations of free electrons."},
+        {"id":"2023OctNov23Q27","topic":"Electrical quantities","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q27","options":["A","B","C","D"],"answer":"D","explanation":"For the same resistance with double diameter, the replacement wire must be four times shorter in the correct proportion, giving length 4L in the setup shown."},
+        {"id":"2023OctNov23Q28","topic":"Static electricity","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q28","options":["A","B","C","D"],"answer":"B","explanation":"Glass and plastic rods are both suitable insulating materials for electrostatic charging by rubbing."},
+        {"id":"2023OctNov23Q29","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q29","options":["A","B","C","D"],"answer":"D","explanation":"In a potential divider, the potential differences are proportional to the resistances."},
+        {"id":"2023OctNov23Q30","topic":"Electrical circuits","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q30","options":["A","B","C","D"],"answer":"A","explanation":"Increasing light on an LDR decreases its resistance and changes the divider output accordingly."},
+
+        {"id":"2023OctNov23Q31","topic":"Electromagnetic induction","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q31","options":["A","B","C","D"],"answer":"A","explanation":"Rotating the coil faster increases both peak e.m.f. and frequency."},
+        {"id":"2023OctNov23Q32","topic":"Electromagnetic forces","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q32","options":["A","B","C","D"],"answer":"B","explanation":"Reversing the current reverses the force on a current-carrying wire in a magnetic field."},
+        {"id":"2023OctNov23Q33","topic":"Electromagnetic induction","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q33","options":["A","B","C","D"],"answer":"B","explanation":"A transformer changes the magnitude of an alternating voltage."},
+        {"id":"2023OctNov23Q34","topic":"The nuclear atom","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q34","options":["A","B","C","D"],"answer":"A","explanation":"Alpha-particle scattering showed that most of the atom is empty space and the nucleus is small and dense."},
+        {"id":"2023OctNov23Q35","topic":"Radioactivity","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q35","options":["A","B","C","D"],"answer":"D","explanation":"After two half-lives, carbon-14 count rate drops to one quarter of its original value."},
+
+        {"id":"2023OctNov23Q36","topic":"Radioactivity","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q36","options":["A","B","C","D"],"answer":"A","explanation":"Beta-particles are deflected more strongly because they have much smaller mass than alpha-particles."},
+        {"id":"2023OctNov23Q37","topic":"Radioactivity","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q37","options":["A","B","C","D"],"answer":"B","explanation":"In a nuclear power station, heavy nuclei split into lighter nuclei during fission."},
+        {"id":"2023OctNov23Q38","topic":"Earth and the Solar System","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q38","options":["A","B","C","D"],"answer":"B","explanation":"After one orbit of X, Y and Z have completed smaller fractions of their orbits according to their longer periods."},
+        {"id":"2023OctNov23Q39","topic":"Stars and the Universe","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q39","options":["A","B","C","D"],"answer":"C","explanation":"Only the statement that light from the star takes about four years to reach Earth is correct."},
+        {"id":"2023OctNov23Q40","topic":"Earth and the Solar System","year":"2023 Oct/Nov Paper 23","imageName":"2023Nov23Q40","options":["A","B","C","D"],"answer":"B","explanation":"Average orbital speed is circumference divided by period, so v = 2πr / T."}
+        
+        
+        
   
 ]
