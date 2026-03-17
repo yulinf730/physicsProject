@@ -3,16 +3,17 @@ import SwiftUI
 struct QuizView: View {
     let questions: [Question]
     let title: String
+    let mode: QuizMode
 
     @State private var currentIndex = 0
     @State private var correctCount = 0
     @State private var wrongCount = 0
-    @State private var unansweredCount = 0   // ✅ 新增未作答计数
-    let mode: QuizMode
+    @State private var unansweredCount = 0
 
     init(filteredBy filter: QuizFilter, mode: QuizMode) {
         self.mode = mode
         let allQuestions = QuestionLoader.loadQuestions()
+
         switch filter {
         case .topic(let topic):
             self.questions = allQuestions.filter { $0.topic == topic }
@@ -30,7 +31,6 @@ struct QuizView: View {
                 .foregroundColor(.secondary)
                 .padding(.top, 8)
 
-            // ✅ Progress indicator
             if currentIndex < questions.count {
                 Text("Question \(currentIndex + 1) of \(questions.count)")
                     .font(.subheadline)
@@ -39,11 +39,11 @@ struct QuizView: View {
 
             Divider()
 
-            // ✅ Quiz Content
             if currentIndex < questions.count {
                 QuestionView(
                     question: questions[currentIndex],
                     mode: mode,
+                    selectedAnswer: nil,
                     onAnswered: { selected in
                         if selected.isEmpty {
                             unansweredCount += 1
@@ -60,7 +60,6 @@ struct QuizView: View {
                 )
                 .transition(.slide)
             } else {
-                // ✅ Summary screen
                 VStack(spacing: 20) {
                     Text("🎉 Quiz Complete!")
                         .font(.title)
@@ -68,7 +67,7 @@ struct QuizView: View {
 
                     Text("✅ Correct: \(correctCount)")
                     Text("❌ Wrong: \(wrongCount)")
-                    Text("⏸ Undone。: \(unansweredCount)")  // ✅ 新增展示
+                    Text("⏸ Undone: \(unansweredCount)")
                     Text("🔢 Total: \(questions.count)")
 
                     Button("🔁 Restart") {

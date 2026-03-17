@@ -141,6 +141,7 @@ struct ResultView: View {
             QuestionView(
                 question: questions[sheetIndex.id],
                 mode: .practice,
+                selectedAnswer: userAnswers[sheetIndex.id],
                 onAnswered: { _ in }
             )
         }

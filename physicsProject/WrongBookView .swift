@@ -157,6 +157,7 @@ struct WrongBookView: View {
             QuestionView(
                 question: q,
                 mode: .practice,
+                selectedAnswer: nil,
                 onAnswered: { selected in
                     if selected == q.answer {
                         WrongQuestionManager.shared.removeWrongQuestion(id: q.id)
