@@ -142,8 +142,9 @@ struct WrongBookView: View {
                 .padding(.top, 8)
                 .padding(.bottom, 10)
                 .background(.thinMaterial)
+              
             }
-        }
+        }  .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(
             LinearGradient(
                 gradient: Gradient(colors: [Color.purple.opacity(0.06), Color.blue.opacity(0.04)]),
