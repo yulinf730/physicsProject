@@ -115,24 +115,22 @@ struct ResultView: View {
     @State private var selectedSheetIndex: SheetIndex? = nil
 
     var body: some View {
-        VStack(spacing: 12) {
-            ScoreHeaderView(correct: correct, wrong: wrong, undone: undone, total: total)
+        ScrollView {
+            VStack(spacing: 28) {
+                ScoreHeaderView(correct: correct, wrong: wrong, undone: undone, total: total)
 
-            ScrollView {
-                VStack(spacing: 28) {
-                    ForEach(questions.indices, id: \.self) { idx in
-                        QuestionReviewCard(
-                            question: questions[idx],
-                            answer: userAnswers[idx],
-                            index: idx,
-                            onTap: {
-                                selectedSheetIndex = SheetIndex(id: idx)
-                            }
-                        )
-                    }
+                ForEach(questions.indices, id: \.self) { idx in
+                    QuestionReviewCard(
+                        question: questions[idx],
+                        answer: userAnswers[idx],
+                        index: idx,
+                        onTap: {
+                            selectedSheetIndex = SheetIndex(id: idx)
+                        }
+                    )
                 }
-                .padding(.bottom, 32)
             }
+            .padding(.bottom, 32)
             .padding(.top, 8)
             .padding(.vertical, 10)
         }
@@ -141,6 +139,7 @@ struct ResultView: View {
             QuestionView(
                 question: questions[sheetIndex.id],
                 mode: .practice,
+                selectedAnswer: userAnswers[sheetIndex.id],
                 onAnswered: { _ in }
             )
         }

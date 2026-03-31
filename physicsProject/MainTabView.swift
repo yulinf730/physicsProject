@@ -13,32 +13,33 @@ struct MainTabView: View {
 
     var body: some View {
         TabView {
-            NavigationView {
-                MainMenuView(questions: questions)
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+            MainMenuView(questions: questions)
             .tabItem {
                 Image(systemName: "book.fill")
                 Text("Papers")
             }
 
-            NavigationView {
+            NavigationStack {
                 WrongBookView(allQuestions: questions)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "exclamationmark.bubble.fill")
                 Text("Mistakes")
             }
 
-            NavigationView {
+            NavigationStack {
                 HistoryTabView() // 历史记录视图
             }
-            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Label("History", systemImage: "clock.arrow.circlepath")
+            }
+
+            NavigationStack {
+                SupportView()
+            }
+            .tabItem {
+                Label("Support", systemImage: "heart.fill")
             }
         }
     }
 }
-

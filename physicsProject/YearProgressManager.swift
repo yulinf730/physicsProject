@@ -7,6 +7,8 @@
 import Foundation
 
 class YearProgressManager: ObservableObject {
+    static let shared = YearProgressManager()
+
     @Published var progress: [String: Int] {
         didSet {
             save()
@@ -15,7 +17,7 @@ class YearProgressManager: ObservableObject {
     
     private let key = "year_progress"
     
-    init() {
+    private init() {
         // 从 UserDefaults 加载
         if let data = UserDefaults.standard.data(forKey: key),
            let dict = try? JSONDecoder().decode([String: Int].self, from: data) {
@@ -24,11 +26,14 @@ class YearProgressManager: ObservableObject {
             self.progress = [:]
         }
     }
-    
+
     private func save() {
         if let data = try? JSONEncoder().encode(progress) {
             UserDefaults.standard.set(data, forKey: key)
         }
     }
-}
 
+    func clampedProgress(for key: String, total: Int) -> Int {
+        min(max(progress[key] ?? 0, 0), total)
+    }
+}

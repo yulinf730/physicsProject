@@ -4,94 +4,92 @@ struct MainMenuView: View {
     let questions: [Question]
 
     @State private var selectedMode: QuizMode? = nil
-    @State private var pendingRoute: Route? = nil
+    @State private var pendingRoute: PendingRoute? = nil
     @State private var showModeSheet = false // 用 sheet 替换原 actionSheet/confirmationDialog
+    @State private var path: [MenuDestination] = []
 
-    @State private var navigateToYear = false
-    @State private var navigateToTopic = false
+    @ObservedObject private var yearProgressManager = YearProgressManager.shared
 
-    @StateObject var yearProgressManager = YearProgressManager()
-    @State private var yearProgress: [String: Int] = [:]
-
-    enum Route {
+    enum PendingRoute {
         case year
         case topic
     }
 
+    enum MenuDestination: Hashable {
+        case year(QuizMode)
+        case topic(QuizMode)
+    }
+
     var body: some View {
-        ZStack {
-            // 渐变背景
-            LinearGradient(
-                gradient: Gradient(colors: [Color.blue.opacity(0.2), Color.purple.opacity(0.2)]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
+        NavigationStack(path: $path) {
+            ZStack {
+                // 渐变背景
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.blue.opacity(0.2), Color.purple.opacity(0.2)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
 
-            VStack(spacing: 32) {
+                VStack(spacing: 32) {
 
-                Spacer(minLength: 30)
+                    Spacer(minLength: 30)
 
-                // 欢迎语
-                VStack(alignment: .center, spacing: 10) {
-                    Text("Physics Practice")
-                        .font(.system(size: 32, weight: .bold))
-                        .foregroundColor(.blue)
-                    Text("Choose how you want to practice")
-                        .font(.title3)
-                        .foregroundColor(.secondary)
-                }
-                .padding(.bottom, 12)
-
-                // 卡片按钮
-                VStack(spacing: 28) {
-                    MenuCard(
-                        icon: "calendar",
-                        title: "Practice by Year",
-                        color: .blue
-                    ) {
-                        pendingRoute = .year
-                        showModeSheet = true
+                    // 欢迎语
+                    VStack(alignment: .center, spacing: 10) {
+                        Text("Physics Practice")
+                            .font(.system(size: 32, weight: .bold))
+                            .foregroundColor(.blue)
+                        Text("Choose how you want to practice")
+                            .font(.title3)
+                            .foregroundColor(.secondary)
                     }
+                    .padding(.bottom, 12)
 
-                    MenuCard(
-                        icon: "book.closed",
-                        title: "Practice by Topic",
-                        color: .purple
-                    ) {
-                        pendingRoute = .topic
-                        showModeSheet = true
-                    }
-                }
-                .padding(.horizontal, 16)
+                    // 卡片按钮
+                    VStack(spacing: 28) {
+                        MenuCard(
+                            icon: "book.closed",
+                            title: "Practice by Topic",
+                            color: .purple
+                        ) {
+                            pendingRoute = .topic
+                            showModeSheet = true
+                        }
 
-                Spacer()
-
-                // 年份进度展示
-                if !yearProgress.isEmpty {
-                    VStack(alignment: .trailing, spacing: 6) {
-                        ForEach(Array(yearProgress.keys.sorted()), id: \.self) { year in
-                            HStack {
-                                Text("\(year):")
-                                    .foregroundColor(.primary)
-                                ProgressView(value: Double(yearProgress[year] ?? 0), total: 10)
-                                    .progressViewStyle(LinearProgressViewStyle(tint: .blue))
-                                    .frame(width: 120)
-                                Text("\(yearProgress[year] ?? 0)x")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
+                        MenuCard(
+                            icon: "calendar",
+                            title: "Practice by Year",
+                            color: .blue
+                        ) {
+                            pendingRoute = .year
+                            showModeSheet = true
                         }
                     }
-                    .padding(.bottom, 20)
-                    .padding(.trailing, 24)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .transition(.opacity)
+                    .padding(.horizontal, 16)
+
+                    Spacer()
+                }
+            }
+            .navigationTitle("")
+            .toolbar(path.isEmpty ? .hidden : .visible, for: .navigationBar)
+            .navigationDestination(for: MenuDestination.self) { destination in
+                switch destination {
+                case .year(let mode):
+                    YearGroupListView(
+                        questions: questions,
+                        mode: mode,
+                        yearProgress: $yearProgressManager.progress
+                    )
+                case .topic(let mode):
+                    TopicListView(
+                        questions: questions,
+                        mode: mode,
+                        yearProgress: $yearProgressManager.progress
+                    )
                 }
             }
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
         // --- 用 sheet 选择模式，居中且不会跑屏 ---
         .sheet(isPresented: $showModeSheet) {
             VStack(spacing: 28) {
@@ -102,7 +100,7 @@ struct MainMenuView: View {
                 Button {
                     selectedMode = .practice
                     showModeSheet = false
-                    handleNavigate()
+                    handleNavigation()
                 } label: {
                     Text("Practice Mode")
                         .font(.title2)
@@ -115,7 +113,7 @@ struct MainMenuView: View {
                 Button {
                     selectedMode = .exam
                     showModeSheet = false
-                    handleNavigate()
+                    handleNavigation()
                 } label: {
                     Text("Exam Mode")
                         .font(.title2)
@@ -134,47 +132,19 @@ struct MainMenuView: View {
             .padding(.horizontal, 28)
             .presentationDetents([.height(270)]) // sheet高度自适应
         }
-        // 跳转链接
-        .background(
-            NavigationLink(
-                destination: selectedMode == nil ? nil : AnyView(
-                    YearGroupListView(
-                        questions: questions,
-                        mode: selectedMode ?? .practice,
-                        yearProgress: $yearProgressManager.progress
-                    )
-                ),
-                isActive: $navigateToYear,
-                label: { EmptyView() }
-            )
-            .hidden()
-        )
-        .background(
-            NavigationLink(
-                destination:
-                    selectedMode == nil
-                    ? AnyView(EmptyView())
-                    : AnyView(TopicListView(questions: questions, mode: selectedMode!)),
-                isActive: $navigateToTopic,
-                label: { EmptyView() }
-            )
-                .hidden()
-        )
-        .onAppear {
-            yearProgress = yearProgressManager.progress
-        }
     }
 
-    private func handleNavigate() {
-        guard let route = pendingRoute, let _ = selectedMode else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            if route == .year {
-                navigateToYear = true
-            } else if route == .topic {
-                navigateToTopic = true
-            }
-            pendingRoute = nil
+    private func handleNavigation() {
+        guard let selectedMode, let pendingRoute else { return }
+
+        switch pendingRoute {
+        case .year:
+            path.append(.year(selectedMode))
+        case .topic:
+            path.append(.topic(selectedMode))
         }
+
+        self.pendingRoute = nil
     }
 }
 

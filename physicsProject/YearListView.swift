@@ -7,8 +7,8 @@ struct YearListView: View {
 
     @State private var completedYear: String? = nil
 
-    var years: [String] {
-        Array(Set(questions.map { $0.year })).sorted(by: >)
+    private var years: [String] {
+        Array(Set(questions.map(\.year))).sorted(by: >)
     }
 
     var body: some View {
@@ -20,35 +20,44 @@ struct YearListView: View {
                     .padding(.top, 10)
 
                 ForEach(years, id: \.self) { year in
-                    NavigationLink(
-                        destination: QuizPageView(
-                            questions: questions.filter { $0.year == year },
+                    let yearQuestions = questions.filter { $0.year == year }
+                    let questionCount = yearQuestions.count
+                    let savedProgress = yearProgress[year] ?? 0
+                    let validProgress = min(max(savedProgress, 0), questionCount)
+
+                    NavigationLink {
+                        QuizPageView(
+                            questions: yearQuestions,
                             mode: mode,
                             title: year,
+                            paperName: year,
+                            yearProgress: $yearProgress,
                             onQuizCompleted: {
                                 completedYear = year
+                                yearProgress[year] = questionCount
                             }
                         )
-                    ) {
+                    } label: {
                         YearCard(
-                            year: year,
-                            finished: yearProgress[year] ?? 0
+                            title: year,
+                            progress: validProgress,
+                            questionCount: questionCount
                         )
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .buttonStyle(.plain)
+                    .padding(.horizontal, 16)
                 }
-            }
-            .padding([.horizontal, .bottom])
-        }
-        .onChange(of: completedYear) { year in
-            if let y = year {
-                yearProgress[y, default: 0] += 1
-                completedYear = nil
+
+                Spacer(minLength: 24)
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
         .background(
             LinearGradient(
-                gradient: Gradient(colors: [Color.blue.opacity(0.07), Color.purple.opacity(0.04)]),
+                gradient: Gradient(colors: [
+                    Color.blue.opacity(0.10),
+                    Color.purple.opacity(0.06)
+                ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -57,54 +66,88 @@ struct YearListView: View {
     }
 }
 
-struct YearCard: View {
-    let year: String
-    let finished: Int
+private struct YearCard: View {
+    let title: String
+    let progress: Int
+    let questionCount: Int
+
+    private var statusText: String {
+        if questionCount == 0 {
+            return "No questions"
+        } else if progress == 0 {
+            return "Not started"
+        } else if progress >= questionCount {
+            return "Completed"
+        } else {
+            return "Continue from Q\(progress + 1)"
+        }
+    }
+
+    private var statusColor: Color {
+        if questionCount == 0 {
+            return .gray
+        } else if progress == 0 {
+            return .gray
+        } else if progress >= questionCount {
+            return .green
+        } else {
+            return .blue
+        }
+    }
 
     var body: some View {
-        HStack(spacing: 20) {
-            Image(systemName: "calendar")
-                .font(.system(size: 28))
-                .foregroundColor(.white)
-                .padding(16)
-                .background(
-                    LinearGradient(
-                        gradient: Gradient(colors: [Color.blue, Color.purple]),
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
+        HStack(spacing: 16) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(
+                        LinearGradient(
+                            colors: [Color.blue.opacity(0.18), Color.purple.opacity(0.18)],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
                     )
-                )
-                .clipShape(Circle())
+                    .frame(width: 52, height: 52)
+
+                Image(systemName: progress >= questionCount && questionCount > 0 ? "checkmark.seal.fill" : "doc.text")
+                    .font(.system(size: 22, weight: .semibold))
+                    .foregroundColor(progress >= questionCount && questionCount > 0 ? .green : .blue)
+            }
 
             VStack(alignment: .leading, spacing: 8) {
-                Text(year)
-                    .font(.title2)
-                    .fontWeight(.semibold)
+                Text(title)
+                    .font(.headline)
                     .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
 
-                ProgressView(value: Double(finished), total: 10)
-                    .progressViewStyle(LinearProgressViewStyle(tint: .blue))
-                    .frame(width: 130)
+                Text(statusText)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(statusColor)
 
-                if finished > 0 {
-                    Text("Finished \(finished) time\(finished > 1 ? "s" : "")")
-                        .font(.caption)
-                        .foregroundColor(.green)
-                } else {
-                    Text("Not finished yet")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
+                ProgressView(value: Double(progress), total: Double(max(questionCount, 1)))
+                    .progressViewStyle(.linear)
+                    .tint(progress >= questionCount && questionCount > 0 ? .green : .blue)
+
+                Text("\(progress)/\(questionCount) questions")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
             }
+
             Spacer()
+
             Image(systemName: "chevron.right")
-                .foregroundColor(.gray)
-                .font(.system(size: 22))
+                .foregroundColor(.gray.opacity(0.8))
+                .font(.system(size: 18, weight: .semibold))
         }
-        .padding()
-        .background(.ultraThinMaterial)
-        .cornerRadius(20)
-        .shadow(color: Color.blue.opacity(0.06), radius: 10, x: 0, y: 4)
-        .padding(.horizontal, 2)
+        .padding(.vertical, 16)
+        .padding(.horizontal, 16)
+        .background(
+            RoundedRectangle(cornerRadius: 22)
+                .fill(.ultraThinMaterial)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 22)
+                .stroke(Color.white.opacity(0.18), lineWidth: 1)
+        )
+        .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 4)
     }
 }

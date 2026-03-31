@@ -34,6 +34,19 @@ struct YearGroupListView: View {
         groupedByYear.keys.sorted(by: >)
     }
 
+    private func answeredCount(for paperName: String, questionCount: Int) -> Int {
+        guard let saved = QuizProgressStore.shared.load(title: paperName, modeRaw: String(describing: mode)),
+              saved.answers.count == questionCount else {
+            return 0
+        }
+
+        return saved.answers.reduce(into: 0) { count, answer in
+            if let answer, !answer.isEmpty {
+                count += 1
+            }
+        }
+    }
+
     var body: some View {
         ScrollView {
             VStack(spacing: 18) {
@@ -42,8 +55,12 @@ struct YearGroupListView: View {
                     .padding(.top, 8)
 
                 ForEach(baseYears, id: \.self) { y in
-                    let allPapers = Set((groupedByYear[y] ?? []).map { $0.year })
-                    let finishedPapers = allPapers.filter { (yearProgress[$0] ?? 0) > 0 }.count
+                    let papersInYear = Dictionary(grouping: groupedByYear[y] ?? [], by: \.year)
+                    let finishedPapers = papersInYear.values.filter { paperQuestions in
+                        guard let paperName = paperQuestions.first?.year else { return false }
+                        let completedCount = answeredCount(for: paperName, questionCount: paperQuestions.count)
+                        return completedCount >= paperQuestions.count
+                    }.count
 
                     NavigationLink {
                         PaperListView(
@@ -55,7 +72,7 @@ struct YearGroupListView: View {
                     } label: {
                         YearGroupCard(
                             baseYear: y,
-                            paperCount: allPapers.count,
+                            paperCount: papersInYear.count,
                             finishedPaperCount: finishedPapers
                         )
                     }

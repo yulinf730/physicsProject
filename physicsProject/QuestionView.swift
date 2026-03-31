@@ -3,17 +3,24 @@ import SwiftUI
 struct QuestionView: View {
     let question: Question
     let mode: QuizMode
+    let selectedAnswer: String?
     var onAnswered: (String) -> Void
 
     @State private var isZoomed = false
     @State private var imageScale: CGFloat = 1.0
     @State private var imageOffset: CGSize = .zero
     @State private var lastScale: CGFloat = 1.0
-    @State private var selectedOption: String?
-    @State private var isAnswered = false
+    @State private var localSelectedAnswer: String? = nil
     @GestureState private var isDragging = false
 
-    // 单独拆分图片显示部分，便于编译器类型推断
+    private var isAnswered: Bool {
+        effectiveSelectedAnswer != nil
+    }
+
+    private var effectiveSelectedAnswer: String? {
+        selectedAnswer ?? localSelectedAnswer
+    }
+
     @ViewBuilder
     var questionImageView: some View {
         if let uiImage = UIImage(named: question.imageName) {
@@ -52,19 +59,22 @@ struct QuestionView: View {
                     VStack(alignment: .leading, spacing: 20) {
                         questionImageView
 
-                        // 选项按钮部分
                         HStack(spacing: 32) {
                             ForEach(question.options, id: \.self) { option in
                                 Button(action: {
-                                    guard selectedOption == nil else { return }
-                                    selectedOption = option
-                                    isAnswered = true
+                                    guard effectiveSelectedAnswer == nil else { return }
+
                                     if mode == .practice {
                                         triggerHaptic(success: option == question.answer)
                                         if option != question.answer {
-                                            WrongQuestionManager.shared.addWrongQuestion(id: question.id, selectedAnswer: option)
+                                            WrongQuestionManager.shared.addWrongQuestion(
+                                                id: question.id,
+                                                selectedAnswer: option
+                                            )
                                         }
                                     }
+
+                                    localSelectedAnswer = option
                                     onAnswered(option)
                                 }) {
                                     ZStack {
@@ -72,6 +82,7 @@ struct QuestionView: View {
                                             .fill(Color.white)
                                             .frame(width: 60, height: 60)
                                             .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+
                                         Text(option)
                                             .font(.system(size: 22, weight: .bold))
                                             .foregroundColor(.blue)
@@ -79,16 +90,12 @@ struct QuestionView: View {
                                     .overlay(
                                         Circle()
                                             .stroke(
-                                                selectedOption == option ?
-                                                    (mode == .practice ?
-                                                        (option == question.answer ? Color.green : Color.red)
-                                                        : Color.orange // exam模式高亮橙色或其它色
-                                                    ) : Color.clear,
-                                                lineWidth: 3
+                                                borderColor(for: option),
+                                                lineWidth: effectiveSelectedAnswer == option ? 3 : 0
                                             )
                                     )
                                 }
-                                .disabled(selectedOption != nil)
+                                .disabled(effectiveSelectedAnswer != nil)
                             }
                         }
                         .frame(maxWidth: .infinity)
@@ -100,17 +107,18 @@ struct QuestionView: View {
                                 Text("Answer: \(question.answer)")
                                     .font(.headline)
                                     .foregroundColor(.blue)
+
                                 Text(question.explanation)
                                     .font(.body)
                                     .foregroundColor(.secondary)
                             }
                             .padding(.horizontal)
                         }
+
                         Spacer(minLength: 60)
                     }
                 }
 
-                // 支持缩放拖拽的图片全屏放大弹窗
                 if isZoomed {
                     ZStack {
                         Color.black.opacity(0.9)
@@ -139,7 +147,7 @@ struct QuestionView: View {
                                             .onChanged { value in
                                                 let delta = value / lastScale
                                                 imageScale *= delta
-                                                imageScale = max(1.0, min(imageScale, 4.0)) // 1-4倍
+                                                imageScale = max(1.0, min(imageScale, 4.0))
                                                 lastScale = value
                                             }
                                             .onEnded { _ in
@@ -152,7 +160,9 @@ struct QuestionView: View {
                                                 }
                                             },
                                         DragGesture()
-                                            .updating($isDragging) { _, state, _ in state = true }
+                                            .updating($isDragging) { _, state, _ in
+                                                state = true
+                                            }
                                             .onChanged { value in
                                                 if imageScale <= 1.01 {
                                                     imageOffset = CGSize(width: 0, height: value.translation.height)
@@ -190,10 +200,16 @@ struct QuestionView: View {
                     .zIndex(2)
                 }
             }
-            .onChange(of: question.id) { _ in
-                selectedOption = nil
-                isAnswered = false
-            }
+        }
+    }
+
+    private func borderColor(for option: String) -> Color {
+        guard effectiveSelectedAnswer == option else { return .clear }
+
+        if mode == .practice {
+            return option == question.answer ? .green : .red
+        } else {
+            return .orange
         }
     }
 

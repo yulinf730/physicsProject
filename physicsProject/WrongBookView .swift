@@ -23,6 +23,11 @@ struct WrongBookView: View {
     // Topic picker
     @State private var showTopicPicker = false
     @State private var selectedTopics = Set<String>()
+    @ObservedObject private var yearProgressManager = YearProgressManager.shared
+
+    private func mainTopic(from topic: String) -> String {
+        topic.components(separatedBy: " / ").first ?? topic
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -34,7 +39,9 @@ struct WrongBookView: View {
                 Spacer()
                 if !wrongQuestionsFiltered.isEmpty {
                     Button(isEditing ? "Done" : "Edit") {
-                        withAnimation(.spring(response: 0.25, dampingFraction: 0.9)) { isEditing.toggle() }
+                        withAnimation(.spring(response: 0.25, dampingFraction: 0.9)) {
+                            isEditing.toggle()
+                        }
                         #if os(iOS)
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         #endif
@@ -52,9 +59,13 @@ struct WrongBookView: View {
                     TextField("Search by id/topic/year…", text: $searchText)
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
+
                     if !searchText.isEmpty {
-                        Button { searchText = "" } label: {
-                            Image(systemName: "xmark.circle.fill").foregroundColor(.secondary)
+                        Button {
+                            searchText = ""
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.secondary)
                         }
                     }
                 }
@@ -80,13 +91,15 @@ struct WrongBookView: View {
             .padding(.vertical, 8)
 
             if wrongQuestions.isEmpty {
-                EmptyMistakesView().padding(.top, 40)
+                EmptyMistakesView()
+                    .padding(.top, 40)
             } else if wrongQuestionsFiltered.isEmpty {
                 VStack(spacing: 10) {
                     Image(systemName: "line.3.horizontal.decrease.circle")
                         .font(.system(size: 40))
                         .foregroundColor(.secondary)
-                    Text("No results").font(.headline)
+                    Text("No results")
+                        .font(.headline)
                     Text("Try a different search or grouping.")
                         .font(.caption)
                         .foregroundColor(.secondary)
@@ -102,7 +115,9 @@ struct WrongBookView: View {
                                     onDelete: { deleteQuestion(id: question.id) },
                                     isEditing: isEditing
                                 ) {
-                                    if !isEditing { selectedQuestion = question }
+                                    if !isEditing {
+                                        selectedQuestion = question
+                                    }
                                 }
                                 .listRowSeparator(.hidden)
                                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -124,7 +139,7 @@ struct WrongBookView: View {
                 HStack(spacing: 12) {
                     Button {
                         // Preselect ALL topics so tapping "Start" = practice all
-                        selectedTopics = Set(availableTopics.map(\.name))
+                        selectedTopics = Set(availablePracticeTopics.map(\.name))
                         showTopicPicker = true
                         #if os(iOS)
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -142,13 +157,14 @@ struct WrongBookView: View {
                 .padding(.top, 8)
                 .padding(.bottom, 10)
                 .background(.thinMaterial)
-              
             }
-        }  .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(
             LinearGradient(
                 gradient: Gradient(colors: [Color.purple.opacity(0.06), Color.blue.opacity(0.04)]),
-                startPoint: .topLeading, endPoint: .bottomTrailing
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
         )
@@ -157,6 +173,7 @@ struct WrongBookView: View {
             QuestionView(
                 question: q,
                 mode: .practice,
+                selectedAnswer: nil,
                 onAnswered: { selected in
                     if selected == q.answer {
                         WrongQuestionManager.shared.removeWrongQuestion(id: q.id)
@@ -171,7 +188,7 @@ struct WrongBookView: View {
         }
         .sheet(isPresented: $showTopicPicker) {
             TopicPickerSheet(
-                topics: availableTopics,
+                topics: availablePracticeTopics,
                 preselected: selectedTopics,
                 onCancel: { showTopicPicker = false },
                 onConfirm: { chosen in
@@ -189,6 +206,8 @@ struct WrongBookView: View {
                     questions: practiceSet,
                     mode: .practice,
                     title: practiceTitle,
+                    paperName: "WrongBookPractice",
+                    yearProgress: $yearProgressManager.progress,
                     onQuizCompleted: { loadWrongQuestions() }
                 ),
                 isActive: $startPractice,
@@ -207,7 +226,10 @@ struct WrongBookView: View {
 
     var wrongQuestionsFiltered: [Question] {
         let base = wrongQuestions
-        guard !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return base }
+        guard !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            return base
+        }
+
         let q = searchText.lowercased()
         return base.filter {
             $0.id.lowercased().contains(q)
@@ -230,22 +252,37 @@ struct WrongBookView: View {
     private var groupedKeys: [String] {
         let keys = Array(groupedDict.keys)
         switch groupBy {
-        case .topic: return keys.sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
-        case .year:  return keys.sorted(by: >)
+        case .topic:
+            return keys.sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+        case .year:
+            return keys.sorted(by: >)
         }
     }
 
     private var practiceTitle: String {
         switch groupBy {
-        case .topic: return "Practice: Mistakes (by Topic)"
-        case .year:  return "Practice: Mistakes (by Year)"
+        case .topic:
+            return "Practice: Mistakes (by Topic)"
+        case .year:
+            return "Practice: Mistakes (by Year)"
         }
     }
 
     private var availableTopics: [(name: String, count: Int)] {
         let counts = Dictionary(grouping: wrongQuestionsFiltered, by: { $0.topic })
             .mapValues { $0.count }
-        return counts.keys.sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+
+        return counts.keys
+            .sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+            .map { ($0, counts[$0] ?? 0) }
+    }
+
+    private var availablePracticeTopics: [(name: String, count: Int)] {
+        let counts = Dictionary(grouping: wrongQuestionsFiltered, by: { mainTopic(from: $0.topic) })
+            .mapValues { $0.count }
+
+        return counts.keys
+            .sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
             .map { ($0, counts[$0] ?? 0) }
     }
 
@@ -266,8 +303,12 @@ struct WrongBookView: View {
 
     private func buildPracticeSetForSelectedTopics() {
         let chosen = selectedTopics
-        practiceSet = wrongQuestionsFiltered.filter { chosen.contains($0.topic) }
+        practiceSet = wrongQuestionsFiltered.filter { chosen.contains(mainTopic(from: $0.topic)) }
         startPractice = !practiceSet.isEmpty
+
+        // reset progress for a fresh wrong-book practice session
+        yearProgressManager.progress["WrongBookPractice"] = 0
+
         #if os(iOS)
         if startPractice {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -282,7 +323,8 @@ struct WrongBookView: View {
     @ViewBuilder
     private func sectionHeader(key: String, count: Int) -> some View {
         HStack {
-            Text(key).font(.headline)
+            Text(key)
+                .font(.headline)
             Spacer()
             Text("\(count)")
                 .font(.caption)
@@ -315,20 +357,25 @@ struct WrongBookCard: View {
                             .cornerRadius(12)
                             .shadow(radius: 3, x: 1, y: 2)
                     }
+
                     VStack(alignment: .leading, spacing: 5) {
                         Text(question.id)
                             .font(.headline)
                             .foregroundColor(.primary)
                             .lineLimit(1)
+
                         Text("Topic: \(question.topic)")
                             .font(.caption)
                             .foregroundColor(.gray)
-                        if let userWrong = WrongQuestionManager.shared.wrongAnswer(for: question.id), !userWrong.isEmpty {
+
+                        if let userWrong = WrongQuestionManager.shared.wrongAnswer(for: question.id),
+                           !userWrong.isEmpty {
                             Text("Your Wrong Answer: \(userWrong)")
                                 .font(.caption)
                                 .foregroundColor(.red)
                         }
                     }
+
                     Spacer()
                 }
                 .padding(.vertical, 13)
@@ -381,12 +428,18 @@ struct TopicPickerSheet: View {
                             .foregroundColor(.secondary)
                     } else {
                         ForEach(topics, id: \.name) { t in
-                            Toggle(isOn: Binding(
-                                get: { chosen.contains(t.name) },
-                                set: { newValue in
-                                    if newValue { chosen.insert(t.name) } else { chosen.remove(t.name) }
-                                }
-                            )) {
+                            Toggle(
+                                isOn: Binding(
+                                    get: { chosen.contains(t.name) },
+                                    set: { newValue in
+                                        if newValue {
+                                            chosen.insert(t.name)
+                                        } else {
+                                            chosen.remove(t.name)
+                                        }
+                                    }
+                                )
+                            ) {
                                 HStack {
                                     Text(t.name)
                                     Spacer()
@@ -414,12 +467,18 @@ struct TopicPickerSheet: View {
                         .disabled(chosen.isEmpty)
                 }
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("Select All") { chosen = Set(topics.map(\.name)) }
+                    Button("Select All") {
+                        chosen = Set(topics.map(\.name))
+                    }
                     Spacer()
-                    Button("Clear") { chosen.removeAll() }
+                    Button("Clear") {
+                        chosen.removeAll()
+                    }
                 }
             }
-            .onAppear { chosen = preselected }
+            .onAppear {
+                chosen = preselected
+            }
         }
     }
 }
@@ -431,9 +490,11 @@ struct EmptyMistakesView: View {
             Image(systemName: "exclamationmark.bubble")
                 .font(.system(size: 48))
                 .foregroundColor(.green.opacity(0.7))
+
             Text("No mistakes yet")
                 .font(.headline)
                 .foregroundColor(.primary)
+
             Text("Your wrong questions will appear here.")
                 .font(.caption)
                 .foregroundColor(.secondary)
