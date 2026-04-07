@@ -16,8 +16,9 @@ struct HistoryDetailView: View {
             wrong: record.wrong,
             undone: record.undone,
             total: record.total,
-            onRestart: {}, // 可以不操作
-            onBack: {}     // 可以不操作
+            onRestart: {},
+            onBack: {},
+            showsActionButtons: false
         )
     }
 }

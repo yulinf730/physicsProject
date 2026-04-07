@@ -13,12 +13,33 @@ struct QuestionView: View {
     @State private var localSelectedAnswer: String? = nil
     @GestureState private var isDragging = false
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
     private var isAnswered: Bool {
         effectiveSelectedAnswer != nil
     }
 
     private var effectiveSelectedAnswer: String? {
         selectedAnswer ?? localSelectedAnswer
+    }
+
+    private var answerColumns: [GridItem] {
+        [
+            GridItem(
+                .adaptive(minimum: isPad ? 96 : 68, maximum: isPad ? 140 : 88),
+                spacing: isPad ? 24 : 18
+            )
+        ]
+    }
+
+    private var answerButtonSize: CGFloat {
+        isPad ? 72 : 60
+    }
+
+    private var answersAreLocked: Bool {
+        mode == .practice && effectiveSelectedAnswer != nil
     }
 
     @ViewBuilder
@@ -42,7 +63,7 @@ struct QuestionView: View {
         } else {
             ZStack {
                 Color(.systemGray5)
-                Text("⚠️ 图片不存在: \(question.imageName)")
+                Text("Image not found: \(question.imageName)")
                     .foregroundColor(.red)
                     .padding()
             }
@@ -54,15 +75,21 @@ struct QuestionView: View {
 
     var body: some View {
         GeometryReader { geo in
+            let horizontalPadding: CGFloat = isPad ? 40 : 24
+            let gridMaxWidth = max(
+                0,
+                min(geo.size.width - (horizontalPadding * 2), isPad ? 560 : 420)
+            )
+
             ZStack {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         questionImageView
 
-                        HStack(spacing: 32) {
+                        LazyVGrid(columns: answerColumns, spacing: isPad ? 24 : 18) {
                             ForEach(question.options, id: \.self) { option in
                                 Button(action: {
-                                    guard effectiveSelectedAnswer == nil else { return }
+                                    guard !answersAreLocked || effectiveSelectedAnswer == option else { return }
 
                                     if mode == .practice {
                                         triggerHaptic(success: option == question.answer)
@@ -80,37 +107,42 @@ struct QuestionView: View {
                                     ZStack {
                                         Circle()
                                             .fill(Color.white)
-                                            .frame(width: 60, height: 60)
+                                            .frame(width: answerButtonSize, height: answerButtonSize)
                                             .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
 
                                         Text(option)
-                                            .font(.system(size: 22, weight: .bold))
+                                            .font(.system(size: isPad ? 28 : 22, weight: .bold))
                                             .foregroundColor(.blue)
                                     }
+                                    .frame(maxWidth: .infinity, minHeight: answerButtonSize + 8)
                                     .overlay(
                                         Circle()
                                             .stroke(
                                                 borderColor(for: option),
                                                 lineWidth: effectiveSelectedAnswer == option ? 3 : 0
                                             )
+                                            .frame(width: answerButtonSize + 6, height: answerButtonSize + 6)
                                     )
                                 }
-                                .disabled(effectiveSelectedAnswer != nil)
+                                .buttonStyle(.plain)
+                                .disabled(answersAreLocked)
                             }
                         }
+                        .frame(maxWidth: gridMaxWidth)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 20)
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal, horizontalPadding)
 
                         if mode == .practice, isAnswered {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text("Answer: \(question.answer)")
-                                    .font(.headline)
+                                    .font(isPad ? .title3.weight(.semibold) : .headline)
                                     .foregroundColor(.blue)
 
                                 Text(question.explanation)
-                                    .font(.body)
+                                    .font(isPad ? .title3 : .body)
                                     .foregroundColor(.secondary)
+                                    .lineSpacing(isPad ? 4 : 0)
                             }
                             .padding(.horizontal)
                         }

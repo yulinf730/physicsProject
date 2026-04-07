@@ -10,6 +10,16 @@ struct MainMenuView: View {
 
     @ObservedObject private var yearProgressManager = YearProgressManager.shared
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    private var menuColumns: [GridItem] {
+        isPad
+            ? [GridItem(.flexible(), spacing: 24), GridItem(.flexible(), spacing: 24)]
+            : [GridItem(.flexible())]
+    }
+
     enum PendingRoute {
         case year
         case topic
@@ -31,23 +41,23 @@ struct MainMenuView: View {
                 )
                 .ignoresSafeArea()
 
-                VStack(spacing: 32) {
+                VStack(spacing: isPad ? 40 : 32) {
 
                     Spacer(minLength: 30)
 
                     // 欢迎语
                     VStack(alignment: .center, spacing: 10) {
                         Text("Physics Practice")
-                            .font(.system(size: 32, weight: .bold))
+                            .font(.system(size: isPad ? 42 : 32, weight: .bold))
                             .foregroundColor(.blue)
                         Text("Choose how you want to practice")
-                            .font(.title3)
+                            .font(isPad ? .title2 : .title3)
                             .foregroundColor(.secondary)
                     }
                     .padding(.bottom, 12)
 
                     // 卡片按钮
-                    VStack(spacing: 28) {
+                    LazyVGrid(columns: menuColumns, spacing: 28) {
                         MenuCard(
                             icon: "book.closed",
                             title: "Practice by Topic",
@@ -66,6 +76,7 @@ struct MainMenuView: View {
                             showModeSheet = true
                         }
                     }
+                    .frame(maxWidth: isPad ? 900 : .infinity)
                     .padding(.horizontal, 16)
 
                     Spacer()
@@ -155,17 +166,21 @@ struct MenuCard: View {
     let color: Color
     let action: () -> Void
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
     var body: some View {
         Button(action: action) {
             HStack(spacing: 18) {
                 Image(systemName: icon)
-                    .font(.system(size: 28))
+                    .font(.system(size: isPad ? 32 : 28))
                     .foregroundColor(.white)
-                    .padding(14)
+                    .padding(isPad ? 16 : 14)
                     .background(color.gradient)
                     .clipShape(Circle())
                 Text(title)
-                    .font(.title2)
+                    .font(isPad ? .title : .title2)
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
                 Spacer()
@@ -173,7 +188,7 @@ struct MenuCard: View {
                     .font(.system(size: 20))
                     .foregroundColor(.gray)
             }
-            .padding(.vertical, 18)
+            .padding(.vertical, isPad ? 22 : 18)
             .padding(.horizontal, 22)
             .background(.ultraThinMaterial)
             .cornerRadius(20)

@@ -122,6 +122,16 @@ struct TopicListView: View {
     @Binding var yearProgress: [String: Int]
     @ObservedObject private var yearProgressManager = YearProgressManager.shared
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    private var columns: [GridItem] {
+        isPad
+            ? [GridItem(.flexible(), spacing: 24), GridItem(.flexible(), spacing: 24)]
+            : [GridItem(.flexible())]
+    }
+
     private var topicSections: [TopicSection] {
         TopicCatalog.groupedTopics(from: questions)
     }
@@ -143,37 +153,40 @@ struct TopicListView: View {
         ScrollView {
             VStack(spacing: 22) {
                 Text("Choose Topic")
-                    .font(.system(size: 28, weight: .bold))
+                    .font(.system(size: isPad ? 38 : 28, weight: .bold))
                     .foregroundColor(.purple)
                     .padding(.top, 12)
                     .padding(.bottom, 8)
 
-                ForEach(topicSections) { section in
-                    let sectionQuestions = questions.filter { TopicCatalog.majorTopic(from: $0.topic) == section.title }
-                    let completedSubtopics = section.topics.filter { topic in
-                        let count = questions.filter { $0.topic == topic }.count
-                        return answeredCount(for: topic, questionCount: count) >= count && count > 0
-                    }.count
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(topicSections) { section in
+                        let sectionQuestions = questions.filter { TopicCatalog.majorTopic(from: $0.topic) == section.title }
+                        let completedSubtopics = section.topics.filter { topic in
+                            let count = questions.filter { $0.topic == topic }.count
+                            return answeredCount(for: topic, questionCount: count) >= count && count > 0
+                        }.count
 
-                    NavigationLink {
-                        TopicSubtopicListView(
-                            title: section.title,
-                            topics: section.topics,
-                            questions: sectionQuestions,
-                            mode: mode,
-                            yearProgress: $yearProgress
-                        )
-                    } label: {
-                        TopicCategoryCard(
-                            title: section.title,
-                            subtopicCount: section.topics.count,
-                            questionCount: sectionQuestions.count,
-                            completedSubtopics: completedSubtopics
-                        )
+                        NavigationLink {
+                            TopicSubtopicListView(
+                                title: section.title,
+                                topics: section.topics,
+                                questions: sectionQuestions,
+                                mode: mode,
+                                yearProgress: $yearProgress
+                            )
+                        } label: {
+                            TopicCategoryCard(
+                                title: section.title,
+                                subtopicCount: section.topics.count,
+                                questionCount: sectionQuestions.count,
+                                completedSubtopics: completedSubtopics
+                            )
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
-                    .padding(.horizontal, 16)
                 }
+                .frame(maxWidth: isPad ? 960 : .infinity)
+                .padding(.horizontal, 16)
 
                 Spacer(minLength: 24)
             }
@@ -201,6 +214,16 @@ private struct TopicSubtopicListView: View {
     let mode: QuizMode
     @Binding var yearProgress: [String: Int]
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    private var columns: [GridItem] {
+        isPad
+            ? [GridItem(.flexible(), spacing: 24), GridItem(.flexible(), spacing: 24)]
+            : [GridItem(.flexible())]
+    }
+
     private func answeredCount(for topic: String, questionCount: Int) -> Int {
         guard let saved = QuizProgressStore.shared.load(title: TopicCatalog.subtopic(from: topic), modeRaw: String(describing: mode)),
               saved.answers.count == questionCount else {
@@ -219,39 +242,42 @@ private struct TopicSubtopicListView: View {
             VStack(spacing: 18) {
                 VStack(spacing: 6) {
                     Text(title)
-                        .font(.system(size: 30, weight: .bold))
+                        .font(.system(size: isPad ? 38 : 30, weight: .bold))
                         .foregroundColor(.primary)
 
                     Text("Choose a subtopic to practise")
-                        .font(.subheadline.weight(.semibold))
+                        .font(isPad ? .title3.weight(.semibold) : .subheadline.weight(.semibold))
                         .foregroundColor(.secondary)
                 }
                 .padding(.top, 10)
 
-                ForEach(topics, id: \.self) { topic in
-                    let topicQuestions = questions.filter { $0.topic == topic }
-                    let questionCount = topicQuestions.count
-                    let answeredQuestionCount = answeredCount(for: topic, questionCount: questionCount)
-                    let progressKey = "TopicPractice_\(topic)"
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(topics, id: \.self) { topic in
+                        let topicQuestions = questions.filter { $0.topic == topic }
+                        let questionCount = topicQuestions.count
+                        let answeredQuestionCount = answeredCount(for: topic, questionCount: questionCount)
+                        let progressKey = "TopicPractice_\(topic)"
 
-                    NavigationLink {
-                        QuizPageView(
-                            questions: topicQuestions,
-                            mode: mode,
-                            title: TopicCatalog.subtopic(from: topic),
-                            paperName: progressKey,
-                            yearProgress: $yearProgress
-                        )
-                    } label: {
-                        TopicCard(
-                            topic: TopicCatalog.subtopic(from: topic),
-                            questionCount: questionCount,
-                            answeredCount: answeredQuestionCount
-                        )
+                        NavigationLink {
+                            QuizPageView(
+                                questions: topicQuestions,
+                                mode: mode,
+                                title: TopicCatalog.subtopic(from: topic),
+                                paperName: progressKey,
+                                yearProgress: $yearProgress
+                            )
+                        } label: {
+                            TopicCard(
+                                topic: TopicCatalog.subtopic(from: topic),
+                                questionCount: questionCount,
+                                answeredCount: answeredQuestionCount
+                            )
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
-                    .padding(.horizontal, 16)
                 }
+                .frame(maxWidth: isPad ? 960 : .infinity)
+                .padding(.horizontal, 16)
 
                 Spacer(minLength: 24)
             }
@@ -278,6 +304,10 @@ private struct TopicCategoryCard: View {
     let subtopicCount: Int
     let questionCount: Int
     let completedSubtopics: Int
+
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
 
     private var progressText: String {
         "\(completedSubtopics)/\(subtopicCount) subtopics completed"
@@ -325,7 +355,7 @@ private struct TopicCategoryCard: View {
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(title)
-                    .font(.headline)
+                    .font(isPad ? .title3.weight(.semibold) : .headline)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
 
@@ -348,7 +378,7 @@ private struct TopicCategoryCard: View {
                 .foregroundColor(.gray.opacity(0.8))
                 .font(.system(size: 18, weight: .semibold))
         }
-        .padding(.vertical, 18)
+        .padding(.vertical, isPad ? 22 : 18)
         .padding(.horizontal, 16)
         .background(
             RoundedRectangle(cornerRadius: 24)
@@ -366,6 +396,10 @@ private struct TopicCard: View {
     let topic: String
     let questionCount: Int
     let answeredCount: Int
+
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
 
     private var answeredSummaryText: String {
         if questionCount == 1 {
@@ -421,7 +455,7 @@ private struct TopicCard: View {
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(topic)
-                    .font(.headline)
+                    .font(isPad ? .title3.weight(.semibold) : .headline)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
 
@@ -444,7 +478,7 @@ private struct TopicCard: View {
                 .foregroundColor(.gray.opacity(0.8))
                 .font(.system(size: 18, weight: .semibold))
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, isPad ? 20 : 16)
         .padding(.horizontal, 16)
         .background(
             RoundedRectangle(cornerRadius: 22)

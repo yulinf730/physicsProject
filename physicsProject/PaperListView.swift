@@ -14,6 +14,16 @@ struct PaperListView: View {
     let selectedBaseYear: String
     @Binding var yearProgress: [String: Int]
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    private var columns: [GridItem] {
+        isPad
+            ? [GridItem(.flexible(), spacing: 24), GridItem(.flexible(), spacing: 24)]
+            : [GridItem(.flexible())]
+    }
+
     private func baseYear(from full: String) -> String? {
         if let range = full.range(of: #"^\d{4}"#, options: .regularExpression) {
             return String(full[range])
@@ -51,39 +61,42 @@ struct PaperListView: View {
             VStack(spacing: 18) {
                 VStack(spacing: 6) {
                     Text(selectedBaseYear)
-                        .font(.system(size: 34, weight: .bold))
+                        .font(.system(size: isPad ? 42 : 34, weight: .bold))
 
                     Text("Choose a paper to continue or start")
-                        .font(.subheadline)
+                        .font(isPad ? .title3 : .subheadline)
                         .foregroundColor(.secondary)
                 }
                 .padding(.top, 10)
 
-                ForEach(papers, id: \.self) { paper in
-                    let paperQuestions = questions.filter { $0.year == paper }
-                    let questionCount = paperQuestions.count
-                    let answeredQuestionCount = answeredCount(for: paper, questionCount: questionCount)
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(papers, id: \.self) { paper in
+                        let paperQuestions = questions.filter { $0.year == paper }
+                        let questionCount = paperQuestions.count
+                        let answeredQuestionCount = answeredCount(for: paper, questionCount: questionCount)
 
-                    NavigationLink {
-                        QuizPageView(
-                            questions: paperQuestions,
-                            mode: mode,
-                            title: paper,
-                            paperName: paper,
-                            yearProgress: $yearProgress,
-                            onQuizCompleted: {
-                                yearProgress[paper] = questionCount
-                            }
-                        )
-                    } label: {
-                        PaperCard(
-                            title: paper,
-                            answeredCount: answeredQuestionCount,
-                            questionCount: questionCount
-                        )
+                        NavigationLink {
+                            QuizPageView(
+                                questions: paperQuestions,
+                                mode: mode,
+                                title: paper,
+                                paperName: paper,
+                                yearProgress: $yearProgress,
+                                onQuizCompleted: {
+                                    yearProgress[paper] = questionCount
+                                }
+                            )
+                        } label: {
+                            PaperCard(
+                                title: paper,
+                                answeredCount: answeredQuestionCount,
+                                questionCount: questionCount
+                            )
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
+                .frame(maxWidth: isPad ? 960 : .infinity)
                 .padding(.horizontal, 16)
 
                 Spacer(minLength: 24)
@@ -109,6 +122,10 @@ private struct PaperCard: View {
     let title: String
     let answeredCount: Int
     let questionCount: Int
+
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
 
     private var statusText: String {
         if questionCount == 0 {
@@ -164,7 +181,7 @@ private struct PaperCard: View {
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(title)
-                    .font(.headline)
+                    .font(isPad ? .title3.weight(.semibold) : .headline)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
 
@@ -187,7 +204,7 @@ private struct PaperCard: View {
                 .foregroundColor(.gray.opacity(0.8))
                 .font(.system(size: 18, weight: .semibold))
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, isPad ? 20 : 16)
         .padding(.horizontal, 16)
         .background(
             RoundedRectangle(cornerRadius: 22)

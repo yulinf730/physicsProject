@@ -6,8 +6,8 @@ struct WrongBookList: View {
     var body: some View {
         List(allQuestions, id: \.id) { question in
             VStack(alignment: .leading) {
-                Text("题目: \(question.topic)  年份: \(question.year)")
-                Text("正确答案: \(question.answer)").font(.caption).foregroundColor(.secondary)
+                Text("Topic: \(question.topic)  Year: \(question.year)")
+                Text("Correct Answer: \(question.answer)").font(.caption).foregroundColor(.secondary)
             }
         }
     }

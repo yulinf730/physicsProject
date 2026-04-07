@@ -2,14 +2,18 @@ import SwiftUI
 import StoreKit
 
 struct SupportView: View {
-    @StateObject private var store = SupportStore()
+    @EnvironmentObject private var store: SupportStore
+
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
                 VStack(spacing: 10) {
                     Image(systemName: "heart.circle.fill")
-                        .font(.system(size: 60))
+                        .font(.system(size: isPad ? 76 : 60))
                         .foregroundStyle(
                             LinearGradient(
                                 colors: [Color.pink, Color.orange],
@@ -19,19 +23,20 @@ struct SupportView: View {
                         )
 
                     Text("Support Me")
-                        .font(.system(size: 32, weight: .bold))
+                        .font(.system(size: isPad ? 42 : 32, weight: .bold))
 
-                    Text("The app will stay free. If you want to support future updates, you can buy me a drink here in the app.")
-                        .font(.body)
+                    Text("This app is meant to stay free. If it has helped you and you'd like to say thank you, you can buy me a drink here in the app. I hope it helps you study well.")
+                        .font(isPad ? .title3 : .body)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 12)
+                        .padding(.horizontal, isPad ? 24 : 12)
                 }
                 .padding(.top, 20)
 
                 supportCard
                 aboutCard
             }
+            .frame(maxWidth: isPad ? 840 : .infinity)
             .padding(.horizontal, 16)
             .padding(.bottom, 28)
         }
@@ -49,23 +54,23 @@ struct SupportView: View {
         )
         .navigationBarTitleDisplayMode(.inline)
         .task {
-            if store.products.isEmpty {
+            if store.products.isEmpty && !store.isLoading {
                 await store.loadProducts()
             }
         }
         .alert("Support", isPresented: Binding(
-            get: { store.message != nil },
+            get: { store.alertMessage != nil },
             set: { newValue in
                 if !newValue {
-                    store.message = nil
+                    store.alertMessage = nil
                 }
             }
         )) {
             Button("OK", role: .cancel) {
-                store.message = nil
+                store.alertMessage = nil
             }
         } message: {
-            Text(store.message ?? "")
+            Text(store.alertMessage ?? "")
         }
     }
 
@@ -81,6 +86,8 @@ struct SupportView: View {
                         .foregroundColor(.secondary)
                 }
                 .padding(.vertical, 8)
+            } else if store.products.isEmpty {
+                unavailableSupportContent
             } else {
                 VStack(spacing: 12) {
                     ForEach(store.tipProducts) { tipProduct in
@@ -89,10 +96,11 @@ struct SupportView: View {
                         supportButton(
                             title: product?.displayName ?? tipProduct.fallbackTitle,
                             subtitle: product?.description ?? tipProduct.fallbackDescription,
-                            priceText: product?.displayPrice ?? "Set in App Store Connect",
+                            priceText: product?.displayPrice ?? "Unavailable",
                             icon: "cup.and.saucer.fill",
                             tint: .orange,
-                            isEnabled: product != nil
+                            isEnabled: product != nil,
+                            isBusy: store.isPurchasing
                         ) {
                             guard let product else { return }
                             Task {
@@ -114,16 +122,42 @@ struct SupportView: View {
         )
     }
 
+    private var unavailableSupportContent: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(store.availabilityMessage ?? "The support option is not available right now.")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+
+            Button {
+                Task {
+                    await store.loadProducts()
+                }
+            } label: {
+                Text("Check Again")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(.orange)
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 10)
+                    .background(
+                        Capsule()
+                            .fill(Color.orange.opacity(0.12))
+                    )
+            }
+            .buttonStyle(.plain)
+            .disabled(store.isLoading)
+        }
+    }
+
     private var aboutCard: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text("Why Support Helps")
                 .font(.headline)
 
-            Text("Support helps me keep improving the question bank, polish the app, and add more useful study features over time.")
+            Text("Your support helps me keep improving the question bank, polish the app, and add more useful study features over time.")
                 .font(.body)
                 .foregroundColor(.secondary)
 
-            Text("Thank you for using the app.")
+            Text("Thank you for using the app, and I hope it helps you study well.")
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.primary)
         }
@@ -146,6 +180,7 @@ struct SupportView: View {
         icon: String,
         tint: Color,
         isEnabled: Bool,
+        isBusy: Bool,
         action: @escaping () -> Void
     ) -> some View {
         Button(action: action) {
@@ -173,18 +208,23 @@ struct SupportView: View {
 
                 Spacer()
 
-                Text(priceText)
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundColor(isEnabled ? tint : .secondary)
+                if isBusy {
+                    ProgressView()
+                        .tint(tint)
+                } else {
+                    Text(priceText)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundColor(isEnabled ? tint : .secondary)
+                }
             }
             .padding(16)
             .background(
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white.opacity(isEnabled ? 0.6 : 0.35))
+                    .fill(Color.white.opacity(isEnabled && !isBusy ? 0.6 : 0.35))
             )
         }
         .buttonStyle(.plain)
-        .disabled(!isEnabled)
+        .disabled(!isEnabled || isBusy)
         .opacity(isEnabled ? 1 : 0.7)
     }
 }
@@ -193,4 +233,5 @@ struct SupportView: View {
     NavigationStack {
         SupportView()
     }
+    .environmentObject(SupportStore())
 }

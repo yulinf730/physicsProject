@@ -34,6 +34,16 @@ struct YearGroupListView: View {
         groupedByYear.keys.sorted(by: >)
     }
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    private var columns: [GridItem] {
+        isPad
+            ? [GridItem(.flexible(), spacing: 24), GridItem(.flexible(), spacing: 24)]
+            : [GridItem(.flexible())]
+    }
+
     private func answeredCount(for paperName: String, questionCount: Int) -> Int {
         guard let saved = QuizProgressStore.shared.load(title: paperName, modeRaw: String(describing: mode)),
               saved.answers.count == questionCount else {
@@ -51,32 +61,35 @@ struct YearGroupListView: View {
         ScrollView {
             VStack(spacing: 18) {
                 Text("Choose Year")
-                    .font(.largeTitle.bold())
+                    .font(isPad ? .system(size: 40, weight: .bold) : .largeTitle.bold())
                     .padding(.top, 8)
 
-                ForEach(baseYears, id: \.self) { y in
-                    let papersInYear = Dictionary(grouping: groupedByYear[y] ?? [], by: \.year)
-                    let finishedPapers = papersInYear.values.filter { paperQuestions in
-                        guard let paperName = paperQuestions.first?.year else { return false }
-                        let completedCount = answeredCount(for: paperName, questionCount: paperQuestions.count)
-                        return completedCount >= paperQuestions.count
-                    }.count
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(baseYears, id: \.self) { y in
+                        let papersInYear = Dictionary(grouping: groupedByYear[y] ?? [], by: \.year)
+                        let finishedPapers = papersInYear.values.filter { paperQuestions in
+                            guard let paperName = paperQuestions.first?.year else { return false }
+                            let completedCount = answeredCount(for: paperName, questionCount: paperQuestions.count)
+                            return completedCount >= paperQuestions.count
+                        }.count
 
-                    NavigationLink {
-                        PaperListView(
-                            questions: questions,
-                            mode: mode,
-                            selectedBaseYear: y,
-                            yearProgress: $yearProgress
-                        )
-                    } label: {
-                        YearGroupCard(
-                            baseYear: y,
-                            paperCount: papersInYear.count,
-                            finishedPaperCount: finishedPapers
-                        )
+                        NavigationLink {
+                            PaperListView(
+                                questions: questions,
+                                mode: mode,
+                                selectedBaseYear: y,
+                                yearProgress: $yearProgress
+                            )
+                        } label: {
+                            YearGroupCard(
+                                baseYear: y,
+                                paperCount: papersInYear.count,
+                                finishedPaperCount: finishedPapers
+                            )
+                        }
                     }
                 }
+                .frame(maxWidth: isPad ? 920 : .infinity)
                 .padding(.horizontal, 16)
 
                 Spacer(minLength: 24)
@@ -99,10 +112,14 @@ private struct YearGroupCard: View {
     let paperCount: Int
     let finishedPaperCount: Int
 
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
     var body: some View {
         HStack(spacing: 18) {
             Image(systemName: "calendar")
-                .font(.system(size: 28, weight: .semibold))
+                .font(.system(size: isPad ? 32 : 28, weight: .semibold))
                 .foregroundColor(.blue)
 
             VStack(alignment: .leading, spacing: 6) {
@@ -116,7 +133,7 @@ private struct YearGroupCard: View {
                 if paperCount > 0 {
                     ProgressView(value: Double(finishedPaperCount), total: Double(paperCount))
                         .progressViewStyle(.linear)
-                        .frame(width: 160)
+                        .frame(width: isPad ? 220 : 160)
 
                     Text("Completed \(finishedPaperCount)/\(paperCount)")
                         .font(.caption)
@@ -129,7 +146,7 @@ private struct YearGroupCard: View {
                 .foregroundColor(.gray)
                 .font(.system(size: 20))
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, isPad ? 22 : 16)
         .padding(.horizontal, 18)
         .background(.ultraThinMaterial)
         .cornerRadius(20)

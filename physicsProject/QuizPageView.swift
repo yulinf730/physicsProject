@@ -26,35 +26,56 @@ private struct QuizBottomControls: View {
     let onNext: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(alignment: .center, spacing: 14) {
             Button(action: onPrevious) {
-                Text("上一题")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
+                Text("Previous")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, minHeight: 56)
+                    .background(Color(.systemGray6))
                     .foregroundColor(.primary)
-                    .cornerRadius(10)
+                    .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
             }
             .disabled(currentIndex == 0)
+            .opacity(currentIndex == 0 ? 0.45 : 1)
 
             Button(action: onShowAnswerSheet) {
-                Label("答题卡", systemImage: "square.grid.3x3.fill")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.orange.opacity(0.9))
+                HStack(spacing: 10) {
+                    Image(systemName: "square.grid.3x3.fill")
+                        .font(.system(size: 16, weight: .semibold))
+                        .frame(width: 32, height: 32)
+                        .background(Color.white.opacity(0.2))
+                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+
+                    Text("Answer Sheet")
+                        .font(.subheadline.weight(.semibold))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.9)
+                }
+                    .padding(.horizontal, 16)
+                    .frame(minWidth: 132, minHeight: 60)
+                    .background(
+                        LinearGradient(
+                            colors: [Color.orange, Color(red: 1.0, green: 0.63, blue: 0.26)],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
                     .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .shadow(color: Color.orange.opacity(0.22), radius: 10, y: 4)
             }
+            .buttonStyle(.plain)
 
             Button(action: onNext) {
-                Text("下一题")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
+                Text("Next")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, minHeight: 56)
+                    .background(Color(.systemGray6))
                     .foregroundColor(.primary)
-                    .cornerRadius(10)
+                    .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
             }
             .disabled(currentIndex == totalQuestions - 1)
+            .opacity(currentIndex == totalQuestions - 1 ? 0.45 : 1)
         }
         .padding(.horizontal)
     }
@@ -65,7 +86,7 @@ private struct SubmitQuizButton: View {
 
     var body: some View {
         Button(action: onSubmit) {
-            Text("提交")
+            Text("Submit")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.blue)
@@ -286,7 +307,7 @@ struct QuizPageView: View {
                             currentIndex: currentIndex,
                             displayMode: answerSheetDisplayMode
                         )
-                        .navigationTitle("答题卡")
+                        .navigationTitle("Answer Sheet")
                         .navigationBarTitleDisplayMode(.inline)
                     }
                     .presentationDetents([.medium, .large])
@@ -308,6 +329,7 @@ struct QuizPageView: View {
                 syncVisibleProgress()
             }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 
     func restoreProgressIfNeeded() {

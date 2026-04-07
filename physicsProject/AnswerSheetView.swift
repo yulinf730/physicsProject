@@ -19,24 +19,51 @@ struct AnswerSheetView: View {
     var currentIndex: Int = -1
     let displayMode: AnswerSheetDisplayMode
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 16), count: 6)
+    private var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    private var columns: [GridItem] {
+        [
+            GridItem(
+                .adaptive(minimum: isPad ? 64 : 52, maximum: isPad ? 86 : 68),
+                spacing: 16
+            )
+        ]
+    }
+
+    private var answeredCount: Int {
+        answers.filter { answer in
+            guard let answer else { return false }
+            return !answer.isEmpty
+        }.count
+    }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("答题卡")
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Answer Sheet")
                 .font(.title2.bold())
                 .padding(.top)
                 .padding(.horizontal)
 
-            HStack(spacing: 16) {
-                legendItem(title: "未作答", fill: Color.gray.opacity(0.4), stroke: .clear)
+            Text("\(answeredCount) of \(total) answered")
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.secondary)
+                .padding(.horizontal)
+
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: isPad ? 120 : 108), spacing: 12)],
+                alignment: .leading,
+                spacing: 10
+            ) {
+                legendItem(title: "Unanswered", fill: Color.gray.opacity(0.4), stroke: .clear)
                 if showsScoring {
-                    legendItem(title: "答对", fill: .green, stroke: .clear)
-                    legendItem(title: "答错", fill: .red, stroke: .clear)
+                    legendItem(title: "Correct", fill: .green, stroke: .clear)
+                    legendItem(title: "Wrong", fill: .red, stroke: .clear)
                 } else {
-                    legendItem(title: "已作答", fill: .blue, stroke: .clear)
+                    legendItem(title: "Answered", fill: .blue, stroke: .clear)
                 }
-                legendItem(title: "当前题", fill: .clear, stroke: .blue)
+                legendItem(title: "Current", fill: .clear, stroke: .blue)
             }
             .font(.caption)
             .padding(.horizontal)
@@ -54,8 +81,8 @@ struct AnswerSheetView: View {
                             onSelect(index)
                         }) {
                             Text("\(index + 1)")
-                                .font(.system(size: 22, weight: .medium))
-                                .frame(width: 52, height: 52)
+                                .font(.system(size: isPad ? 24 : 22, weight: .medium))
+                                .frame(width: isPad ? 60 : 52, height: isPad ? 60 : 52)
                                 .background(backgroundColor(index: index, userAnswer: userAnswer))
                                 .foregroundColor(.white)
                                 .clipShape(Circle())
@@ -69,6 +96,7 @@ struct AnswerSheetView: View {
                         .buttonStyle(.plain)
                     }
                 }
+                .frame(maxWidth: isPad ? 760 : .infinity, alignment: .leading)
                 .padding()
             }
 
