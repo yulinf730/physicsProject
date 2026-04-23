@@ -6,10 +6,39 @@ struct SheetIndex: Identifiable {
     let id: Int
 }
 
+enum ReviewFilter: String {
+    case all
+    case correct
+    case wrong
+    case undone
+
+    func includes(question: Question, answer: String?) -> Bool {
+        switch self {
+        case .all:
+            return true
+        case .correct:
+            guard let answer, !answer.isEmpty else { return false }
+            return answer == question.answer
+        case .wrong:
+            guard let answer, !answer.isEmpty else { return false }
+            return answer != question.answer
+        case .undone:
+            guard let answer else { return true }
+            return answer.isEmpty
+        }
+    }
+
+    static func visibleIndices(questions: [Question], answers: [String?], filter: ReviewFilter) -> [Int] {
+        questions.indices.filter { index in
+            let answer = answers.indices.contains(index) ? answers[index] : nil
+            return filter.includes(question: questions[index], answer: answer)
+        }
+    }
+}
+
 struct QuestionReviewCard: View {
     let question: Question
     let answer: String?
-    let index: Int
     var onTap: (() -> Void)? = nil
 
     private var isPad: Bool {
@@ -29,7 +58,7 @@ struct QuestionReviewCard: View {
                     .cornerRadius(8)
             }
 
-            Text("Q\(index + 1)")
+            Text("Q\(question.questionNumber)")
                 .font(.caption)
                 .foregroundColor(.gray)
 
@@ -86,6 +115,8 @@ struct ScoreHeaderView: View {
     let wrong: Int
     let undone: Int
     let total: Int
+    let selectedFilter: ReviewFilter
+    let onFilterSelected: (ReviewFilter) -> Void
 
     private var isPad: Bool {
         UIDevice.current.userInterfaceIdiom == .pad
@@ -111,10 +142,34 @@ struct ScoreHeaderView: View {
                 .foregroundColor(.secondary)
 
             LazyVGrid(columns: summaryColumns, spacing: 12) {
-                ScoreSummaryCard(title: "Correct", value: correct, tint: .green)
-                ScoreSummaryCard(title: "Wrong", value: wrong, tint: .red)
-                ScoreSummaryCard(title: "Undone", value: undone, tint: .orange)
-                ScoreSummaryCard(title: "Total", value: total, tint: .blue)
+                ScoreSummaryCard(
+                    title: "Correct",
+                    value: correct,
+                    tint: .green,
+                    isSelected: selectedFilter == .correct,
+                    action: { onFilterSelected(.correct) }
+                )
+                ScoreSummaryCard(
+                    title: "Wrong",
+                    value: wrong,
+                    tint: .red,
+                    isSelected: selectedFilter == .wrong,
+                    action: { onFilterSelected(.wrong) }
+                )
+                ScoreSummaryCard(
+                    title: "Undone",
+                    value: undone,
+                    tint: .orange,
+                    isSelected: selectedFilter == .undone,
+                    action: { onFilterSelected(.undone) }
+                )
+                ScoreSummaryCard(
+                    title: "Total",
+                    value: total,
+                    tint: .blue,
+                    isSelected: selectedFilter == .all,
+                    action: { onFilterSelected(.all) }
+                )
             }
             .padding(.top, 6)
 
@@ -127,23 +182,33 @@ private struct ScoreSummaryCard: View {
     let title: String
     let value: Int
     let tint: Color
+    let isSelected: Bool
+    let action: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title)
-                .font(.caption.weight(.semibold))
-                .foregroundColor(.secondary)
+        Button(action: action) {
+            VStack(alignment: .leading, spacing: 6) {
+                Text(title)
+                    .font(.caption.weight(.semibold))
+                    .foregroundColor(.secondary)
 
-            Text("\(value)")
-                .font(.title2.bold())
-                .foregroundColor(tint)
+                Text("\(value)")
+                    .font(.title2.bold())
+                    .foregroundColor(tint)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(14)
+            .background(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(tint.opacity(isSelected ? 0.18 : 0.10))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(tint.opacity(isSelected ? 0.70 : 0.0), lineWidth: 2)
+            )
+            .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(14)
-        .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(tint.opacity(0.10))
-        )
+        .buttonStyle(.plain)
     }
 }
 
@@ -186,25 +251,50 @@ struct ResultView: View {
     var showsActionButtons: Bool = true
 
     @State private var selectedSheetIndex: SheetIndex? = nil
+    @State private var selectedFilter: ReviewFilter = .all
+
+    private var visibleQuestionIndices: [Int] {
+        ReviewFilter.visibleIndices(
+            questions: questions,
+            answers: userAnswers,
+            filter: selectedFilter
+        )
+    }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 28) {
-                ScoreHeaderView(correct: correct, wrong: wrong, undone: undone, total: total)
+                ScoreHeaderView(
+                    correct: correct,
+                    wrong: wrong,
+                    undone: undone,
+                    total: total,
+                    selectedFilter: selectedFilter,
+                    onFilterSelected: { filter in
+                        selectedFilter = filter
+                    }
+                )
 
                 if showsActionButtons {
                     ResultActionRow(onRestart: onRestart, onBack: onBack)
                 }
 
-                ForEach(questions.indices, id: \.self) { idx in
+                ForEach(visibleQuestionIndices, id: \.self) { idx in
                     QuestionReviewCard(
                         question: questions[idx],
                         answer: userAnswers[idx],
-                        index: idx,
                         onTap: {
                             selectedSheetIndex = SheetIndex(id: idx)
                         }
                     )
+                }
+
+                if visibleQuestionIndices.isEmpty {
+                    Text("No questions in this filter.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.vertical, 24)
                 }
             }
             .padding(.bottom, 32)

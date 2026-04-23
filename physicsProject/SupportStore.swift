@@ -19,7 +19,7 @@ final class SupportStore: ObservableObject {
 
     let tipProducts: [TipProduct] = [
         TipProduct(
-            id: "support.drink",
+            id: "supportalevelphysics.drink",
             fallbackTitle: "Buy Me a Drink",
             fallbackDescription: "Support future updates for the app."
         )

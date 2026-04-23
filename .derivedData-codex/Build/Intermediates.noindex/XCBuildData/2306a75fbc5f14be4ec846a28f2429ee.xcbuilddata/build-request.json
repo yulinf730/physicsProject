@@ -1,0 +1,75 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "0a5467c1d036bc35cd73ee2a136fca0463391b6524fa313b04c120bc93da0fd4"
+    }
+  ],
+  "containerPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "hostTargetedPlatform" : null,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos26.4",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex/Build/Products",
+      "derivedDataPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex",
+      "indexDataStoreFolderPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "CODE_SIGNING_ALLOWED" : "NO"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "MacFamily20,1",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "26.3",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "MacFamily20,1",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "CLANG_COVERAGE_MAPPING" : "YES",
+          "CLANG_PROFILE_DATA_DIRECTORY" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData-codex/Build/ProfileData",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "ONLY_ACTIVE_ARCH" : "YES",
+          "TARGET_DEVICE_IDENTIFIER" : "00006000-000829303E92401E",
+          "TARGET_DEVICE_MODEL" : "MacBookPro18,1",
+          "TARGET_DEVICE_OS_VERSION" : "26.3.1",
+          "TARGET_DEVICE_PLATFORM_NAME" : "macosx"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

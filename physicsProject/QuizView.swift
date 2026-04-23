@@ -16,10 +16,10 @@ struct QuizView: View {
 
         switch filter {
         case .topic(let topic):
-            self.questions = allQuestions.filter { $0.topic == topic }
+            self.questions = allQuestions.filter { $0.displayTopic == topic }
             self.title = topic
         case .year(let year):
-            self.questions = allQuestions.filter { $0.year == year }
+            self.questions = Question.sortedForPaper(allQuestions.filter { $0.year == year })
             self.title = year
         }
     }

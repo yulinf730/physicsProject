@@ -71,7 +71,7 @@ struct PaperListView: View {
 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(papers, id: \.self) { paper in
-                        let paperQuestions = questions.filter { $0.year == paper }
+                        let paperQuestions = Question.sortedForPaper(questions.filter { $0.year == paper })
                         let questionCount = paperQuestions.count
                         let answeredQuestionCount = answeredCount(for: paper, questionCount: questionCount)
 

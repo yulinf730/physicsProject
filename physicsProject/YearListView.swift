@@ -20,7 +20,7 @@ struct YearListView: View {
                     .padding(.top, 10)
 
                 ForEach(years, id: \.self) { year in
-                    let yearQuestions = questions.filter { $0.year == year }
+                    let yearQuestions = Question.sortedForPaper(questions.filter { $0.year == year })
                     let questionCount = yearQuestions.count
                     let savedProgress = yearProgress[year] ?? 0
                     let validProgress = min(max(savedProgress, 0), questionCount)

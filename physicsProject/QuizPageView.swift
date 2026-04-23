@@ -5,6 +5,7 @@ private struct QuizHeaderView: View {
     let title: String
     let currentIndex: Int
     let totalQuestions: Int
+    let currentQuestionNumber: Int
 
     var body: some View {
         VStack(spacing: 12) {
@@ -12,7 +13,7 @@ private struct QuizHeaderView: View {
                 .font(.title2.bold())
                 .padding(.top, 8)
 
-            Text("Question \(min(currentIndex + 1, max(totalQuestions, 1)))/\(totalQuestions)")
+            Text("Q\(currentQuestionNumber)  (\(min(currentIndex + 1, max(totalQuestions, 1)))/\(totalQuestions))")
                 .font(.headline)
         }
     }
@@ -223,7 +224,8 @@ struct QuizPageView: View {
                         QuizHeaderView(
                             title: title,
                             currentIndex: currentIndex,
-                            totalQuestions: questions.count
+                            totalQuestions: questions.count,
+                            currentQuestionNumber: currentQuestionNumber
                         )
 
                         TabView(selection: $currentIndex) {
@@ -298,6 +300,7 @@ struct QuizPageView: View {
                         AnswerSheetView(
                             total: questions.count,
                             answers: answers,
+                            questionNumbers: questions.map(\.questionNumber),
                             onSelect: { index in
                                 // 不要在这里直接 currentIndex = index
                                 // 先记下来，等 sheet 关闭后再跳
@@ -392,6 +395,13 @@ struct QuizPageView: View {
     private func moveToQuestion(_ index: Int) {
         currentIndex = index
         persistQuizState(currentIndex: index, answers: answers)
+    }
+
+    private var currentQuestionNumber: Int {
+        guard questions.indices.contains(currentIndex) else {
+            return 1
+        }
+        return questions[currentIndex].questionNumber
     }
 
     private func persistQuizState(currentIndex: Int, answers: [String?]) {

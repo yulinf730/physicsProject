@@ -47,7 +47,7 @@ struct MainMenuView: View {
 
                     // 欢迎语
                     VStack(alignment: .center, spacing: 10) {
-                        Text("Physics Practice")
+                        Text("Alevel Physics")
                             .font(.system(size: isPad ? 42 : 32, weight: .bold))
                             .foregroundColor(.blue)
                         Text("Choose how you want to practice")

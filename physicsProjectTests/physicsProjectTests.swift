@@ -105,4 +105,24 @@ struct physicsProjectTests {
 
         #expect(progress == 2)
     }
+
+    @Test func reviewFilterShowsOnlyWrongQuestions() async throws {
+        let visibleIndices = ReviewFilter.visibleIndices(
+            questions: sampleQuestions,
+            answers: ["A", "B", nil],
+            filter: .wrong
+        )
+
+        #expect(visibleIndices == [1])
+    }
+
+    @Test func reviewFilterCanReturnAllQuestions() async throws {
+        let visibleIndices = ReviewFilter.visibleIndices(
+            questions: sampleQuestions,
+            answers: ["A", "B", nil],
+            filter: .all
+        )
+
+        #expect(visibleIndices == [0, 1, 2])
+    }
 }

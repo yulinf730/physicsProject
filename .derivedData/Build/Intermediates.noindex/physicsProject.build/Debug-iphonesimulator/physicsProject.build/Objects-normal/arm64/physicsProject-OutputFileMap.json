@@ -1,0 +1,349 @@
+{
+  "" : {
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProject-primary.dia",
+    "emit-module-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProject-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProject-primary-emit-module.dia",
+    "pch" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProject-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProject-primary.swiftdeps"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/AnswerSheetView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AnswerSheetView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/AppUpdateManager.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdateManager~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/AppUpdatePromptView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/AppUpdatePromptView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/CalculatorOverlayView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/CalculatorOverlayView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/ContentView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/HistoryDetailView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryDetailView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/HistoryList.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryList~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/HistoryTabView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/HistoryTabView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/MainMenuView.swift.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainMenuView.swift~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/MainTabView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/MainTabView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/PaperListView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/PaperListView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/Question.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/Question~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuestionLoader.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionLoader~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuestionView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuestionView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizFilter.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizFilter~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizHistoryManager.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryManager~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizHistoryRecord.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizHistoryRecord~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizMode.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizMode~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizPageView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizPageView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizProgress.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgress~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizProgressStore.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizProgressStore~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/QuizView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/QuizView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/ResultView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/ResultView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/SupportStore.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportStore~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/SupportView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/SupportView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/TopicListView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/TopicListView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/WrongBookList.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookList~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/WrongBookView .swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView .swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongBookView ~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/WrongQuestionManager.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/WrongQuestionManager~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/YearGroupListView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearGroupListView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/YearListView.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearListView~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/YearProgressManager.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/YearProgressManager~partial.swiftmodule"
+  },
+  "/Users/yulinfeng/Documents/physicsProjectAlevel/physicsProject/physicsProjectApp.swift" : {
+    "const-values" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.swiftconstvalues",
+    "dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.d",
+    "diagnostics" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.dia",
+    "index-unit-output-path" : "/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.o",
+    "llvm-bc" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.bc",
+    "object" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.o",
+    "swift-dependencies" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp.swiftdeps",
+    "swiftmodule" : "/Users/yulinfeng/Documents/physicsProjectAlevel/.derivedData/Build/Intermediates.noindex/physicsProject.build/Debug-iphonesimulator/physicsProject.build/Objects-normal/arm64/physicsProjectApp~partial.swiftmodule"
+  }
+}
