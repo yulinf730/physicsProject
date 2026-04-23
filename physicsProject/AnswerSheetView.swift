@@ -15,6 +15,7 @@ enum AnswerSheetDisplayMode {
 struct AnswerSheetView: View {
     let total: Int
     let answers: [String?]
+    let questionNumbers: [Int]
     let onSelect: (Int) -> Void
     var currentIndex: Int = -1
     let displayMode: AnswerSheetDisplayMode
@@ -76,11 +77,12 @@ struct AnswerSheetView: View {
                     ForEach(0..<total, id: \.self) { index in
                         let userAnswer = index < answers.count ? answers[index] : nil
                         let isCurrent = index == currentIndex
+                        let questionNumber = index < questionNumbers.count ? questionNumbers[index] : index + 1
 
                         Button(action: {
                             onSelect(index)
                         }) {
-                            Text("\(index + 1)")
+                            Text("\(questionNumber)")
                                 .font(.system(size: isPad ? 24 : 22, weight: .medium))
                                 .frame(width: isPad ? 60 : 52, height: isPad ? 60 : 52)
                                 .background(backgroundColor(index: index, userAnswer: userAnswer))

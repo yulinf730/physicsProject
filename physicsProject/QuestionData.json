@@ -1009,7 +1009,7 @@
    },
    {
       "id": "2023May11Q33",
-      "topic": "Nuclear Physics / Radiation, Safety and Uses",
+      "topic": "Electricity and Magnetism / Electrical Quantities",
       "year": "2023 May/June Paper 11",
       "imageName": "2023May11Q33",
       "options": [
@@ -1019,7 +1019,7 @@
          "D"
       ],
       "answer": "C",
-      "explanation": "Alpha is most ionising and least penetrating; beta and gamma are more penetrating."
+      "explanation": "For the same power, transmitting at a higher voltage means a smaller current. This reduces heating losses in the cables, so less energy is wasted."
    },
    {
       "id": "2023May11Q34",
@@ -1051,7 +1051,7 @@
    },
    {
       "id": "2023May11Q36",
-      "topic": "Space Physics / Earth and Solar System",
+      "topic": "Nuclear Physics / Radioactive Decay and Half-Life",
       "year": "2023 May/June Paper 11",
       "imageName": "2023May11Q36",
       "options": [
@@ -1061,7 +1061,7 @@
          "D"
       ],
       "answer": "C",
-      "explanation": "The Sun’s gravity provides the centripetal force that keeps planets in orbit."
+      "explanation": "Radioactive decay is random. Each nucleus has the same probability of decaying in any equal time interval, so option C is correct."
    },
    {
       "id": "2023May11Q37",
@@ -1079,7 +1079,7 @@
    },
    {
       "id": "2023May11Q38",
-      "topic": "Space Physics / Stars and Cosmology",
+      "topic": "Space Physics / Earth and Solar System",
       "year": "2023 May/June Paper 11",
       "imageName": "2023May11Q38",
       "options": [
@@ -1089,7 +1089,7 @@
          "D"
       ],
       "answer": "A",
-      "explanation": "A light-year is the distance light travels in one year; it is a unit of distance, not time."
+      "explanation": "Mercury is the planet nearest to the Sun, and it is a rocky planet, so answer A is correct."
    },
    {
       "id": "2023May11Q39",
@@ -1117,7 +1117,7 @@
          "D"
       ],
       "answer": "A",
-      "explanation": "A typical low-mass star’s lifecycle includes: stable star → red giant → white dwarf; Hubble’s law is unrelated here."
+      "explanation": "The Milky Way is a galaxy. It contains our Solar System, so answer A is correct."
    },
    {
       "id": "2023May13Q1",

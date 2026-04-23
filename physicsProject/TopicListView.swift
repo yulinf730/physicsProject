@@ -5,7 +5,6 @@ private struct TopicSection: Identifiable {
     let topics: [String]
 
     var id: String { title }
-    var totalQuestions: Int { topics.count }
 }
 
 private enum TopicCatalog {
@@ -63,7 +62,7 @@ private enum TopicCatalog {
     }
 
     static func groupedTopics(from questions: [Question]) -> [TopicSection] {
-        let allTopics = Set(questions.map(\.topic))
+        let allTopics = Set(questions.map(\.displayTopic))
         let grouped = Dictionary(grouping: allTopics) { majorTopic(from: $0) }
 
         return sectionOrder.compactMap { section in
@@ -120,7 +119,6 @@ struct TopicListView: View {
     let questions: [Question]
     let mode: QuizMode
     @Binding var yearProgress: [String: Int]
-    @ObservedObject private var yearProgressManager = YearProgressManager.shared
 
     private var isPad: Bool {
         UIDevice.current.userInterfaceIdiom == .pad
@@ -136,9 +134,9 @@ struct TopicListView: View {
         TopicCatalog.groupedTopics(from: questions)
     }
 
-    private func answeredCount(for topic: String, questionCount: Int) -> Int {
-        guard let saved = QuizProgressStore.shared.load(title: TopicCatalog.subtopic(from: topic), modeRaw: String(describing: mode)),
-              saved.answers.count == questionCount else {
+    private func answeredCount(progressTitle: String, questions: [Question]) -> Int {
+        guard let saved = QuizProgressStore.shared.load(title: progressTitle, modeRaw: String(describing: mode)),
+              saved.matches(questions) else {
             return 0
         }
 
@@ -152,37 +150,73 @@ struct TopicListView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 22) {
-                Text("Choose Topic")
-                    .font(.system(size: isPad ? 38 : 28, weight: .bold))
-                    .foregroundColor(.purple)
-                    .padding(.top, 12)
-                    .padding(.bottom, 8)
+                VStack(spacing: 8) {
+                    Text("Choose Topic")
+                        .font(.system(size: isPad ? 38 : 28, weight: .bold))
+                        .foregroundColor(.purple)
+
+                    Text("Practise by topic, then go deeper where needed")
+                        .font(isPad ? .title3.weight(.semibold) : .subheadline.weight(.semibold))
+                        .foregroundColor(.secondary)
+                }
+                .padding(.top, 12)
 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(topicSections) { section in
-                        let sectionQuestions = questions.filter { TopicCatalog.majorTopic(from: $0.topic) == section.title }
+                        let sectionQuestions = questions.filter { TopicCatalog.majorTopic(from: $0.displayTopic) == section.title }
                         let completedSubtopics = section.topics.filter { topic in
-                            let count = questions.filter { $0.topic == topic }.count
-                            return answeredCount(for: topic, questionCount: count) >= count && count > 0
+                            let topicQuestions = questions.filter { $0.displayTopic == topic }
+                            return answeredCount(
+                                progressTitle: TopicCatalog.subtopic(from: topic),
+                                questions: topicQuestions
+                            ) >= topicQuestions.count && !topicQuestions.isEmpty
                         }.count
 
-                        NavigationLink {
-                            TopicSubtopicListView(
-                                title: section.title,
-                                topics: section.topics,
-                                questions: sectionQuestions,
-                                mode: mode,
-                                yearProgress: $yearProgress
-                            )
-                        } label: {
-                            TopicCategoryCard(
-                                title: section.title,
-                                subtopicCount: section.topics.count,
-                                questionCount: sectionQuestions.count,
-                                completedSubtopics: completedSubtopics
-                            )
+                        if section.topics.count == 1, let topic = section.topics.first {
+                            let topicQuestions = questions.filter { $0.displayTopic == topic }
+                            let progressKey = "TopicPractice_\(topic)"
+                            let answeredQuestionCount = answeredCount(progressTitle: section.title, questions: topicQuestions)
+
+                            NavigationLink {
+                                QuizPageView(
+                                    questions: topicQuestions,
+                                    mode: mode,
+                                    title: section.title,
+                                    paperName: progressKey,
+                                    yearProgress: $yearProgress
+                                )
+                            } label: {
+                                TopicCategoryCard(
+                                    title: section.title,
+                                    subtitle: TopicCatalog.subtopic(from: topic),
+                                    questionCount: topicQuestions.count,
+                                    subtopicCount: section.topics.count,
+                                    completedSubtopics: answeredQuestionCount >= topicQuestions.count && !topicQuestions.isEmpty ? 1 : 0,
+                                    answeredQuestionCount: answeredQuestionCount
+                                )
+                            }
+                            .buttonStyle(.plain)
+                        } else {
+                            NavigationLink {
+                                TopicSubtopicListView(
+                                    title: section.title,
+                                    topics: section.topics,
+                                    questions: sectionQuestions,
+                                    mode: mode,
+                                    yearProgress: $yearProgress
+                                )
+                            } label: {
+                                TopicCategoryCard(
+                                    title: section.title,
+                                    subtitle: nil,
+                                    questionCount: sectionQuestions.count,
+                                    subtopicCount: section.topics.count,
+                                    completedSubtopics: completedSubtopics,
+                                    answeredQuestionCount: 0
+                                )
+                            }
+                            .buttonStyle(.plain)
                         }
-                        .buttonStyle(.plain)
                     }
                 }
                 .frame(maxWidth: isPad ? 960 : .infinity)
@@ -224,9 +258,9 @@ private struct TopicSubtopicListView: View {
             : [GridItem(.flexible())]
     }
 
-    private func answeredCount(for topic: String, questionCount: Int) -> Int {
+    private func answeredCount(for topic: String, questions: [Question]) -> Int {
         guard let saved = QuizProgressStore.shared.load(title: TopicCatalog.subtopic(from: topic), modeRaw: String(describing: mode)),
-              saved.answers.count == questionCount else {
+              saved.matches(questions) else {
             return 0
         }
 
@@ -253,9 +287,9 @@ private struct TopicSubtopicListView: View {
 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(topics, id: \.self) { topic in
-                        let topicQuestions = questions.filter { $0.topic == topic }
+                        let topicQuestions = questions.filter { $0.displayTopic == topic }
                         let questionCount = topicQuestions.count
-                        let answeredQuestionCount = answeredCount(for: topic, questionCount: questionCount)
+                        let answeredQuestionCount = answeredCount(for: topic, questions: topicQuestions)
                         let progressKey = "TopicPractice_\(topic)"
 
                         NavigationLink {
@@ -282,7 +316,6 @@ private struct TopicSubtopicListView: View {
                 Spacer(minLength: 24)
             }
         }
-        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .background(
             LinearGradient(
@@ -301,20 +334,54 @@ private struct TopicSubtopicListView: View {
 
 private struct TopicCategoryCard: View {
     let title: String
-    let subtopicCount: Int
+    let subtitle: String?
     let questionCount: Int
+    let subtopicCount: Int
     let completedSubtopics: Int
+    let answeredQuestionCount: Int
 
     private var isPad: Bool {
         UIDevice.current.userInterfaceIdiom == .pad
     }
 
     private var progressText: String {
-        "\(completedSubtopics)/\(subtopicCount) subtopics completed"
+        if subtopicCount <= 1 {
+            if questionCount == 1 {
+                return "\(answeredQuestionCount) of 1 question answered"
+            }
+            return "\(answeredQuestionCount) of \(questionCount) questions answered"
+        }
+        return "\(completedSubtopics)/\(subtopicCount) subtopics completed"
+    }
+
+    private var summaryText: String {
+        if subtopicCount <= 1 {
+            return subtitle ?? title
+        }
+        return "\(subtopicCount) subtopics • \(questionCount) questions"
     }
 
     private var tintColor: Color {
-        completedSubtopics == subtopicCount ? .green : .blue
+        if subtopicCount <= 1 {
+            if questionCount > 0 && answeredQuestionCount >= questionCount {
+                return .green
+            }
+            if answeredQuestionCount > 0 {
+                return .blue
+            }
+            return .gray
+        }
+        if completedSubtopics == subtopicCount && subtopicCount > 0 {
+            return .green
+        }
+        return .blue
+    }
+
+    private var isComplete: Bool {
+        if subtopicCount <= 1 {
+            return questionCount > 0 && answeredQuestionCount >= questionCount
+        }
+        return completedSubtopics == subtopicCount && subtopicCount > 0
     }
 
     private var symbolName: String {
@@ -323,6 +390,40 @@ private struct TopicCategoryCard: View {
 
     private var symbolColors: [Color] {
         TopicCatalog.symbolColors(for: title)
+    }
+
+    private var symbolImageName: String {
+        if isComplete {
+            return "checkmark.seal.fill"
+        }
+        return symbolName
+    }
+
+    private var symbolForegroundStyle: AnyShapeStyle {
+        if isComplete {
+            return AnyShapeStyle(Color.green)
+        }
+        return AnyShapeStyle(
+            LinearGradient(
+                colors: symbolColors,
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+    }
+
+    private var progressValue: Double {
+        if subtopicCount <= 1 {
+            return Double(answeredQuestionCount)
+        }
+        return Double(completedSubtopics)
+    }
+
+    private var progressTotal: Double {
+        if subtopicCount <= 1 {
+            return Double(max(questionCount, 1))
+        }
+        return Double(max(subtopicCount, 1))
     }
 
     var body: some View {
@@ -338,19 +439,9 @@ private struct TopicCategoryCard: View {
                     )
                     .frame(width: 58, height: 58)
 
-                Image(systemName: completedSubtopics == subtopicCount ? "checkmark.seal.fill" : symbolName)
+                Image(systemName: symbolImageName)
                     .font(.system(size: 24, weight: .semibold))
-                    .foregroundStyle(
-                        completedSubtopics == subtopicCount
-                            ? AnyShapeStyle(Color.green)
-                            : AnyShapeStyle(
-                                LinearGradient(
-                                    colors: symbolColors,
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                    )
+                    .foregroundStyle(symbolForegroundStyle)
             }
 
             VStack(alignment: .leading, spacing: 8) {
@@ -359,11 +450,11 @@ private struct TopicCategoryCard: View {
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
 
-                Text("\(subtopicCount) subtopics • \(questionCount) questions")
+                Text(summaryText)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(.secondary)
 
-                ProgressView(value: Double(completedSubtopics), total: Double(max(subtopicCount, 1)))
+                ProgressView(value: progressValue, total: progressTotal)
                     .progressViewStyle(.linear)
                     .tint(tintColor)
 
@@ -404,9 +495,8 @@ private struct TopicCard: View {
     private var answeredSummaryText: String {
         if questionCount == 1 {
             return "\(answeredCount) of 1 question answered"
-        } else {
-            return "\(answeredCount) of \(questionCount) questions answered"
         }
+        return "\(answeredCount) of \(questionCount) questions answered"
     }
 
     private var statusText: String {
@@ -424,9 +514,7 @@ private struct TopicCard: View {
     }
 
     private var statusColor: Color {
-        if questionCount == 0 {
-            return .gray
-        } else if answeredCount == 0 {
+        if questionCount == 0 || answeredCount == 0 {
             return .gray
         } else if answeredCount >= questionCount {
             return .green

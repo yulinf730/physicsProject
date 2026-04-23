@@ -16,22 +16,28 @@ struct WrongBookView: View {
     @State private var searchText = ""
     @State private var groupBy: WrongGroupBy = .topic
 
-    // Practice launcher
     @State private var startPractice = false
     @State private var practiceSet: [Question] = []
 
-    // Topic picker
     @State private var showTopicPicker = false
     @State private var selectedTopics = Set<String>()
+    @State private var showYearPicker = false
+    @State private var selectedYears = Set<String>()
     @ObservedObject private var yearProgressManager = YearProgressManager.shared
 
     private func mainTopic(from topic: String) -> String {
         topic.components(separatedBy: " / ").first ?? topic
     }
 
+    private func baseYear(from fullYear: String) -> String {
+        if let range = fullYear.range(of: #"^\d{4}"#, options: .regularExpression) {
+            return String(fullYear[range])
+        }
+        return fullYear
+    }
+
     var body: some View {
         VStack(spacing: 0) {
-            // Header
             HStack {
                 Text("Mistakes")
                     .font(.system(size: 28, weight: .bold))
@@ -52,7 +58,6 @@ struct WrongBookView: View {
             .padding(.top, 8)
             .padding(.horizontal, 16)
 
-            // Search & Group controls
             HStack(spacing: 10) {
                 HStack {
                     Image(systemName: "magnifyingglass")
@@ -134,18 +139,22 @@ struct WrongBookView: View {
                 .listStyle(.insetGrouped)
             }
 
-            // Bottom bar: single button
             if !wrongQuestionsFiltered.isEmpty {
                 HStack(spacing: 12) {
                     Button {
-                        // Preselect ALL topics so tapping "Start" = practice all
-                        selectedTopics = Set(availablePracticeTopics.map(\.name))
-                        showTopicPicker = true
+                        switch groupBy {
+                        case .topic:
+                            selectedTopics = Set(availablePracticeTopics.map(\.name))
+                            showTopicPicker = true
+                        case .year:
+                            selectedYears = Set(availablePracticeYears.map(\.name))
+                            showYearPicker = true
+                        }
                         #if os(iOS)
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         #endif
                     } label: {
-                        Label("Practice by Topics", systemImage: "list.bullet.rectangle")
+                        Label(bottomButtonTitle, systemImage: bottomButtonIcon)
                             .frame(maxWidth: .infinity)
                             .padding()
                             .background(Color.blue.opacity(0.9))
@@ -199,7 +208,19 @@ struct WrongBookView: View {
             )
             .presentationDetents([.medium, .large])
         }
-        // Navigate to a practice session using QuizPageView
+        .sheet(isPresented: $showYearPicker) {
+            YearPickerSheet(
+                years: availablePracticeYears,
+                preselected: selectedYears,
+                onCancel: { showYearPicker = false },
+                onConfirm: { chosen in
+                    selectedYears = chosen
+                    buildPracticeSetForSelectedYears()
+                    showYearPicker = false
+                }
+            )
+            .presentationDetents([.medium, .large])
+        }
         .background(
             NavigationLink(
                 destination: QuizPageView(
@@ -218,8 +239,6 @@ struct WrongBookView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    // MARK: - Derived data
-
     var wrongIDs: [String] {
         WrongQuestionManager.shared.allWrongQuestionIDs()
     }
@@ -233,7 +252,7 @@ struct WrongBookView: View {
         let q = searchText.lowercased()
         return base.filter {
             $0.id.lowercased().contains(q)
-            || $0.topic.lowercased().contains(q)
+            || $0.displayTopic.lowercased().contains(q)
             || $0.year.lowercased().contains(q)
         }
     }
@@ -241,7 +260,7 @@ struct WrongBookView: View {
     private var groupedDict: [String: [Question]] {
         switch groupBy {
         case .topic:
-            return Dictionary(grouping: wrongQuestionsFiltered, by: { $0.topic })
+            return Dictionary(grouping: wrongQuestionsFiltered, by: { $0.displayTopic })
                 .mapValues { $0.sorted { $0.id < $1.id } }
         case .year:
             return Dictionary(grouping: wrongQuestionsFiltered, by: { $0.year })
@@ -268,25 +287,41 @@ struct WrongBookView: View {
         }
     }
 
-    private var availableTopics: [(name: String, count: Int)] {
-        let counts = Dictionary(grouping: wrongQuestionsFiltered, by: { $0.topic })
+    private var availablePracticeYears: [(name: String, count: Int)] {
+        let counts = Dictionary(grouping: wrongQuestionsFiltered, by: { baseYear(from: $0.year) })
             .mapValues { $0.count }
 
         return counts.keys
-            .sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+            .sorted(by: >)
             .map { ($0, counts[$0] ?? 0) }
+    }
+
+    private var bottomButtonTitle: String {
+        switch groupBy {
+        case .topic:
+            return "Practice by Topics"
+        case .year:
+            return "Practice by Years"
+        }
+    }
+
+    private var bottomButtonIcon: String {
+        switch groupBy {
+        case .topic:
+            return "list.bullet.rectangle"
+        case .year:
+            return "calendar"
+        }
     }
 
     private var availablePracticeTopics: [(name: String, count: Int)] {
-        let counts = Dictionary(grouping: wrongQuestionsFiltered, by: { mainTopic(from: $0.topic) })
+        let counts = Dictionary(grouping: wrongQuestionsFiltered, by: { mainTopic(from: $0.displayTopic) })
             .mapValues { $0.count }
 
         return counts.keys
             .sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
             .map { ($0, counts[$0] ?? 0) }
     }
-
-    // MARK: - Actions
 
     func loadWrongQuestions() {
         let ids = WrongQuestionManager.shared.allWrongQuestionIDs()
@@ -303,10 +338,18 @@ struct WrongBookView: View {
 
     private func buildPracticeSetForSelectedTopics() {
         let chosen = selectedTopics
-        practiceSet = wrongQuestionsFiltered.filter { chosen.contains(mainTopic(from: $0.topic)) }
+        practiceSet = wrongQuestionsFiltered.filter { chosen.contains(mainTopic(from: $0.displayTopic)) }
+            .sorted { lhs, rhs in
+                if lhs.displayTopic == rhs.displayTopic {
+                    if lhs.questionNumber == rhs.questionNumber {
+                        return lhs.id < rhs.id
+                    }
+                    return lhs.questionNumber < rhs.questionNumber
+                }
+                return lhs.displayTopic.localizedCaseInsensitiveCompare(rhs.displayTopic) == .orderedAscending
+            }
         startPractice = !practiceSet.isEmpty
 
-        // reset progress for a fresh wrong-book practice session
         yearProgressManager.progress["WrongBookPractice"] = 0
 
         #if os(iOS)
@@ -318,7 +361,30 @@ struct WrongBookView: View {
         #endif
     }
 
-    // MARK: - UI helpers
+    private func buildPracticeSetForSelectedYears() {
+        let chosen = selectedYears
+        practiceSet = wrongQuestionsFiltered.filter { chosen.contains(baseYear(from: $0.year)) }
+            .sorted { lhs, rhs in
+                if lhs.year == rhs.year {
+                    if lhs.questionNumber == rhs.questionNumber {
+                        return lhs.id < rhs.id
+                    }
+                    return lhs.questionNumber < rhs.questionNumber
+                }
+                return lhs.year > rhs.year
+            }
+        startPractice = !practiceSet.isEmpty
+
+        yearProgressManager.progress["WrongBookPractice"] = 0
+
+        #if os(iOS)
+        if startPractice {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        } else {
+            UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        }
+        #endif
+    }
 
     @ViewBuilder
     private func sectionHeader(key: String, count: Int) -> some View {
@@ -336,8 +402,6 @@ struct WrongBookView: View {
         .textCase(nil)
     }
 }
-
-// MARK: - Card
 
 struct WrongBookCard: View {
     let question: Question
@@ -364,7 +428,7 @@ struct WrongBookCard: View {
                             .foregroundColor(.primary)
                             .lineLimit(1)
 
-                        Text("Topic: \(question.topic)")
+                        Text("Topic: \(question.displayTopic)")
                             .font(.caption)
                             .foregroundColor(.gray)
 
@@ -408,8 +472,6 @@ struct WrongBookCard: View {
         }
     }
 }
-
-// MARK: - Topic Picker Sheet
 
 struct TopicPickerSheet: View {
     let topics: [(name: String, count: Int)]
@@ -483,7 +545,78 @@ struct TopicPickerSheet: View {
     }
 }
 
-// Empty state
+struct YearPickerSheet: View {
+    let years: [(name: String, count: Int)]
+    let preselected: Set<String>
+    var onCancel: () -> Void
+    var onConfirm: (Set<String>) -> Void
+
+    @State private var chosen: Set<String> = []
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    if years.isEmpty {
+                        Text("No years available in the current filter.")
+                            .foregroundColor(.secondary)
+                    } else {
+                        ForEach(years, id: \.name) { year in
+                            Toggle(
+                                isOn: Binding(
+                                    get: { chosen.contains(year.name) },
+                                    set: { newValue in
+                                        if newValue {
+                                            chosen.insert(year.name)
+                                        } else {
+                                            chosen.remove(year.name)
+                                        }
+                                    }
+                                )
+                            ) {
+                                HStack {
+                                    Text(year.name)
+                                    Spacer()
+                                    Text("\(year.count)")
+                                        .font(.caption2)
+                                        .padding(.vertical, 2)
+                                        .padding(.horizontal, 6)
+                                        .background(Color.secondary.opacity(0.15))
+                                        .clipShape(Capsule())
+                                }
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Select Years")
+                }
+            }
+            .navigationTitle("Practice by Years")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Cancel", action: onCancel)
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Start") { onConfirm(chosen) }
+                        .disabled(chosen.isEmpty)
+                }
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button("Select All") {
+                        chosen = Set(years.map(\.name))
+                    }
+                    Spacer()
+                    Button("Clear") {
+                        chosen.removeAll()
+                    }
+                }
+            }
+            .onAppear {
+                chosen = preselected
+            }
+        }
+    }
+}
+
 struct EmptyMistakesView: View {
     var body: some View {
         VStack(spacing: 12) {
